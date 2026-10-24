@@ -379,20 +379,15 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Settings Background */
-.contentRegionScroller-2_GT_N {
+.contentRegionScroller__23e6b {
   background: var(--background-secondary);
 }
 
 /* No Voice Users (Panel) */
-.voiceUsers-3gPcwY {
+.voiceUsers_e131a9 {
   display: none;
 }
 
-/* Remove Background Modifier element */
-.option-ayUoaq:after {
-  display: none;
-}
-
-.communityInfoPill-2Mll66 {
+.communityInfoPill_f37cb1 {
   display: none;
 }

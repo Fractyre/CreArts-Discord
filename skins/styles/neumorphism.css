@@ -10,16 +10,16 @@
 /* ║ Neumorphism              ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.base-2jDfDU,
-.sidebar-1tnWFu,
-.content-1jQy2l,
-.sidebar-1tnWFu,
-.content-1SgpWY,
-.chat-2ZfjoI {
+.base__5e434,
+.sidebar__5e434,
+.content_f75fb0,
+.sidebar__5e434,
+.content__5e434,
+.chat_f75fb0 {
   overflow: visible !important;
 }
 
-.base-2jDfDU {
+.base__5e434 {
   width: 0;
 }
 
@@ -27,7 +27,7 @@
 /* ║ Neumorphism              ║ Titlebar                                                                                ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.titleBar-1it3bQ::before {
+.titleBar__421ed::before {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
@@ -37,27 +37,27 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.wrapper-1_HaEi {
+.wrapper_ef3116 {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
 
-.childWrapper-1j_1ub {
+.childWrapper__6e9f8 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.childWrapper-1j_1ub {
+.childWrapper__6e9f8 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.circleIconButton-1VxDrg {
+.circleIconButton__5bc7e {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.expandedFolderBackground-1kSAf6 {
+.folderGroupBackground__48112 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -67,7 +67,7 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.header-3OsQeK {
+.header_f37cb1 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -77,41 +77,37 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.sidebar-1tnWFu .thin-31rlnD.scrollerBase-_bVAAt {
+.sidebar__5e434 .thin__99f8c.scrollerBase_d125d2 {
   background: var(--background-flat) !important;
   box-shadow: var(--shape-flat);
 }
 
 /* Boost Goal */
-.container-2giAcK {
-  background: var(--background-pressed);
-  box-shadow: var(--shape-pressed);
-}
 
 /* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
 /* ║ Neumorphism              ║ Panel                                                                                   ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.panels-3wFtMD {
+.panels__5e434 {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
 
 /* Avatar */
-.container-YkUktl .avatarWrapper-1B9FTW  {
+.container__37e49 .accountPopoutButtonWrapper__37e49  {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
 
 /* Name */
-.container-YkUktl .nameTag-sc-gpq  {
+.container__37e49 .nameTag__37e49  {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
 
 /* Buttons */
-.container-YkUktl .directionRow-2Iu2A9 .button-12Fmur {
+.container__37e49 .buttons__37e49 .button__67645 {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
@@ -121,12 +117,12 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.children-3xh0VB {
+.children__9293f {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.toolbar-3_r2xA {
+.toolbar__9293f {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -136,7 +132,7 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.messagesWrapper-RpOMA3 {
+.messagesWrapper__36d07 {
   background: var(--background-pressed) !important;
   box-shadow: var(--shape-pressed);
 }
@@ -145,7 +141,7 @@
 /* ║ Neumorphism              ║ Members                                                                                 ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.container-2o3qEW {
+.container_c8ffbb {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -155,26 +151,26 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Attach Button */
-.attachWrapper-3slhXI .lookBlank-21BCro {
+.attachWrapper__0923f .lookBlank__201d5 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Text Area */
-.chat-1-OBC7 .textArea-2CLwUE,
-.chat-2ZfjoI .textArea-2CLwUE {
+.chat_f02135 .textArea__74017,
+.chat_f75fb0 .textArea__74017 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Buttons */
-.buttons-uaqb-5 {
+.buttons__74017 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Typing */
-.typing-2J1mQU {
+.typing_b88801 {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }

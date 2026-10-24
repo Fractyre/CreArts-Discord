@@ -2,12 +2,12 @@
 /* ║ Edited                   ║ Import                                                                                  ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.edited-1v5nT8:not(.message-translate-indicator) {
+.edited_c19a55:not(.message-translate-indicator) {
   display: none;
 }
 
-.timestamp-p1Df1m:not(.timestampInline-_lS3aK,
-.timestampVisibleOnHover-9PEuZS) time::after {
+.timestamp_c19a55:not(.timestampInline_c19a55,
+.timestampVisibleOnHover_c19a55) time::after {
   content: "("attr(aria-label)")";
   color: var(--text-muted);
   font-size: 0.625rem;

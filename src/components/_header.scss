@@ -3,7 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.container-ZMc96U {
+.container__9293f {
   margin: 0px 0px calc(var(--layout-margin) / 2) calc(var(--layout-margin) / 2);
   background: transparent !important;
   padding: 0px;
@@ -13,7 +13,7 @@
 }
 
 // Title
-.children-3xh0VB {
+.children__9293f {
   background: var(--background-secondary);
   margin: 0px calc(var(--layout-margin) / 2) 0px 0px;
   border-radius: var(--radius-primary);
@@ -21,7 +21,7 @@
 }
 
 // Toolbar
-.toolbar-3_r2xA {
+.toolbar__9293f {
   background: var(--background-secondary);
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
@@ -29,20 +29,14 @@
 }
 
 // Divider
-.divider-q3P9HC {
-  background: var(--background-primary);
-}
 
 // Remove Divider
-.divider-q3P9HC {
-  display: none !important;
-}
 
 // Icons
-.button-1fGHAH {
+.button__9db96 {
   margin: 0px;
 }
 
-.toolbar-3_r2xA button{
+.toolbar__9293f button{
   margin: 0 8px;
 }

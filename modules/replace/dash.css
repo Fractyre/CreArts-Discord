@@ -15,14 +15,11 @@
 /* ║ Dash                     ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.container-1NXEtd .channelName-3KPsGw,
-.title-31SJ6t .title-17SveM,
-.contents-2MsGLg .iconMentionText-1_WCtN,
-.container-2McqkF .resultChannel-37MfX_,
-.searchResultsWrap-5RVOkx .channelName-3w2Y3c,
-.search-39IXmY .searchAnswer-23w-CH,
-.autocomplete-3NRXG8 .size16-rrJ6ag,
-.channelTextArea-1FufC0 .iconMentionText-1_WCtN {
+.container__2637a .name__2ea32,
+.title_f75fb0 .title__9293f,
+.contents_c19a55 .iconMentionText_b75563,
+.search__49676 .searchAnswer_bd8186,
+.channelTextArea_f75fb0 .iconMentionText_b75563 {
   font-family: "CreArts-Dash", var(--font-primary) !important;
   text-transform: capitalize;
 }

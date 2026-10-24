@@ -16,13 +16,13 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.platform-win .layer-86YKbF {
+.platform-win .layer__960e4 {
   top: -22px;
   padding-top: calc(var(--height-titlebar) - 2px);
 }
 
 // Background
-.titleBar-1it3bQ::before {
+.titleBar__421ed::before {
   content: "";
   position: absolute;
   background: var(--background-secondary-alt);
@@ -37,12 +37,12 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Remove Wordmark
-.platform-win .wordmark-2u86JB svg {
+.platform-win .wordmark__421ed svg {
   display: none;
 }
 
 // Wordmark
-.platform-win .wordmarkWindows-2dq6rw::before {
+.platform-win .wordmarkWindows__421ed::before {
   -webkit-mask: var(--titlebar-wordmark);
   mask: var(--titlebar-wordmark);
   background: var(--header-secondary);
@@ -60,7 +60,7 @@
 // ║ Titlebar                 ║ Title                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.wordmarkWindows-2dq6rw::after {
+.wordmarkWindows__421ed::after {
   position: fixed;
   font-size: 12px;
   font-weight: 400;
@@ -82,11 +82,11 @@
 }
 
 // Title (Windows)
-.wordmarkWindows-2dq6rw::after {
+.wordmarkWindows__421ed::after {
   content: "CreArts " var(--info-version) " - " var(--info-skin) " " var(--info-shape, " ") " - by " var(--info-author);
 }
 
-.wordmarkWindows-2dq6rw::after {
+.wordmarkWindows__421ed::after {
   content: "CreArts " var(--info-version) " - " var(--info-skin) " " var(--info-shape, " ") " - by " var(--info-author);
 }
 
@@ -95,32 +95,32 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Buttons
-.winButton-3UMjdg,
-.winButton-3UMjdg:hover,
-.winButton-3UMjdg:active {
+.winButton__421ed,
+.winButton__421ed:hover,
+.winButton__421ed:active {
   height: calc(var(--height-titlebar) - 2px);
   width: 42px;
   opacity: var(--opacity-titlebar-buttons);
 }
 
 // Focused
-.app-focused .winButton-3UMjdg,
-.app-focused .winButton-3UMjdg:hover,
-.app-focused .winButton-3UMjdg:active {
+.app-focused .winButton__421ed,
+.app-focused .winButton__421ed:hover,
+.app-focused .winButton__421ed:active {
   color: white;
   opacity: 1;
 }
 
 // No Icons
-.winButtonMinMax-3RsPUg:nth-child(3) svg {
+.winButtonMinMax__421ed:nth-child(3) svg {
   display: none;
 }
-.winButtonClose-3Q8ZH5 svg {
+.winButtonClose__421ed svg {
   display: none;
 }
 
 // Minimize (Windows)
-.winButtonMinMax-3RsPUg:nth-child(4):after {
+.winButtonMinMax__421ed:nth-child(4):after {
   content: "";
   background: var(--header-secondary);
   width: 16px;
@@ -131,7 +131,7 @@
 }
 
 // Maximize (Windows)
-.winButtonMinMax-3RsPUg:nth-child(3):after {
+.winButtonMinMax__421ed:nth-child(3):after {
   content: "";
   background: var(--header-secondary);
   width: 16px;
@@ -142,7 +142,7 @@
 }
 
 // Window (Windows)
-.maximized .winButtonMinMax-3RsPUg:nth-child(3):after {
+.maximized .winButtonMinMax__421ed:nth-child(3):after {
   content: "";
   background: var(--header-secondary);
   width: 16px;
@@ -153,7 +153,7 @@
 }
 
 // Close (Windows)
-.winButtonClose-3Q8ZH5:after {
+.winButtonClose__421ed:after {
   content: "";
   background: var(--header-secondary);
   width: 16px;
@@ -164,27 +164,27 @@
 }
 
 // Background
-.winButtonMinMax-3RsPUg:hover,
-.winButtonMinMax-3RsPUg:active {
+.winButtonMinMax__421ed:hover,
+.winButtonMinMax__421ed:active {
   background: var(--background-secondary);
 }
 
 // Background
-.winButtonClose-3Q8ZH5:hover,
-.winButtonClose-3Q8ZH5:active {
+.winButtonClose__421ed:hover,
+.winButtonClose__421ed:active {
   background: #c42b1c;
 }
 
 // No Icon
 
 // Hover
-.winButtonClose-3Q8ZH5:hover:after,
-.winButtonClose-3Q8ZH5:active:after {
+.winButtonClose__421ed:hover:after,
+.winButtonClose__421ed:active:after {
   color: white;
 }
 
 // Butons
-.platform-osx .macButtons-eIdy0e {
+.platform-osx .macButtons__421ed {
   z-index: 200;
   position: fixed;
   top: -2px;
@@ -192,7 +192,7 @@
 }
 
 // No Icon
-.winButtonMinMax-3RsPUg:nth-child(4) svg {
+.winButtonMinMax__421ed:nth-child(4) svg {
   display: none;
 }
 
@@ -201,7 +201,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Version (OSX)
-.platform-osx .macButtons-eIdy0e::after {
+.platform-osx .macButtons__421ed::after {
   position: fixed;
   font-size: 12px;
   font-weight: 400;
@@ -215,6 +215,6 @@
 }
 
 // Wordmark (OSX)
-.platform-osx .macButtons-eIdy0e::after {
+.platform-osx .macButtons__421ed::after {
   content: "CreArts " var(--info-version) " - " var(--info-skin) " - by " var(--info-author);
 }

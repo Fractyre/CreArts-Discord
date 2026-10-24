@@ -4,23 +4,23 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat-2ZfjoI .scrollableContainer-15eg7h,
-.chat-1-OBC7 .scrollableContainer-15eg7h,
-.channelTextArea-1FufC0 {
+.chat_f75fb0 .scrollableContainer__74017,
+.chat_f02135 .scrollableContainer__74017,
+.channelTextArea_f75fb0 {
   background: transparent;
 }
 
 // Spacing
-.inner-NQg18Y {
+.inner__74017 {
   margin-top: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
 }
 
-.channelTextArea-1FufC0 {
+.channelTextArea_f75fb0 {
   margin-bottom: 0px;
 }
 
-.chat-2ZfjoI .form-3gdLxP,
-.chat-1-OBC7 .form-3gdLxP {
+.chat_f75fb0 .form_f75fb0,
+.chat_f02135 .form_f75fb0 {
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -29,14 +29,14 @@
 }
 
 // Disabled
-.chat-2ZfjoI .channelTextAreaDisabled-1p2fQv,
-.chat-1-OBC7 .channelTextAreaDisabled-1p2fQv {
+.chat_f75fb0 .channelTextAreaDisabled__74017,
+.chat_f02135 .channelTextAreaDisabled__74017 {
   display: none;
 }
 
 // Text
-.chat-2ZfjoI .fontSize16Padding-XoMpjI,
-.chat-1-OBC7 .fontSize16Padding-XoMpjI {
+.chat_f75fb0 .textArea__74017,
+.chat_f02135 .textArea__74017 {
   padding: 11px;
   overflow: hidden !important;
 }
@@ -48,8 +48,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat-2ZfjoI .replyBar-1oi75v,
-.chat-1-OBC7 .replyBar-1oi75v {
+.chat_f75fb0 .replyBar__841c8,
+.chat_f02135 .replyBar__841c8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2)) 0px 0px 0px;
@@ -57,34 +57,34 @@
 }
 
 // Spacing
-.chat-2ZfjoI .clipContainer-31nYlH,
-.chat-1-OBC7 .clipContainer-31nYlH {
+.chat_f75fb0 .clipContainer__841c8,
+.chat_f02135 .clipContainer__841c8 {
   overflow: hidden;
   padding-top: 0px;
   margin-top: 0px;
 }
 
 // No Background
-.chat-2ZfjoI .attachedBars-2BCP3l,
-.chat-1-OBC7 .attachedBars-2BCP3l {
+.chat_f75fb0 .stackedBars__74017,
+.chat_f02135 .stackedBars__74017 {
   order: -1;
   background: transparent;
 }
 
 // No Separator
-.chat-2ZfjoI .separator-8ngZ3p,
-.chat-1-OBC7 .separator-8ngZ3p {
+.chat_f75fb0 .separator__841c8,
+.chat_f02135 .separator__841c8 {
   display: none;
 }
 
 // No Thread Suggestion
-.chat-2ZfjoI .threadSuggestionBar-3ExSyc,
-.chat-1-OBC7 .threadSuggestionBar-3ExSyc {
+.chat_f75fb0 .threadSuggestionBar__841c8,
+.chat_f02135 .threadSuggestionBar__841c8 {
   display: none;
 }
 
-.chat-2ZfjoI .colorLink-2apWfY,
-.chat-1-OBC7 .colorLink-2apWfY {
+.chat_f75fb0 .colorLink__201d5,
+.chat_f02135 .colorLink__201d5 {
   color: var(--interactive-normal);
 }
 
@@ -94,7 +94,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.wrapper-2SplAX {
+.wrapper__44df5 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2)) 0px 0px 0px;
@@ -105,12 +105,12 @@
 // ║ Input                    ║ Typing                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.chat-2ZfjoI .typing-2J1mQU {
+.chat_f75fb0 .typing_b88801 {
   order: 1;
 }
 
-.chat-2ZfjoI .base-3bcbY3,
-.chat-1-OBC7 .base-3bcbY3 {
+.chat_f75fb0 .base_b88801,
+.chat_f02135 .base_b88801 {
   position: relative;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -127,21 +127,21 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.attachWrapper-3slhXI .lookBlank-21BCro {
+.attachWrapper__0923f .lookBlank__201d5 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-right: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2));
 }
 
 // Spacing
-.attachButton-1ijpt9 {
+.attachButton__74017 {
   margin-left: 0px;
   padding: 0px;
   height: 44px;
   width: 44px;
 }
 
-.sansAttachButton-1ERHue {
+.sansAttachButton__74017 {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -150,7 +150,7 @@
 }
 
 // Upload Button
-.attachWrapper-3slhXI {
+.attachWrapper__0923f {
   order: 1;
   position: sticky;
   left: 0;
@@ -162,8 +162,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat-1-OBC7 .textArea-2CLwUE,
-.chat-2ZfjoI .textArea-2CLwUE {
+.chat_f02135 .textArea__74017,
+.chat_f75fb0 .textArea__74017 {
   order: 2;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -175,7 +175,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Backgound
-.chat-2ZfjoI .buttons-uaqb-5 {
+.chat_f75fb0 .buttons__74017 {
   order: 3;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -185,7 +185,7 @@
 }
 
 // Replace Emoji Icon
-.chat-2ZfjoI .sprite-2lxwfc {
+.chat_f75fb0 .sprite__04eed {
   background: var(--interactive-normal);
   -webkit-mask: var(--emoji);
   mask: var(--emoji);
@@ -194,7 +194,7 @@
     center no-repeat;
 }
 
-.button-3BaQ4X {
+.button__74017 {
   padding: 0px;
   margin: 0px;
   width: 44px;
@@ -205,28 +205,28 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.separator-3ng7S5 {
+.separator_aa63ab {
   margin-left: 0px;
 }
 
 // No Border
-.separator-3ng7S5:before {
+.separator_aa63ab:before {
   display: none;
 }
 
 // Button
-.activeButtonChild-2hgLAO {
+.activeButtonChild_aa63ab {
   color: var(--interactive-normal);
 }
 
-.theme-dark .button-y6hemj:focus-within .activeButtonChild-2hgLAO,
-.theme-dark .button-y6hemj:focus .activeButtonChild-2hgLAO,
-.theme-dark .button-y6hemj:hover .activeButtonChild-2hgLAO {
+.theme-dark .button_aa63ab:focus-within .activeButtonChild_aa63ab,
+.theme-dark .button_aa63ab:focus .activeButtonChild_aa63ab,
+.theme-dark .button_aa63ab:hover .activeButtonChild_aa63ab {
   color: var(--interactive-active);
 }
 
 // Spacing
-.buttonContainer-6W2Ep3 .innerButton-1aF_E_ {
+.buttonContainer_aa63ab .button_aa63ab {
   margin: 0px;
   padding: 0px;
   width: 44px;
@@ -238,17 +238,17 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.scrollableContainer-15eg7h {
+.scrollableContainer__74017 {
   max-height: unset !important;
 }
 
 // No Divider
-.scrollableContainer-15eg7h .divider-2rZFJK {
+.scrollableContainer__74017 .divider__908e2 {
   display: none;
 }
 
 // Background
-.channelAttachmentArea-HwpkuQ {
+.channelAttachmentArea_b77158 {
   gap: 12px;
   background: transparent;
   border-radius: var(--radius-primary);
@@ -257,7 +257,7 @@
 }
 
 // Upload
-.channelAttachmentArea-HwpkuQ .upload-vLbqu- {
+.channelAttachmentArea_b77158 .upload_aa605f {
   background: var(--background-secondary);
   border-radius: var(--radius-secondary);
   padding: 8px;
@@ -270,7 +270,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat-2ZfjoI .bar-2MWHzg {
+.chat_f75fb0 .bar__84522 {
   margin: var(--layout-margin) 0px 0px 0px;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);

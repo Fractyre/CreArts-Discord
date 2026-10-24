@@ -2,6 +2,6 @@
 /* ║ No Help Icon             ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.anchor-1MIwyf[href="https://support.discord.com"] {
+a[href="https://support.discord.com"] {
   display: none !important;
 }

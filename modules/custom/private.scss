@@ -6,20 +6,20 @@
 
 
   /*
-.containerDefault-3TQ5YN {
+.containerDefault__29444 {
   height: 20px !important;
 }
 
-.containerDefault-YUSmu3 {
+.containerDefault_c69b6d {
   height: 60px !important;
 }
 */
 
 // Custom
-.container-1NXEtd[aria-label*="CorellanStoma"] {
+.container__2637a[aria-label*="CorellanStoma"] {
 
   // Adding Grid
-  .content-2a4AW9 {
+  .content_d125d2 {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: min-content;
@@ -38,23 +38,23 @@
   }
 
   // No scrollbar
-  .scroller-1ox3I2::-webkit-scrollbar {
+  .scroller__629e4::-webkit-scrollbar {
     display: none;
   }
 
   // No Icons
-  .children-1MGS9G,
-  .iconContainer-21RCa3 {
+  .children__2ea32,
+  .iconContainer__2ea32 {
     display: none;
   }
 
-  .wrapper-NhbLHG {
+  .wrapper__2ea32 {
     height: 60px;
     width: 100%;
   }
 
   // Item
-  .content-1gYQeQ {
+  .wrapper__2ea32 {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -70,7 +70,7 @@
   }
 
   // Chat
-  [data-dnd-name="chat"] .content-1gYQeQ {
+  [data-dnd-name="chat"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/BZgKnuo.png");
   }
 
@@ -79,102 +79,102 @@
   }
 
   // Palettes
-  [data-dnd-name="palettes"] .content-1gYQeQ {
+  [data-dnd-name="palettes"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/aHoc4cm.png");
   }
 
   // Portfolio
-  [data-dnd-name="portfolio"] .content-1gYQeQ {
+  [data-dnd-name="portfolio"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/K9I3v8h.png");
   }
 
   // Projects
-  [data-dnd-name="projects"] .content-1gYQeQ {
+  [data-dnd-name="projects"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/1I93QS0.png");
   }
 
   // Anime
-  [data-dnd-name="anime"] .content-1gYQeQ {
+  [data-dnd-name="anime"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/AFAEcNM.png");
   }
 
   // Manga
-  [data-dnd-name="manga"] .content-1gYQeQ {
+  [data-dnd-name="manga"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/g2y1RBH.png");
   }
 
   // TV Series
-  [data-dnd-name="tv-series"] .content-1gYQeQ {
+  [data-dnd-name="tv-series"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/kez5TfI.png");
   }
 
   // Comic
-  [data-dnd-name="comic"] .content-1gYQeQ {
+  [data-dnd-name="comic"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/rDpRf3G.png");
   }
 
   // Movies
-  [data-dnd-name="movies"] .content-1gYQeQ {
+  [data-dnd-name="movies"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/1YQpuCM.png");
   }
 
   // Books
-  [data-dnd-name="books"] .content-1gYQeQ {
+  [data-dnd-name="books"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/BCPBYoc.png");
   }
 
   // Recipes
-  [data-dnd-name="recipes"] .content-1gYQeQ {
+  [data-dnd-name="recipes"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/Sda6lb4.png");
   }
 
   // Notes
-  [data-dnd-name="notes"] .content-1gYQeQ {
+  [data-dnd-name="notes"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/4ieRtBt.png");
   }
 
   // Games
-  [data-dnd-name="games"] .content-1gYQeQ {
+  [data-dnd-name="games"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/Wcpcjym.png");
   }
 
   // Music
-  [data-dnd-name="music"] .content-1gYQeQ {
+  [data-dnd-name="music"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/r4ebl1E.png");
   }
 
   // Guides
-  [data-dnd-name="guides"] .content-1gYQeQ {
+  [data-dnd-name="guides"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/HHhZawS.png");
   }
 
   // Inspiration
-  [data-dnd-name="inspiration"] .content-1gYQeQ {
+  [data-dnd-name="inspiration"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/8WWhWTM.png");
   }
 
   // Knowledge
-  [data-dnd-name="knowledge"] .content-1gYQeQ {
+  [data-dnd-name="knowledge"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/kuRfFoq.png");
   }
 
   // Resources
-  [data-dnd-name="resources"] .content-1gYQeQ {
+  [data-dnd-name="resources"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/nsdtBso.png");
   }
 
   // Tools
-  [data-dnd-name="tools"] .content-1gYQeQ {
+  [data-dnd-name="tools"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/jd9nohK.png");
   }
 
   // 3D Print
-  [data-dnd-name="3d-prints"] .content-1gYQeQ {
+  [data-dnd-name="3d-prints"] .wrapper__2ea32 {
     background-image: url("https://i.imgur.com/JVRXNRQ.png");
   }
 
   // Item Overlay
-  .content-1gYQeQ::before {
+  .wrapper__2ea32::before {
     content: "";
     position: absolute;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
@@ -186,13 +186,13 @@
   }
 
   // Category
-  .containerDefault-3TQ5YN {
+  .containerDefault__29444 {
     grid-column: 1/-1 !important;
   }
 
   // Channel Name
-  [data-list-item-id="channels___home-tab-958458301463527454"] .name-28HaxV,
-  .channelName-3KPsGw {
+  [data-list-item-id="channels___home-tab-958458301463527454"] .name__2ea32,
+  .name__2ea32 {
     text-align: center;
     color: white;
   }
@@ -203,21 +203,21 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-[aria-label*="CorellanStoma"] .scroller-1ox3I2 {
+[aria-label*="CorellanStoma"] .scroller__629e4 {
   margin-top: calc(var(--layout-margin) + var(--height-channel-buttons) + (var(--layout-margin) / 2)) !important;
 }
 
 // Unread
-[aria-label*="CorellanStoma"] .unreadTop-1DJtGv {
+[aria-label*="CorellanStoma"] .unreadTop__629e4 {
   top: calc(var(--layout-margin) + var(--height-channel-buttons) + var(--layout-margin));
 }
 
 // Position
-.scroller-1ox3I2 {
+.scroller__629e4 {
   z-index: 3;
 }
 
-.container-1-ERn5 {
+.container_f37cb1 {
   z-index: 9 !important;
 }
 
@@ -226,7 +226,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // GitHub (Normal)
-.topic-11NuQZ [href="https://github.com/CorellanStoma"]::after
+.topic__6ec1a [href="https://github.com/CorellanStoma"]::after
 {
   content: "GitHub";
   position: fixed !important;
@@ -244,7 +244,7 @@
 }
 
 // Github (Hover)
-.topic-11NuQZ [href="https://github.com/CorellanStoma"]:hover::after
+.topic__6ec1a [href="https://github.com/CorellanStoma"]:hover::after
 {
   background: var(--brand-experiment);
   color: var(--interactive-active);
@@ -255,7 +255,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // ArtStation (Normal)
-.topic-11NuQZ [href*="https://www.artstation.com/danielklingeldesign"]::after
+.topic__6ec1a [href*="https://www.artstation.com/danielklingeldesign"]::after
 {
   content: "ArtStation";
   position: fixed !important;
@@ -276,7 +276,7 @@
 }
 
 // ArtStation (Hover)
-.topic-11NuQZ [href*="https://www.artstation.com/danielklingeldesign"]:hover::after
+.topic__6ec1a [href*="https://www.artstation.com/danielklingeldesign"]:hover::after
 {
   background: var(--brand-experiment);
   color: var(--interactive-active);
@@ -287,7 +287,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Twitter (Normal)
-.topic-11NuQZ [href*="https://twitter.com/CorellanStoma"]::after
+.topic__6ec1a [href*="https://twitter.com/CorellanStoma"]::after
 {
   content: "Twitter";
   position: fixed !important;
@@ -308,7 +308,7 @@
 }
 
 // Twitter (Hover)
-.topic-11NuQZ [href*="https://twitter.com/CorellanStoma"]:hover::after
+.topic__6ec1a [href*="https://twitter.com/CorellanStoma"]:hover::after
 {
   background: var(--brand-experiment);
   color: var(--interactive-active);
