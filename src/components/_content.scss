@@ -8,7 +8,7 @@
 }
 
 .scroller__36d07 {
-  border-radius: var(--radius-primary) var(--radius-primary) 0px 0px;
+  border-radius: var(--radius-primary);
 }
 
 // Background
@@ -28,6 +28,18 @@
 // No Fade (a square strip over the card's rounded bottom corners)
 .chatGradient__36d07 {
   display: none;
+}
+
+// Bottom Padding (Discord's spacer reserves room for a floating typing indicator; CreArts shows typing as its own card)
+.scrollerSpacer__36d07 {
+  height: var(--inner-secondary) !important;
+}
+
+// Messages inset and rounded like the member rows (hover/mention highlights were square and flush with the card edge)
+.message__5126c {
+  margin-left: var(--inner-primary);
+  margin-right: var(--inner-primary);
+  border-radius: var(--radius-tertiary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
