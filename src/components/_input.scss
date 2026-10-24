@@ -138,6 +138,9 @@ body {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   height: 24px;
+  // Discord offsets it upward to float over the messages
+  top: 0px;
+  transform: none;
   left: 0px;
   right: 0px;
   padding-left: 8px;
