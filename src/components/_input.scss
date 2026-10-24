@@ -10,6 +10,11 @@
   background: transparent;
 }
 
+// Height (one 44px slot, so the 11px text padding centres a single line)
+body {
+  --custom-channel-textarea-text-area-height: 44px;
+}
+
 // Spacing
 .inner__74017 {
   margin-top: calc(var(--layout-margin) / 2);
