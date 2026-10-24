@@ -205,7 +205,9 @@
 
 // Text
   --text-normal: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --text-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
+  --text-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
+  // Faint on purpose (date dividers, "(edited)"); Discord now uses --text-muted for regular secondary text
+  --text-faint: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
 
 
   --text-link: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));

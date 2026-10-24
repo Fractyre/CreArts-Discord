@@ -50,7 +50,7 @@
   margin-bottom: 0px;
 }
 
-// DM List Text (Discord paints idle rows with the muted color, which CreArts keeps faint for timestamps)
+// DM List Text (idle rows match the channel list)
 .privateChannels_e6b769 .interactive__972a0 .name__20a53 {
   color: var(--channels-default);
 }
