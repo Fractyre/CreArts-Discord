@@ -49,6 +49,16 @@
   color: var(--interactive-normal) !important;
 }
 
+// Idle icons match the user panel buttons
+.guilds__5e434 .wrapper__6e9f8:not(:hover, .selected__6e9f8) .childWrapper__6e9f8,
+.guilds__5e434 .circleIconButton__5bc7e:not(:hover, .selected__5bc7e) {
+  background: var(--background-primary);
+}
+
+.guilds__5e434 .wrapper__6e9f8[data-list-item-id="guildsnav___home"]:not(:hover, .selected__6e9f8) .childWrapper__6e9f8 {
+  color: var(--interactive-normal);
+}
+
 .circleIconButton__5bc7e.selected__5bc7e .circleIcon__5bc7e {
   color: var(--interactive-active) !important;
 }
