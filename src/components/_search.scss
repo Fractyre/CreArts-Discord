@@ -7,3 +7,20 @@
   border-radius: var(--radius-primary);
   margin-left: 20px;
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Search                   ║ Bar                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background (matches the user panel controls)
+.search_c322aa .searchBar_c322aa {
+  background: var(--background-primary);
+  border: none;
+  box-shadow: none;
+  border-radius: var(--radius-secondary);
+}
+
+// Icon
+.search_c322aa .icon__0c4c4 {
+  color: var(--interactive-normal);
+}
