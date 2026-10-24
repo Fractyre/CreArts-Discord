@@ -63,7 +63,7 @@
 // ║ Variables                ║ Palette                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.theme-dark {
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
   // Lightness (Custom)
   --lightness: 0%;
 
@@ -120,7 +120,7 @@
 // ║ Variables                ║ System                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.theme-dark {
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
   // Interactive (Default)
   --interactive-active: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 100% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
   --interactive-hover: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
