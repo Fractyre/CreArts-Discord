@@ -25,11 +25,11 @@
 <kbd>[<img title="Spanish" alt="Spanish" src="https://crearts-community.github.io/Assets/languages/spanish.png" width="40">](.github/docs/translations/readme/spanish.md)</kbd>
 <kbd>[<img title="Swedish" alt="Swedish" src="https://crearts-community.github.io/Assets/languages/swedish.png" width="40">](.github/docs/translations/readme/swedish.md)</kbd>
 
-# CreArts v3.0.3
+# CreArts v3.1.0
 
-[![Version](https://img.shields.io/github/manifest-json/v/CreArts-Community/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](.github/docs/changelog.md)
-[![License](https://img.shields.io/github/license/CreArts-Community/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](license)
-[![Downloads](https://img.shields.io/github/downloads/CreArts-Community/CreArts-Discord/total?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://github.com/CreArts-Community/CreArts-Discord/releases)
+[![Version](https://img.shields.io/github/package-json/v/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](.github/docs/changelog.md)
+[![License](https://img.shields.io/github/license/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](license)
+[![Downloads](https://img.shields.io/github/downloads/Fractyre/CreArts-Discord/total?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://github.com/Fractyre/CreArts-Discord/releases)
 [![Paypal](https://img.shields.io/badge/Donate-PayPal-blue?&labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://www.paypal.com/donate/?hosted_button_id=5MQYGQ2FGQDWJ)
 [![Discord](https://img.shields.io/discord/534376415202639903?label=Discord&labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://discord.gg/8W8E39Z)
 
@@ -56,109 +56,44 @@ This project is licensed under the [MIT License](license), even though this proj
 
 ## Getting Started
 
-To use this theme you need a client mod or a browser plugin that allows you to load custom CSS. There are several possibilities, the first and recommended variant would be a client mod, for example [Powercord](https://github.com/powercord-org/powercord), [Better Discord](https://github.com/BetterDiscord/BetterDiscord) or [GooseMod](https://github.com/GooseMod/GooseMod).
-
-However, we would like to point out that using a client mod could result in account termination, Discord is not actively taking action against client mod users at this time. If you have concerns about using a client mod, a CSS browser plugin like Stylus may be a better choice.
-
-
-This theme can also be used with a browser extension like [Stylus](https://github.com/openstyles/stylus), it can be used with [Chromium](https://github.com/chromium/chromium) based browsers, [Opera](https://addons.opera.com/en/extensions/details/stylus/) or [Firefox](https://addons.mozilla.org/de/firefox/addon/styl-us/).
+CreArts is a [BetterDiscord](https://betterdiscord.app) theme. Install BetterDiscord first, then use either of the methods below.
 
 ## Installation
 
-This theme can be used in different ways, with a client mod or in the browser with an extension that allows to load custom css. in the lower section you will find various instructions.
+<!-- BetterDiscord -->
+<details>
+<summary><b>BetterDiscord (Theme File)</b></summary>
 
+* **Step 1:** Download [`clients/crearts.theme.css`](https://github.com/Fractyre/CreArts-Discord/blob/master/clients/crearts.theme.css).
+
+* **Step 2:** Open **User Settings → Themes → Open Themes Folder** and paste the file there.
+
+* **Step 3:** Enable **CreArts v3** in the theme list. Open the file to toggle skins and modules by commenting or uncommenting their `@import` lines.
+</details>
 
 <!-- CSS Import -->
 <details>
-<summary><b>CSS Import</b></summary>
+<summary><b>BetterDiscord (Custom CSS)</b></summary>
 
-* **Step 1:** Copy the Import link:
+* **Step 1:** Open **User Settings → Custom CSS**.
 
-* **Step 2:** Paste the code above your theme code or load it via Quick CSS.
+* **Step 2:** Paste the import at the top:
 
 ```css
-@import url("https://crearts-community.github.io/CreArts-Discord/clients/crearts.theme.css");
+@import url("https://fractyre.github.io/CreArts-Discord/clients/crearts.theme.css");
 ```
 </details>
 
-<!-- Powercord -->
+<!-- Development -->
 <details>
-<summary><b>Powercord</b></summary>
-
-* **Step 1:** Open **Command Prompt** / **Terminal**
-
-* **Step 2:** Paste the below code in your terminal:
+<summary><b>Development</b></summary>
 
 ```bash
-cd powercord/src/Powercord/themes
+pnpm install
+pnpm run dev            # live build into BetterDiscord's themes folder as "CreArts Dev"
+pnpm run build          # compile src/source.css and modules/custom/*.css
+pnpm run check-classes  # list selectors that no longer exist in Discord
 ```
-
-```bash
-git clone https://github.com/CreArts-Community/CreArts-Discord.git
-```
-</details>
-
-<!-- BetterDiscord -->
-<details>
-<summary><b>BetterDiscord</b></summary>
-
-* **Step 1:** Go to [releases](https://github.com/CreArts-Community/CreArts-Discord/releases) tab of this repo.
-
-* **Step 2:** Click on the `CreArts-Discord.theme.css` file to download it.
-
-* **Step 3:** Paste the downloaded file inside your **BetterDiscord**'s themes folder.
-</details>
-
-<!-- GooseMod -->
-<details>
-<summary><b>GooseMod</b></summary>
-
-* **Step 1:** Go to the themes store in **GooseMod** and search for "**CreArts-Discord**".
-
-* **Step 2:** Press the install button.
-</details>
-
-<!-- Vizality -->
-<details>
-<summary><b>Vizality</b></summary>
-
-* **Step 1:** Open **Command Prompt** / **Terminal**
-
-* **Step 2:** Paste the below code in your terminal:
-
-```bash
-cd vizality/addons/themes && git clone https://crearts-community.github.io/CreArts-Discord
-```
-</details>
-
-<!-- Cumcord -->
-<details>
-<summary><b>Cumcord</b></summary>
-
-* **Step 1:** Install the [Cumstain](https://github.com/yellowsink/cc-plugins) plugin for Cumcord.
-
-* **Step 2:** Open the new theme option which appears in the settings.
-
-* **Step 3:** Install the theme with this link:
-```
-https://crearts-community.github.io/CreArts-Discord/clients/crearts.theme.css
-```
-
-* **Optional:** Add theme store repo link:
-```
-https://crearts-community.github.io/CreArts-Discord
-```
-</details>
-
-<!-- Stylus -->
-<details>
-<summary><b>Stylus</b></summary>
-
-* **Step 1:** Install the [**Stylus**](https://add0n.com/stylus.html) extension for [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) / [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) / [Opera](https://github.com/openstyles/stylus/wiki/Opera,-Outdated-Stylus).
-
-* **Step 2:** After installing, head over to [this link](https://github.com/CreArts-Community/CreArts-Discord/releases/latest/download/crearts.user.css).
-
-* **Step 3:** Press the "**Install Style**" button.
 </details>
 
 ## Credits
@@ -170,4 +105,4 @@ This theme uses extensions from other theme creators:
 
 ## Support
 
-If you have problems, found some bugs or have wishes for this theme, create a [Issue](https://github.com/CreArts-Community/CreArts-Discord/issues) or join our [Community](https://discord.gg/8W8E39Z) and communicate with us.
+If you have problems, found some bugs or have wishes for this theme, create a [Issue](https://github.com/Fractyre/CreArts-Discord/issues) or join our [Community](https://discord.gg/8W8E39Z) and communicate with us.
