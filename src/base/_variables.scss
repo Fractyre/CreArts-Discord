@@ -430,6 +430,81 @@ html {
   --height-channel-buttons: 32px;
 }
 
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Modern Discord Tokens                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Discord's 2025 refresh reads these instead of the legacy names above; point them at the CreArts palette.
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
+  // Background
+  --background-base-lowest: var(--background-tertiary);
+  --background-base-lower: var(--background-secondary);
+  --background-base-low: var(--background-primary);
+  --background-surface-high: var(--background-secondary);
+  --background-surface-higher: var(--background-secondary-alt);
+  --background-surface-highest: var(--background-tertiary);
+  --bg-surface-raised: var(--background-secondary);
+  --bg-surface-overlay: var(--background-secondary-alt);
+  --chat-background: var(--background-primary);
+  --chat-background-default: var(--background-primary);
+  --app-frame-background: var(--background-tertiary);
+  --app-frame-border: transparent;
+  --home-background: var(--background-tertiary);
+  --card-background-default: var(--background-secondary-alt);
+  --background-brand: var(--accent-primary);
+
+  // Modifier
+  --background-mod-subtle: var(--background-modifier-hover);
+  --background-mod-muted: var(--background-modifier-hover);
+  --background-mod-normal: var(--background-modifier-active);
+  --background-mod-strong: var(--background-modifier-selected);
+  --interactive-background-hover: var(--background-modifier-hover);
+  --interactive-background-active: var(--background-modifier-active);
+  --interactive-background-selected: var(--background-modifier-selected);
+
+  // Interactive
+  --interactive-text-default: var(--interactive-normal);
+  --interactive-text-hover: var(--interactive-hover);
+  --interactive-text-active: var(--interactive-active);
+  --interactive-icon-default: var(--interactive-normal);
+  --interactive-icon-hover: var(--interactive-hover);
+  --interactive-icon-active: var(--interactive-active);
+
+  // Text
+  --text-default: var(--text-normal);
+  --text-strong: var(--header-primary);
+  --text-subtle: var(--header-secondary);
+  --text-feedback-positive: var(--green-primary);
+  --text-feedback-warning: var(--yellow-primary);
+  --text-feedback-critical: var(--red-primary);
+
+  // Icon
+  --icon-default: var(--interactive-normal);
+  --icon-strong: var(--interactive-hover);
+  --icon-subtle: var(--interactive-normal);
+  --icon-muted: var(--interactive-muted);
+
+  // Border (CreArts panels are borderless)
+  --border-subtle: transparent;
+  --border-muted: transparent;
+  --border-normal: var(--background-modifier-active);
+  --border-strong: var(--background-modifier-selected);
+
+  // Controls
+  --control-primary-background-default: var(--accent-primary);
+  --control-primary-background-hover: var(--accent-secondary);
+  --control-primary-background-active: var(--accent-tertiary);
+  --input-background-default: var(--input-background);
+  --input-placeholder-text-default: var(--input-placeholder-text);
+
+  // Messages
+  --message-background-hover: var(--background-message-hover);
+  --message-mentioned-background-default: var(--background-mentioned);
+  --message-mentioned-background-hover: var(--background-mentioned-hover);
+  --message-automod-background-default: var(--background-message-automod);
+  --message-automod-background-hover: var(--background-message-automod-hover);
+}
+
 /*
 //--accent-text: var(--SKIN-accent-text, hsla(216, calc(var(--saturation-factor, 1) * 4%), 74%, 1));
 */
