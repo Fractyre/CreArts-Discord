@@ -10,8 +10,28 @@
 
 // Spacing
 .container_c8ffbb {
-  margin-left: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+  margin-left: calc(var(--layout-margin) / 2);
   width: var(--width-members);
+}
+
+// Fit the card (Discord sizes the list wider than --width-members)
+.container_c8ffbb {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.membersWrap_c8ffbb {
+  width: 100% !important;
+  min-width: 0px;
+}
+
+// Rows inset evenly from both card edges (Discord fixes them at 247px with a left margin only)
+.member_c8ffbb {
+  width: auto;
+  max-width: none;
+  margin: 0px var(--inner-primary) !important;
+  border-radius: var(--radius-tertiary);
+  overflow: hidden;
 }
 
 // No Background

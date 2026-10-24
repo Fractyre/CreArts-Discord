@@ -12,7 +12,7 @@
 
 // Spacing
 .inner__74017 {
-  margin-top: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+  margin-top: calc(var(--layout-margin) / 2);
 }
 
 .channelTextArea_f75fb0 {
@@ -37,8 +37,11 @@
 // Text
 .chat_f75fb0 .textArea__74017,
 .chat_f02135 .textArea__74017 {
+  padding: 0px;
+}
+
+.textArea__74017 .slateTextArea_ec4baf {
   padding: 11px;
-  overflow: hidden !important;
 }
 
 
@@ -52,7 +55,7 @@
 .chat_f02135 .replyBar__841c8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2)) 0px 0px 0px;
+  margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
   width: 100%;
 }
 
@@ -97,7 +100,7 @@
 .wrapper__44df5 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2)) 0px 0px 0px;
+  margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
   order: -1 !important;
 }
 
@@ -119,7 +122,7 @@
   right: 0px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-top: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2));
+  margin-top: calc(var(--layout-margin) / 2);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -127,15 +130,15 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.attachWrapper__0923f .lookBlank__201d5 {
+.attachWrapper__0923f .attachButton__0923f {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin-right: calc(calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2));
+  justify-content: center;
 }
 
 // Spacing
 .attachButton__74017 {
-  margin-left: 0px;
+  margin: 0px;
   padding: 0px;
   height: 44px;
   width: 44px;
@@ -155,6 +158,8 @@
   position: sticky;
   left: 0;
   top: auto;
+  padding: 0px;
+  margin-right: calc(var(--layout-margin) / 2);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -167,7 +172,7 @@
   order: 2;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin-right: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+  margin-right: calc(var(--layout-margin) / 2);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -179,8 +184,8 @@
   order: 3;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: var(--inner-primary);
+  padding-left: var(--inner-primary);
   margin-right: auto;
 }
 
@@ -194,10 +199,13 @@
     center no-repeat;
 }
 
-.button__74017 {
+.button__74017,
+.buttons__74017 .buttonContainer__74017,
+.buttons__74017 .buttonContainer_e6e74f {
   padding: 0px;
   margin: 0px;
   width: 44px;
+  justify-content: center;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -237,11 +245,6 @@
 // ║ Input                    ║ Uplaod                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.scrollableContainer__74017 {
-  max-height: unset !important;
-}
-
 // No Divider
 .scrollableContainer__74017 .divider__908e2 {
   display: none;
@@ -252,7 +255,7 @@
   gap: 12px;
   background: transparent;
   border-radius: var(--radius-primary);
-  padding: var(--layout-margin) 0px var(--layout-margin) 0px;
+  padding: calc(var(--layout-margin) / 2) 0px calc(var(--layout-margin) / 2) 0px;
   margin: 0px;
 }
 
@@ -271,7 +274,7 @@
 
 // Background
 .chat_f75fb0 .bar__84522 {
-  margin: var(--layout-margin) 0px 0px 0px;
+  margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }

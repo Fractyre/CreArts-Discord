@@ -4,7 +4,7 @@
 
 .channelNotice_e88f3f,
 .notice__30f28 {
-  margin-bottom: var(--layout-margin);
+  margin-bottom: calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
   background: var(--background-secondary) !important;
   box-shadow: none;

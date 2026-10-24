@@ -2,7 +2,7 @@
 /* ║ No Sticker               ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.stickerButton__74017{
-  position: fixed;
-  visibility: hidden;
+/* Hide the whole slot so the remaining buttons close ranks */
+.buttons__74017 .buttonContainer__74017:has(.stickerButton__74017) {
+  display: none;
 }

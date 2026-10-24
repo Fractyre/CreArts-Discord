@@ -4,7 +4,7 @@
 
 // Background
 .container__9293f {
-  margin: 0px 0px calc(var(--layout-margin) / 2) calc(var(--layout-margin) / 2);
+  margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   background: transparent !important;
   padding: 0px;
   width: unset;
@@ -15,7 +15,8 @@
 // Title
 .children__9293f {
   background: var(--background-secondary);
-  margin: 0px calc(var(--layout-margin) / 2) 0px 0px;
+  margin: 0px;
+  padding: 0px var(--inner-secondary);
   border-radius: var(--radius-primary);
   height: 100%;
 }
@@ -24,6 +25,7 @@
 .toolbar__9293f {
   background: var(--background-secondary);
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
+  padding: 0px var(--inner-primary) !important;
   border-radius: var(--radius-primary);
   height: 100%;
 }

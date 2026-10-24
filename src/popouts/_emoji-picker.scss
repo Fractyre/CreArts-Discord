@@ -83,5 +83,5 @@ position: relative;
 position: absolute;
 right: 0px !important;
 bottom: 0px !important;
-left: calc(var(--layout-margin-right) + var(--width-members) + calc(var(--layout-margin) / 2) + calc(var(--layout-margin) / 2)) !important;
+left: calc(var(--layout-margin-right) + var(--width-members) + calc(var(--layout-margin) / 2)) !important;
 }

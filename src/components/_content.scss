@@ -15,12 +15,19 @@
 .chatContent_f75fb0 {
   margin: 0px 0px 0px 0px;
   border-radius: var(--radius-primary);
+  background: transparent;
+  min-width: 0px;
 }
 
 // Background (Chat)
 .chat_f75fb0 .messagesWrapper__36d07 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
+}
+
+// No Fade (a square strip over the card's rounded bottom corners)
+.chatGradient__36d07 {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -40,6 +47,10 @@
   display: none;
 }
 
+.tabBody__133bf {
+  background: transparent;
+}
+
 .container__7d20c {
   background: transparent;
 }
@@ -54,7 +65,7 @@
 .nowPlayingColumn__133bf {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px var(--layout-margin);
+  margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
 .applicationStore_f07d62,
@@ -249,7 +260,7 @@
 .wrapper_cb9592.minimum_cb9592 {
   margin-top: calc(var(--layout-margin-top) + var(--height-header));
   background-color: transparent;
-  margin-bottom: var(--layout-margin);
+  margin-bottom: calc(var(--layout-margin) / 2);
 }
 
 .wrapper_cb9592.minimum_cb9592 .root_bfe55a {

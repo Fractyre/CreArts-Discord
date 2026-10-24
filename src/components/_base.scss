@@ -28,6 +28,6 @@
 }
 
 // No Focus Outline
-ul.tree_ef3116:focus {
+ul.tree_ef3116:focus:not(:focus-visible) {
   outline: none;
 }
