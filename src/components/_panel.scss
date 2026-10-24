@@ -60,28 +60,25 @@
   margin: 0px;
 }
 
-// Avatar
+// Avatar + Name
 .container__37e49 .accountPopoutButtonWrapper__37e49 {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
-  margin: var(--inner-primary) var(--inner-primary) 0px var(--inner-primary);
+  margin: 0px var(--inner-primary);
   padding: var(--inner-primary);
   grid-column: 1;
-  height: 32px;
+  align-self: center;
 }
 
 // Name
 .container__37e49 .nameTag__37e49 {
-  background: var(--background-primary);
-  border-radius: var(--radius-secondary);
-  margin: var(--inner-primary) var(--inner-primary) 0px 0px;
-  padding: var(--inner-primary);
-  grid-column: 2;
-  height: 32px;
+  background: transparent;
+  margin: 0px;
+  padding: 0px 0px 0px var(--inner-primary);
 }
 
 // Button Area
-.container__37e49 .flex__7c0ba {
+.container__37e49 .buttons__37e49 {
   display: grid;
   margin-left: var(--inner-primary);
   margin-right: var(--inner-primary);

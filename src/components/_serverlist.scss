@@ -3,7 +3,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .guilds__5e434 {
-  margin: var(--layout-margin-top) 0px var(--layout-margin-bottom) var(--layout-margin-left);
+  margin: 0px calc(var(--layout-margin) / 2) 0px 0px !important;
+  width: var(--layout-width-guild);
   border-radius: var(--radius-primary);
 }
 

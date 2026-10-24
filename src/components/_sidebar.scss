@@ -23,16 +23,56 @@
 // Spacing
 .sidebar__5e434 {
   background: transparent;
-  margin: 0px calc(var(--layout-margin) / 2) 0px 0px;
+  margin: 0px;
   border-radius: var(--radius-primary) !important;
-  width: var(--width-channel);
+  width: calc(var(--layout-width-guild) + (var(--layout-margin) / 2) + var(--width-channel)) !important;
+}
+
+// Channel column leaves room for the user panel below it
+.sidebarList__5e434 {
+  margin-bottom: calc(50px + var(--inner-primary) + var(--inner-primary) + (var(--layout-margin) / 2)) !important;
+}
+
+// No Resize
+.sidebarResizeHandle__5e434 {
+  display: none;
+}
+
+// No Bottom Shadow
+.sidebar__5e434::after {
+  display: none;
+}
+
+// DM List (Discord reserves panel room here too; the channel column already does)
+.privateChannels_e6b769 .scroller__99e7c {
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+  margin-bottom: 0px;
+}
+
+// DM List Text (Discord paints idle rows with the muted color, which CreArts keeps faint for timestamps)
+.privateChannels_e6b769 .interactive__972a0 .name__20a53 {
+  color: var(--channels-default);
+}
+
+.privateChannels_e6b769 .interactive__972a0:hover .name__20a53 {
+  color: var(--interactive-hover);
+}
+
+.privateChannels_e6b769 .interactiveSelected__972a0 .name__20a53 {
+  color: var(--interactive-active);
 }
 
 // Background
 .container__2637a,
 .sidebar__5e434 .thin__99f8c {
   background: transparent;
-  margin-bottom: calc(var(--layout-margin) / 2);
+  margin-bottom: 0px;
+}
+
+// Discord pads the channel list for its full-width panel; the channel column already leaves room
+.container__2637a {
+  padding-bottom: 0px;
 }
 
 .privateChannels_e6b769 {
@@ -48,7 +88,7 @@
   border-radius: var(--radius-primary);
   box-shadow: none;
   height: var(--height-header);
-  margin-bottom: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+  margin-bottom: calc(var(--layout-margin) / 2);
 }
 
 .searchBar_e6b769 .searchBarComponent_ee924e {
@@ -167,7 +207,7 @@
 .scroller__629e4 {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px 0px !important;
+  margin: 0px !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -177,6 +217,10 @@
 // Background
 .panels__5e434 {
   background: var(--background-secondary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
+  margin: 0px;
   border-radius: var(--radius-primary);
+  left: calc(var(--layout-width-guild) + (var(--layout-margin) / 2)) !important;
+  right: 0px;
+  bottom: 0px;
+  width: auto !important;
 }
