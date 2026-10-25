@@ -47,6 +47,8 @@
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   overflow: hidden;
+  // Keeps its width when the chat column grows (multiline input squeezed it, as it did the member list)
+  flex-shrink: 0;
 }
 
 // No Frame (Discord draws a 2px primary-colour frame around the profile; themed profiles keep theirs)
