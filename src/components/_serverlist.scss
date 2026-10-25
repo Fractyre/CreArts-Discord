@@ -16,6 +16,17 @@
   background: transparent;
 }
 
+// Icons centre in the column (Discord sizes items wider than --layout-width-guild and reserves a scrollbar gutter)
+.guilds__5e434 .scroller_ef3116 {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+
+.guilds__5e434 .listItem__650eb,
+.guilds__5e434 .folderGroup__48112 {
+  width: 100%;
+}
+
 .platform-win .scroller_ef3116 {
   padding-top: 12px;
 }

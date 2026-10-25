@@ -306,7 +306,7 @@
 
 
 
-  --input-background: #202225;
+  --input-background: var(--background-primary);
   --input-placeholder-text: hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%);
   --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
   --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
