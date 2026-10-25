@@ -3,11 +3,22 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .channelNotice_e88f3f,
-.notice__30f28 {
+.notice__30f28,
+.chatHeaderBar_dc83f5 {
   margin-bottom: calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
   background: var(--background-secondary) !important;
   box-shadow: none;
+}
+
+// Bar above the messages ("This channel is not on your channel list."); Discord indents the text 28px
+.chatHeaderBar_dc83f5 {
+  padding: var(--inner-primary) var(--inner-primary) var(--inner-primary) var(--inner-secondary);
+}
+
+// No Line (Discord's 1px separator just below the bar)
+.chatHeaderBar_dc83f5::after {
+  display: none;
 }
 .chat_f75fb0 .content_d125d2,
 .chat_f02135 .content_d125d2 {

@@ -10,14 +10,9 @@
   width: calc(var(--layout-width-guild) + (var(--layout-margin) / 2) + var(--width-channel)) !important;
 }
 
-// Channel column leaves room for the user panel below it
+// Channel column leaves room for the panels below it (Discord measures them, voice and activity panels included)
 .sidebarList__5e434 {
-  margin-bottom: calc(var(--height-panel) + (var(--layout-margin) / 2)) !important;
-}
-
-// No Resize
-.sidebarResizeHandle__5e434 {
-  display: none;
+  margin-bottom: calc(var(--custom-app-panels-height, var(--height-panel)) + (var(--layout-margin) / 2)) !important;
 }
 
 // No Bottom Shadow
@@ -108,6 +103,9 @@
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   height: var(--height-header);
+  // Discord's 8px padding left 27px for its 31px dropdown, which overflowed downwards and sat off-centre
+  padding: 0px var(--inner-primary);
+  align-items: center;
   margin: 0px 0px calc(var(--layout-margin) / 2) 0px;
 }
 
@@ -124,6 +122,12 @@
 .animatedContainer_f37cb1 {
   border-radius: var(--radius-primary);
   box-shadow: none;
+}
+
+// Clip the header's shading to the card (Discord's dark ellipse behind the name reaches past the banner's top-left
+// corner); clip-path only cuts the painting, overflow: hidden broke the banner's layout
+.container_f37cb1.hasBanner_f37cb1 {
+  clip-path: inset(0px round var(--radius-primary));
 }
 
 // Spacing
@@ -157,27 +161,12 @@
   box-shadow: none;
 }
 
-// Background
+// Background (the header's bottom margin already spaces it from above)
 .channelNotice_e2d7b8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px;
+  margin: 0px 0px calc(var(--layout-margin) / 2) 0px;
   padding: 12px;
-}
-
-// Normal
-.channelNotice_e2d7b8 .textBlock_e2d7b8:first-child,
-.channelNotice_e2d7b8 .button__201d5 {
-  display: none;
-}
-
-// Hover
-.channelNotice_e2d7b8:hover .textBlock_e2d7b8:first-child {
-  display: flex;
-}
-
-.channelNotice_e2d7b8:hover .button__201d5 {
-  display: block;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

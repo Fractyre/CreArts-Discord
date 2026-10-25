@@ -24,8 +24,8 @@
   min-width: 0px;
 }
 
-// Background (Chat)
-.chat_f75fb0 .messagesWrapper__36d07 {
+// Background (Chat; .chat_ee72fa is the thread and voice chat side panel)
+:is(.chat_f75fb0, .chat_ee72fa) .messagesWrapper__36d07 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
@@ -186,6 +186,11 @@
   background: var(--background-secondary) !important;
 }
 
+// Static like every other header (Discord slides the whole page in from the top, header included)
+.applicationStore_f07d62 .fadeInFromTop__02f2d {
+  animation: none;
+}
+
 .applicationStore_f07d62 .navBar__131a1 .children__9293f {
   background: transparent;
 }
@@ -221,7 +226,8 @@
   display: none;
 }
 
-.container_a592e1 .innerContainer_e1147e > .scroller__23746 {
+// (Discover > Servers wraps it in .container_d08938 instead)
+.container_a592e1 :is(.innerContainer_e1147e, .container_d08938) > .scroller__23746 {
   flex: 1 1 auto;
   min-height: 0px;
   height: auto;
@@ -249,13 +255,40 @@
 // ║ Content                  ║ Layout (Voice)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// No Background (Discord's square block showed in the gap beside the call card and behind its rounded corners; the DM
+// call's .minimum_cb9592 variant sets it with a stronger rule)
+.wrapper_cb9592,
+.channelChatWrapper_cb9592 {
+  background: transparent !important;
+}
+
+// Discord squares the call off while its chat panel is open
 .callContainer_cb9592 {
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
-  border-radius: var(--radius-primary);
+  border-radius: var(--radius-primary) !important;
 }
 
 .callContainer_cb9592 .container__9293f {
   margin-left: 0px;
+}
+
+// Header and top bar card are both transparent over the call, so they read as one row: end the toolbar under the card,
+// its last icon one toolbar gap (--inner-primary) from the card's first (toolbar padding + card gap + card padding read
+// as one wide gap)
+.callContainer_cb9592 .container__9293f {
+  margin-right: calc(var(--top-bar-width) - var(--inner-secondary));
+}
+
+// With the chat panel open the call no longer reaches the top bar card, so its header needs no room for it
+.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2))
+  .callContainer_cb9592
+  .container__9293f {
+  margin-right: 0px;
+}
+
+// Header floats over the video like Discord's (its cards touched the call card's rounded edges)
+.callContainer_cb9592 :is(.children__9293f, .toolbar__9293f) {
+  background: transparent;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

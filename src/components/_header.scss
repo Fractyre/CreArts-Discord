@@ -29,6 +29,18 @@
   height: 100%;
 }
 
+// The title truncates instead (a full toolbar, e.g. a call's clip and stream quality badges, squeezed its items and
+// clipped the quality badge)
+.toolbar__9293f,
+.toolbar__9293f > * {
+  flex-shrink: 0;
+}
+
+// Clip badge: the toolbar's gap alone after it, like the other items (its own right margin doubled it)
+.toolbar__9293f > .clipsEnabledIndicator__8c88a {
+  margin-right: 0px;
+}
+
 // Icons
 .button__9db96 {
   margin: 0px;

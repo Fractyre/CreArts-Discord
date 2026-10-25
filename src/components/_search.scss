@@ -27,6 +27,8 @@
 
 // Collapsed to a plain toolbar icon until focused or holding a query (the clear icon shows then)
 .search__49676 {
+  // Sized by the width below (Discord's flex: 0 1 244px overrode it, so it only collapsed when the header ran short)
+  flex: none;
   width: 31px;
   margin-left: 0px;
   transition: width 0.2s ease;
@@ -48,14 +50,14 @@
   background: transparent;
 }
 
-// Magnifier (the bolder pre-2023 Discord glyph from the CreArts screenshots, at the toolbar's 24px icon size)
+// Magnifier (the bolder pre-2023 Discord glyph from the CreArts screenshots, at the toolbar icons' 20px size)
 .search_c322aa .iconContainer__0c4c4 > svg:not(.clear__0c4c4) {
   opacity: 0;
 }
 
 // Container sized to the glyph so it doesn't spill into the padding; expanded, it keeps clear of the bar's edge
 .search_c322aa .iconContainer__0c4c4 {
-  width: 24px;
+  width: 20px;
 }
 
 .search__49676:is(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) .icon_c322aa {
@@ -69,8 +71,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: var(--interactive-normal);
   -webkit-mask: var(--search-icon) center / contain no-repeat;
   mask: var(--search-icon) center / contain no-repeat;
