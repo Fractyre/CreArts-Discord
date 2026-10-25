@@ -124,6 +124,12 @@
   box-shadow: none;
 }
 
+// Clip the header's shading to the card (Discord's dark ellipse behind the name reaches past the banner's top-left
+// corner); clip-path only cuts the painting, overflow: hidden broke the banner's layout
+.container_f37cb1.hasBanner_f37cb1 {
+  clip-path: inset(0px round var(--radius-primary));
+}
+
 // Spacing
 .hasBanner_f37cb1 .header_f37cb1 {
   background: transparent;
