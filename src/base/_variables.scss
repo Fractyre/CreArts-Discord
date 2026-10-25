@@ -454,8 +454,9 @@ html {
 
   // Controls
   --control-primary-background-default: var(--accent-primary);
-  --control-primary-background-hover: var(--accent-secondary);
-  --control-primary-background-active: var(--accent-tertiary);
+  // Brightens on hover like CreArts' icons (Discord's darker hover read as a jump to a different colour)
+  --control-primary-background-hover: #{skin(accent, 5%)};
+  --control-primary-background-active: #{skin(accent, -5%)};
   --input-background-default: var(--input-background);
   --input-placeholder-text-default: var(--input-placeholder-text);
 
