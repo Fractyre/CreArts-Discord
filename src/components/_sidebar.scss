@@ -103,6 +103,9 @@
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   height: var(--height-header);
+  // Discord's 8px padding left 27px for its 31px dropdown, which overflowed downwards and sat off-centre
+  padding: 0px var(--inner-primary);
+  align-items: center;
   margin: 0px 0px calc(var(--layout-margin) / 2) 0px;
 }
 
@@ -152,27 +155,12 @@
   box-shadow: none;
 }
 
-// Background
+// Background (the header's bottom margin already spaces it from above)
 .channelNotice_e2d7b8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px;
+  margin: 0px 0px calc(var(--layout-margin) / 2) 0px;
   padding: 12px;
-}
-
-// Normal
-.channelNotice_e2d7b8 .textBlock_e2d7b8:first-child,
-.channelNotice_e2d7b8 .button__201d5 {
-  display: none;
-}
-
-// Hover
-.channelNotice_e2d7b8:hover .textBlock_e2d7b8:first-child {
-  display: flex;
-}
-
-.channelNotice_e2d7b8:hover .button__201d5 {
-  display: block;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
