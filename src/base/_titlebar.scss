@@ -15,10 +15,74 @@
 // ║ Titlebar                 ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.platform-win .layer__960e4 {
-  top: -22px;
-  padding-top: calc(var(--height-titlebar) - 2px);
+// Spacing (Discord's top bar fills the top window margin instead of sitting below it)
+body,
+.refresh-title-bar-small {
+  --custom-app-top-bar-height: var(--layout-margin-top);
+}
+
+.base__5e434 > .bar_c38106 {
+  height: var(--layout-margin-top);
+  min-height: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Titlebar                 ║ Top Bar                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// The empty strip stays as the window's drag area; inbox and window buttons move into a card at the end of the header row
+.base__5e434 {
+  --top-bar-slots: 4; // Inbox, Minimize, Maximize, Close
+  --top-bar-slot: 32px;
+  --top-bar-width: calc(var(--top-bar-slots) * var(--top-bar-slot) + (var(--top-bar-slots) - 1) * var(--inner-primary) + var(--inner-secondary) * 2);
+}
+
+// Extra button (e.g. Discord's update download)
+.base__5e434:has(> .bar_c38106 > .trailing_c38106 > div:not(.winButtons_c38106, .iconWrapper__468db)) {
+  --top-bar-slots: 5;
+}
+
+// No Back/Forward, No Title
+.base__5e434 > .bar_c38106 > .leading_c38106,
+.base__5e434 > .bar_c38106 > .title_c38106 {
+  display: none;
+}
+
+// Card
+.base__5e434 > .bar_c38106 > .trailing_c38106 {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  width: var(--top-bar-width);
+  height: var(--height-header);
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px var(--inner-secondary);
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+// Header row makes room for the card
+.base__5e434 .container__9293f {
+  margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+}
+
+// Buttons
+.trailing_c38106 > .winButtons_c38106 {
+  display: contents;
+}
+
+.trailing_c38106 > .winButtons_c38106::before {
+  display: none;
+}
+
+.trailing_c38106 .winButton_c38106,
+.trailing_c38106 .iconWrapper__468db .clickable__81391 {
+  width: var(--top-bar-slot);
+  height: var(--top-bar-slot);
+  justify-content: center;
+  border-radius: var(--radius-tertiary);
 }
 
 // Background

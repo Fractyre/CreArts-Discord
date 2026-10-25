@@ -10,9 +10,9 @@
   background: transparent !important;
 }
 
-// Spacing
+// Spacing (no top margin: the top bar fills it, see Titlebar)
 .base__5e434 {
-  margin: var(--layout-margin-top) var(--layout-margin-right) var(--layout-margin-bottom) var(--layout-margin);
+  margin: 0px var(--layout-margin-right) var(--layout-margin-bottom) var(--layout-margin);
 }
 
 // No Lines
