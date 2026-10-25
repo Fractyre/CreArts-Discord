@@ -80,7 +80,6 @@
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.applicationStore_f07d62,
 .container__133bf {
   background: transparent !important;
   border: none;
@@ -101,18 +100,31 @@
   background: transparent;
 }
 
-// Header
-.shop__6db1d .headerBar__80679 {
+// Header (Shop, Quests)
+.shop__6db1d .headerBar__80679,
+.container__955a3 .headerBar__1a9ce {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
   padding: 0px var(--inner-secondary);
 }
 
-// Background
-.shopViewWrapper__6db1d {
+// Background (Shop, Quests)
+.shopViewWrapper__6db1d,
+.container__955a3 > .scroller__23746 {
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
   overflow: hidden;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Nitro)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.applicationStore_f07d62 {
+  margin-left: calc(var(--layout-margin) / 2);
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -132,10 +144,15 @@
   border-radius: var(--radius-primary);
 }
 
-// No Background (Discord's own square layers inside the card)
+// No Background (Discord's own square layers inside the Discover and Nitro cards)
 .homeWrapper__0920e,
 .scroller__02f2d {
   background: transparent;
+}
+
+// Header keeps clear of the top bar card
+.headerBar__8a7fc {
+  padding-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
