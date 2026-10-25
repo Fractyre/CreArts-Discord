@@ -255,9 +255,17 @@
 // ║ Content                  ║ Layout (Voice)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// No Background (Discord's square block showed in the gap beside the call card and behind its rounded corners; the DM
+// call's .minimum_cb9592 variant sets it with a stronger rule)
+.wrapper_cb9592,
+.channelChatWrapper_cb9592 {
+  background: transparent !important;
+}
+
+// Discord squares the call off while its chat panel is open
 .callContainer_cb9592 {
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
-  border-radius: var(--radius-primary);
+  border-radius: var(--radius-primary) !important;
 }
 
 .callContainer_cb9592 .container__9293f {
