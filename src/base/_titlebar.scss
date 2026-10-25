@@ -22,6 +22,8 @@ body,
   --top-bar-slots: 4; // Inbox, Minimize, Maximize, Close
   --top-bar-slot: 32px;
   --top-bar-width: calc(var(--top-bar-slots) * var(--top-bar-slot) + (var(--top-bar-slots) - 1) * var(--inner-primary) + var(--inner-secondary) * 2);
+  // Room a header row leaves for the card
+  --top-bar-reserve: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
 }
 
 // Extra button (e.g. Discord's update download)
@@ -54,7 +56,7 @@ body,
 
 // Header row makes room for the card
 .base__5e434 .container__9293f {
-  margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+  margin-right: var(--top-bar-reserve);
 }
 
 // Buttons

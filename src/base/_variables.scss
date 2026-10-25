@@ -57,6 +57,7 @@
   // Height (Custom)
   --height-titlebar: var(--SKIN-height-titlebar, 32px);
   --height-header: var(--SKIN-height-header, 44px);
+  --height-panel: calc(50px + var(--inner-primary) * 2);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

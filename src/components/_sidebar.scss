@@ -12,7 +12,7 @@
 
 // Channel column leaves room for the user panel below it
 .sidebarList__5e434 {
-  margin-bottom: calc(50px + var(--inner-primary) + var(--inner-primary) + (var(--layout-margin) / 2)) !important;
+  margin-bottom: calc(var(--height-panel) + (var(--layout-margin) / 2)) !important;
 }
 
 // No Resize

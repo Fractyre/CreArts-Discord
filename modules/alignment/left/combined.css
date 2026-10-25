@@ -11,6 +11,8 @@
 
 /* Anchor the pinned cards to the server list instead of its scroller */
 .guilds__5e434 {
+  /* From the list's top edge up to the top of the pinned card */
+  --combined-offset: calc(var(--combined-top) + (var(--layout-margin) / 2));
   overflow: visible !important;
   /* Discord's edge fade is a mask, which would hide the pinned cards outside the list */
   mask: none !important;
@@ -30,7 +32,7 @@
 
 /* Spacing (outranks the core margin, which loads later) */
 .sidebar__5e434 > .guilds__5e434 {
-  margin-top: calc(var(--combined-top) + (var(--layout-margin) / 2)) !important;
+  margin-top: var(--combined-offset) !important;
   margin-bottom: calc(var(--combined-bottom) + (var(--layout-margin) / 2)) !important;
 }
 
@@ -41,7 +43,7 @@
 /* Home Button */
 .guilds__5e434 .tutorialContainer__1f388 {
   position: absolute;
-  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1);
+  top: calc(var(--combined-offset) * -1);
   left: 0px;
   width: 100%;
   height: var(--combined-top) !important;
@@ -51,24 +53,22 @@
   border-radius: var(--radius-primary);
 }
 
-/* Explore Button */
-.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]) {
+/* Explore, Add Server Buttons */
+.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]),
+.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
   position: absolute;
   z-index: 1;
-  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1 + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
   left: 0px;
   width: 100%;
   margin: 0px;
 }
 
-/* Add Server Button */
+.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]) {
+  top: calc(var(--combined-offset) * -1 + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
+}
+
 .guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
-  position: absolute;
-  z-index: 1;
-  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1 + var(--inner-secondary) + (var(--guild-icon) + var(--guild-spacing)) * 2);
-  left: 0px;
-  width: 100%;
-  margin: 0px;
+  top: calc(var(--combined-offset) * -1 + var(--inner-secondary) + (var(--guild-icon) + var(--guild-spacing)) * 2);
 }
 
 /* Separator */

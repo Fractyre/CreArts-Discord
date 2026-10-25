@@ -31,9 +31,14 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
-  height: calc(90px + var(--inner-primary) + var(--inner-primary));
+  height: var(--height-panel) !important;
   padding: 0px;
   margin: 0px;
+}
+
+// Last Card (Discord adds a bottom margin)
+.panels__5e434 > .container__37e49:last-child {
+  margin-bottom: unset !important;
 }
 
 // Avatar + Name
@@ -48,6 +53,7 @@
 
 // Name
 .container__37e49 .nameTag__37e49 {
+  min-width: unset !important;
   background: transparent;
   margin: 0px;
   padding: 0px 0px 0px var(--inner-primary);

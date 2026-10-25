@@ -124,10 +124,6 @@
   border-radius: var(--radius-primary);
 }
 
-.containerBackground__02f2d {
-  background: transparent;
-}
-
 // Header (the transparent variant sits in a column, where the header's width: unset collapsed it to a 0px pill)
 .container__9293f.transparent__9293f {
   align-self: stretch;
@@ -144,7 +140,7 @@
 .applicationStore_f07d62 {
   --split-h: var(--height-header);
   --split-g: calc(var(--layout-margin) / 2);
-  --split-w: calc(var(--top-bar-width) + var(--split-g));
+  --split-w: var(--top-bar-reserve);
   --split-r: var(--radius-primary);
   --split-fill: linear-gradient(#000, #000);
   --split-c: #000 calc(var(--split-r) - 1px), transparent var(--split-r);
@@ -204,7 +200,7 @@
   flex-shrink: 0;
   width: auto;
   height: var(--height-header);
-  margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+  margin-right: var(--top-bar-reserve);
   padding: 0px var(--inner-secondary);
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -224,6 +220,7 @@
 
 // No Background (Discord's own square layers inside the Discover and Nitro cards)
 .homeWrapper__0920e,
+.containerBackground__02f2d,
 .scroller__02f2d {
   background: transparent;
 }
