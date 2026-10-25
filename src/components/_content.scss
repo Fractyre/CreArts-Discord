@@ -186,6 +186,11 @@
   background: var(--background-secondary) !important;
 }
 
+// Static like every other header (Discord slides the whole page in from the top, header included)
+.applicationStore_f07d62 .fadeInFromTop__02f2d {
+  animation: none;
+}
+
 .applicationStore_f07d62 .navBar__131a1 .children__9293f {
   background: transparent;
 }
