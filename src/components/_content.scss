@@ -150,10 +150,31 @@
   border-radius: var(--radius-primary);
 }
 
-// Background
+// Background (a header card and a page card, like Quests)
 .container_a592e1 {
   margin-left: calc(var(--layout-margin) / 2);
+  background: transparent;
+}
+
+.container_a592e1 .headerBar__8a7fc {
+  position: relative;
+  flex-shrink: 0;
+  height: var(--height-header);
+  margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+  padding: 0px var(--inner-secondary);
   background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+.container_a592e1 .backdrop__8a7fc {
+  display: none;
+}
+
+.container_a592e1 .innerContainer_e1147e > .scroller__23746 {
+  flex: 1 1 auto;
+  min-height: 0px;
+  height: auto;
+  margin-top: calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
 }
 
@@ -162,12 +183,6 @@
 .scroller__02f2d {
   background: transparent;
 }
-
-// Header keeps clear of the top bar card
-.headerBar__8a7fc {
-  padding-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
-}
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (No Page)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
