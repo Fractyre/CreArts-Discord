@@ -10,13 +10,13 @@
   background: transparent;
 }
 
-// Height (one 44px slot, so the 11px text padding centres a single line)
-body {
+// Height (one 44px slot, so the 11px text padding centres a single line; scoped so popout inputs keep their size)
+.channelTextArea_f75fb0 {
   --custom-channel-textarea-text-area-height: 44px;
 }
 
 // Spacing
-.inner__74017 {
+.channelTextArea_f75fb0 .inner__74017 {
   margin-top: calc(var(--layout-margin) / 2);
 }
 
@@ -45,7 +45,7 @@ body {
   padding: 0px;
 }
 
-.textArea__74017 .slateTextArea_ec4baf {
+.channelTextArea_f75fb0 .textArea__74017 .slateTextArea_ec4baf {
   padding: 11px;
 }
 
