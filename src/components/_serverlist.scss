@@ -89,9 +89,11 @@
 // ║ Serverlist               ║ Folder                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Open folder tile matches the Home/Explore/Add tiles: same fill, the tile's own corners.
+// Keep Discord's padding: it makes this layer exactly one tile tall, and the folder animates between it and the preview below.
 .isExpanded__48112 .folderIconWrapper__48112 {
-  background: var(--background-secondary-alt);
-  border-radius: var(--radius-primary);
+  background: var(--background-primary);
+  border-radius: inherit;
 }
 
 .folderGroupBackground__48112 {
