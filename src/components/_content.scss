@@ -221,7 +221,8 @@
   display: none;
 }
 
-.container_a592e1 .innerContainer_e1147e > .scroller__23746 {
+// (Discover > Servers wraps it in .container_d08938 instead)
+.container_a592e1 :is(.innerContainer_e1147e, .container_d08938) > .scroller__23746 {
   flex: 1 1 auto;
   min-height: 0px;
   height: auto;
