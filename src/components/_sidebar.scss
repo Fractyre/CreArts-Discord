@@ -10,9 +10,9 @@
   width: calc(var(--layout-width-guild) + (var(--layout-margin) / 2) + var(--width-channel)) !important;
 }
 
-// Channel column leaves room for the user panel below it
+// Channel column leaves room for the panels below it (Discord measures them, voice and activity panels included)
 .sidebarList__5e434 {
-  margin-bottom: calc(var(--height-panel) + (var(--layout-margin) / 2)) !important;
+  margin-bottom: calc(var(--custom-app-panels-height, var(--height-panel)) + (var(--layout-margin) / 2)) !important;
 }
 
 // No Resize

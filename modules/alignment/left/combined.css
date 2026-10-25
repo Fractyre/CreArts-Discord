@@ -93,8 +93,12 @@
   margin: var(--inner-primary);
 }
 
-/* Nameplate clipped to the Avatar + Name box (Discord sizes it to the whole card) */
+/* Nameplate clipped to the Avatar + Name box (the card is static, so Discord's absolute nameplate sizes to the whole
+   panel stack, voice panel included; pin it to the bottom card) */
 .panels__5e434 > .container__37e49 > .fitInAccount_df39b2 {
+  top: auto;
+  bottom: 0px;
+  height: var(--height-panel);
   clip-path: inset(var(--inner-primary) round var(--radius-secondary));
 }
 
