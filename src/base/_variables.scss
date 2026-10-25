@@ -180,7 +180,7 @@
   --brightness: calc(1.5 - var(--saturation-factor, 1) * 0.5);
   --contrast: var(--saturation-factor, 1);
 
-  --focus-primary: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
+  --focus-primary: var(--accent-primary);
 
   --toast-background: #2f3136;
   --toast-header: #202225;
