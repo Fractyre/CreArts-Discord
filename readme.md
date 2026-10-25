@@ -1,4 +1,4 @@
-> **Archived for an indefinite period of time.**
+> **Revived for the 2025+ Discord client, BetterDiscord only.** The default left (combined) alignment is fully ported; the other alignment modules still use the old layout.
 
 <kbd>[<img title="Bulgarian" alt="Bulgarian" src="https://crearts-community.github.io/Assets/languages/bulgarian.png" width="40">](.github/docs/translations/readme/bulgarian.md)</kbd>
 <kbd>[<img title="Chinese" alt="Chinese" src="https://crearts-community.github.io/Assets/languages/chinese.png" width="40">](.github/docs/translations/readme/chinese.md)</kbd>
@@ -35,7 +35,7 @@
 
 **CreArts-Discord** is a theme for [Discord](https://discord.com) that gives you a new modern interface and adds at the same time many possibilities to be customized, one of the core features are [Skins](.github/docs/skins.md), which allow you to customize the appearance with [Variables](.github/docs/variables.md). The goal of this Discord theme is to wrap the standard Discord charm in a new visual idea.
 
-This project is licensed under the [MIT License](license), even though this project is under the MIT license, we would appreciate any recognition. CreArts is an actively developed theme, which is compatible with [Powercord](https://github.com/powercord-org/powercord), [Better Discord](https://github.com/BetterDiscord/BetterDiscord), [GooseMod](https://github.com/GooseMod/GooseMod) and many more. This repo is offered in several [Languages](.github/docs/translations.md), select your preferred language with the flags icon above.
+This project is licensed under the [MIT License](license), even though this project is under the MIT license, we would appreciate any recognition. CreArts is a [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord) theme; support for other client mods was dropped in the revival. This repo is offered in several [Languages](.github/docs/translations.md), select your preferred language with the flags icon above.
 
 ## Preview
 
@@ -101,7 +101,6 @@ pnpm run check-classes  # list selectors that no longer exist in Discord
 This theme uses extensions from other theme creators:
 
 * [**Discolored**](https://github.com/NYRI4/Discolored) | *Colorize Discord's boring SVGs.*
-* [**Cooler Activity Status**](https://github.com/mr-miner1/cooler-activity-status) | *Makes game activity cards cooler.*
 
 ## Support
 
