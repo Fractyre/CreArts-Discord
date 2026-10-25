@@ -6,7 +6,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "sass --no-source-map --style=compressed src/source.scss:src/source.css modules/custom/private.scss:modules/custom/private.css modules/custom/server.scss:modules/custom/server.css modules/custom/user.scss:modules/custom/user.css modules/custom/tags.scss:modules/custom/tags.css",
+    "build": "sass --no-source-map --style=compressed src/source.scss:src/source.css modules/custom:modules/custom",
     "dev": "node scripts/dev.js",
     "check-classes": "node scripts/check-classes.js",
     "lint": "prettier ./src --check",

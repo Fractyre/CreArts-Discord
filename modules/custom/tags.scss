@@ -2,35 +2,29 @@
 // ║ Tags                     ║ Mixins                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+@mixin pill($name, $background) {
+  position: relative;
+  content: "#{$name}";
+  background: #{$background};
+  border-radius: 3px;
+  color: #fff;
+  padding: 1px 5px 1px 5px;
+  margin-left: 8px;
+  top: -3px;
+  font-size: .625rem;
+  text-transform: uppercase;
+  line-height: .9375rem;
+}
+
 @mixin chat-normal($name, $background, $user-id:"") {
   @if $user-id != "" {
     .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55[style="color: #{$background};"]::after {
-      position: relative;
-      content: "#{$name}";
-      background: #{$background};
-      border-radius: 3px;
-      color: #fff;
-      padding: 1px 5px 1px 5px;
-      margin-left: 8px;
-      top: -3px;
-      font-size: .625rem;
-      text-transform: uppercase;
-      line-height: .9375rem;
+      @include pill($name, $background);
     }
   }
   @else {
     h2 .username_c19a55[style="color: #{$background};"]::after {
-      position: relative;
-      content: "#{$name}";
-      background: #{$background};
-      border-radius: 3px;
-      color: #fff;
-      padding: 1px 5px 1px 5px;
-      margin-left: 8px;
-      top: -3px;
-      font-size: .625rem;
-      text-transform: uppercase;
-      line-height: .9375rem;
+      @include pill($name, $background);
       font-weight: 500;
     }
     [style="color: #{$background};"] + .botTag_c19a55,
@@ -42,17 +36,7 @@
 
 @mixin chat-extra($name, $background, $user-id) {
   .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55::after {
-    position: relative;
-    content: "#{$name}";
-    background: #{$background};
-    border-radius: 3px;
-    color: white;
-    padding: 1px 5px 1px 5px;
-    margin-left: 8px;
-    top: -3px;
-    font-size: .625rem;
-    text-transform: uppercase;
-    line-height: .9375rem;
+    @include pill($name, $background);
     font-weight: 500;
   }
   .botTagCozy_c19a55 {

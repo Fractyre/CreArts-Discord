@@ -1,20 +1,16 @@
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Version                  ║ Settings Info                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Text Selection
-.versionHash__081d7 {
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
+.bd-version-info > div {
   user-select: all;
 }
 
 //  content: 'CreArts ' var(--info-version) ' - ' var(--info-skin) ' - by ' var(--info-author);
 
 // Version
-div:has(> .versionHash__081d7)::after {
+.bd-version-info::after {
   display: block;
 
   content: "CreArts " var(--info-version);
@@ -23,54 +19,6 @@ div:has(> .versionHash__081d7)::after {
   text-transform: none;
   color: var(--text-muted);
   margin-top: 20px;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
   cursor: text;
 }
-
-/*
-// Skin
-div:has(> .versionHash__081d7)::before {
-  display: block;
-  position: absolute;
-  content: var(--info-skin);
-  font-size: 12px;
-  line-height: 16px;
-  text-transform: none;
-  color: var(--text-muted);
-  margin-top: 104px;
-}
-*/
-/*
-  {
-    &
-  
-    &::before {
-      content: "Current " !important;
-      color: var(--text-muted);
-      opacity: 1;
-      filter: brightness(100%);
-      display: block;
-      font-size: 12px;
-      font-family: var(--font-primary);
-      font-weight: 400;
-      position: absolute;
-      margin-top: 102px;
-    }
-  }
-  
-  .socialLinks__7df54::after {
-    content: "Style: " var(--style-name) " | Creator: " var(--style-creator) !important;
-    color: var(--text-muted);
-    opacity: 1;
-    filter: brightness(180%);
-    display: block;
-    font-size: 10px;
-    font-family: var(--font-primary);
-    font-weight: 400;
-    position: absolute;
-    margin-top: 132px;
-  }
-  */

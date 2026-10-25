@@ -34,11 +34,7 @@ Which operating system do you use?
 - [ ] macOS
 
 **tested with**:
-- [ ] Powercord:
-- [ ] GooseMod:
 - [ ] BetterDiscord:
-- [ ] Vizality:
-- [ ] Web:
 
 # Checklist:
 

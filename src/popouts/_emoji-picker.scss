@@ -9,7 +9,7 @@
 
 // Emoji Picker
 #emoji-picker-tab {
-  order: 1; 
+  order: 1;
   margin-left: 0px;
   margin-right: 8px;
 }
@@ -26,62 +26,24 @@
   margin-left: 0px;
 }
 
-/*
-.navList__08434 {
-align-items: center;
-justify-content: center;
-}
-*/
-
-
-
-
-
-
-
-
-
-/*
-.wrapper_dc0b29 {
-position: relative;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 .drawerSizingWrapper__08434 {
-    resize: vertical;
+  resize: vertical;
 }
-
 
 //.resizeHandle__08434 {display: none;}
 
-
-
-
 .positionContainer__08434 {
-    resize: vertical;
-    width: 100%;
-    height: 644px;
-    pointer-events: none;
-    max-width: 100%;
-    margin: 0px;
+  resize: vertical;
+  width: 100%;
+  height: 644px;
+  pointer-events: none;
+  max-width: 100%;
+  margin: 0px;
 }
 
-
 .positionLayer__08434 {
-position: absolute;
-right: 0px !important;
-bottom: 0px !important;
-left: calc(var(--layout-margin-right) + var(--width-members) + calc(var(--layout-margin) / 2)) !important;
+  position: absolute;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: calc(var(--layout-margin-right) + var(--width-members) + calc(var(--layout-margin) / 2)) !important;
 }

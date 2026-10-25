@@ -1,11 +1,9 @@
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Input                    ║ Layout                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat_f75fb0 .scrollableContainer__74017,
-.chat_f02135 .scrollableContainer__74017,
+:is(.chat_f75fb0, .chat_f02135) .scrollableContainer__74017,
 .channelTextArea_f75fb0 {
   background: transparent;
 }
@@ -13,6 +11,7 @@
 // Height (one 44px slot, so the 11px text padding centres a single line; scoped so popout inputs keep their size)
 .channelTextArea_f75fb0 {
   --custom-channel-textarea-text-area-height: 44px;
+  margin-bottom: 0px;
 }
 
 // Spacing
@@ -20,28 +19,20 @@
   margin-top: calc(var(--layout-margin) / 2);
 }
 
-.channelTextArea_f75fb0 {
-  margin-bottom: 0px;
-}
-
-.chat_f75fb0 .form_f75fb0,
-.chat_f02135 .form_f75fb0 {
+:is(.chat_f75fb0, .chat_f02135) .form_f75fb0 {
   margin: 0px;
   padding: 0px;
   display: flex;
   flex-direction: column-reverse;
-
 }
 
 // Disabled
-.chat_f75fb0 .channelTextAreaDisabled__74017,
-.chat_f02135 .channelTextAreaDisabled__74017 {
+:is(.chat_f75fb0, .chat_f02135) .channelTextAreaDisabled__74017 {
   display: none;
 }
 
 // Text
-.chat_f75fb0 .textArea__74017,
-.chat_f02135 .textArea__74017 {
+:is(.chat_f75fb0, .chat_f02135) .textArea__74017 {
   padding: 0px;
 }
 
@@ -49,15 +40,12 @@
   padding: 11px;
 }
 
-
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Input                    ║ Reply                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat_f75fb0 .replyBar__841c8,
-.chat_f02135 .replyBar__841c8 {
+:is(.chat_f75fb0, .chat_f02135) .replyBar__841c8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
@@ -65,37 +53,27 @@
 }
 
 // Spacing
-.chat_f75fb0 .clipContainer__841c8,
-.chat_f02135 .clipContainer__841c8 {
+:is(.chat_f75fb0, .chat_f02135) .clipContainer__841c8 {
   overflow: hidden;
   padding-top: 0px;
   margin-top: 0px;
 }
 
 // No Background
-.chat_f75fb0 .stackedBars__74017,
-.chat_f02135 .stackedBars__74017 {
+:is(.chat_f75fb0, .chat_f02135) .stackedBars__74017 {
   order: -1;
   background: transparent;
 }
 
-// No Separator
-.chat_f75fb0 .separator__841c8,
-.chat_f02135 .separator__841c8 {
+// No Separator, No Thread Suggestion
+:is(.chat_f75fb0, .chat_f02135) .separator__841c8,
+:is(.chat_f75fb0, .chat_f02135) .threadSuggestionBar__841c8 {
   display: none;
 }
 
-// No Thread Suggestion
-.chat_f75fb0 .threadSuggestionBar__841c8,
-.chat_f02135 .threadSuggestionBar__841c8 {
-  display: none;
-}
-
-.chat_f75fb0 .colorLink__201d5,
-.chat_f02135 .colorLink__201d5 {
+:is(.chat_f75fb0, .chat_f02135) .colorLink__201d5 {
   color: var(--interactive-normal);
 }
-
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Input                    ║ Announcements                                                                           ║
@@ -132,8 +110,7 @@
   order: 1;
 }
 
-.chat_f75fb0 .base_b88801,
-.chat_f02135 .base_b88801 {
+:is(.chat_f75fb0, .chat_f02135) .base_b88801 {
   position: relative;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -200,8 +177,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat_f02135 .textArea__74017,
-.chat_f75fb0 .textArea__74017 {
+:is(.chat_f75fb0, .chat_f02135) .textArea__74017 {
   order: 2;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);

@@ -1,3 +1,34 @@
+@use "sass:math";
+@use "sass:meta";
+@use "sass:string";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Palette Function                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// One palette colour: hue, saturation and alpha from --SKIN-<name>-* (else --<name>-*), lightness shifted by $shift.
+// $shift is a percentage or a variable name (grading-0); $alpha replaces the alpha, $fade lowers it.
+@function skin($name, $shift, $alpha: null, $fade: null) {
+  $a: "var(--SKIN-#{$name}-a, var(--#{$name}-a))";
+  @if meta.type-of($shift) == string {
+    $shift: "- var(--SKIN-#{$shift}, var(--#{$shift}))";
+  } @else if $shift > 0 {
+    $shift: "+ #{$shift}";
+  } @else {
+    $shift: "- #{math.abs($shift)}";
+  }
+  @if $fade {
+    $alpha: "calc(#{$a} - #{$fade})";
+  } @else if not $alpha {
+    $alpha: $a;
+  }
+  @return string.unquote(
+    "hsla(var(--SKIN-#{$name}-h, var(--#{$name}-h)), " +
+      "calc(var(--saturation-factor, 1) * var(--SKIN-#{$name}-s, var(--#{$name}-s))), " +
+      "calc(var(--SKIN-#{$name}-l, var(--#{$name}-l)) #{$shift} + var(--SKIN-lightness, var(--lightness))), #{$alpha})"
+  );
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Variables                ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -15,14 +46,29 @@
   // Fonts (Custom)
   --font-titlebar: var(--SKIN-titlebar-font, "Segoe UI", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif);
   --font-primary: var(--SKIN-primary-font, "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif);
-  --font-display: var(--SKIN-display-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";);
-  --font-headline: var(--SKIN-headline-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";);
-  --font-code: var(--SKIN-code-font, "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", Courier, monospace;);
-  
+  --font-display: var(--SKIN-display-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+  --font-headline: var(--SKIN-headline-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+  --font-code: var(
+    --SKIN-code-font,
+    "Consolas",
+    "Andale Mono WT",
+    "Andale Mono",
+    "Lucida Console",
+    "Lucida Sans Typewriter",
+    "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono",
+    "Liberation Mono",
+    "Nimbus Mono L",
+    "Monaco",
+    "Courier New",
+    Courier,
+    monospace;
+  );
+
   // Opacity (Custom)
-  --opacity-titlebar-wordmark: var(--SKIN-opacity-titlebar-wordmark, 1.0);
-  --opacity-titlebar-title: var(--SKIN-opacity-titlebar-title, 1.0);
-  --opacity-titlebar-buttons: var(--SKIN-opacity-titlebar-buttons, 1.0);
+  --opacity-titlebar-wordmark: var(--SKIN-opacity-titlebar-wordmark, 1);
+  --opacity-titlebar-title: var(--SKIN-opacity-titlebar-title, 1);
+  --opacity-titlebar-buttons: var(--SKIN-opacity-titlebar-buttons, 1);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -57,6 +103,7 @@
   // Height (Custom)
   --height-titlebar: var(--SKIN-height-titlebar, 32px);
   --height-header: var(--SKIN-height-header, 44px);
+  --height-panel: calc(50px + var(--inner-primary) * 2);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -77,43 +124,43 @@
   --interactive-h: 216;
   --interactive-s: 4%;
   --interactive-l: 74%;
-  --interactive-a: 1.0;
+  --interactive-a: 1;
 
   // Background (Custom)
   --background-h: 220;
   --background-s: 8%;
   --background-l: 23%;
-  --background-a: 1.0;
+  --background-a: 1;
 
   // Accent (Custom)
   --accent-h: 235;
   --accent-s: 100%;
   --accent-l: 71%;
-  --accent-a: 1.0;
+  --accent-a: 1;
 
   // Green (Custom)
   --green-h: 153;
   --green-s: 46%;
   --green-l: 49%;
-  --green-a: 1.0;
+  --green-a: 1;
 
   // Yellow (Custom)
   --yellow-h: 38;
   --yellow-s: 96%;
   --yellow-l: 54%;
-  --yellow-a: 1.0;
+  --yellow-a: 1;
 
   // Red (Custom)
   --red-h: 0;
   --red-s: 85%;
   --red-l: 61%;
-  --red-a: 1.0;
+  --red-a: 1;
 
   // Purple (Custom)
   --purple-h: 262;
   --purple-s: 47%;
   --purple-l: 40%;
-  --purple-a: 1.0;
+  --purple-a: 1;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -122,71 +169,64 @@
 
 :is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
   // Interactive (Default)
-  --interactive-active: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 100% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --interactive-hover: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --interactive-normal: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --interactive-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
+  --interactive-active: #{skin(interactive, 100%)};
+  --interactive-hover: #{skin(interactive, 10%)};
+  --interactive-normal: #{skin(interactive, -10%)};
+  --interactive-muted: #{skin(interactive, -20%, $fade: 0.8)};
 
   // Background (Default)
-  --background-primary: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - var(--SKIN-grading-0, var(--grading-0)) + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --background-secondary: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - var(--SKIN-grading-1, var(--grading-1)) + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --background-secondary-alt: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - var(--SKIN-grading-2, var(--grading-2)) + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --background-tertiary: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - var(--SKIN-grading-3, var(--grading-3)) + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
+  --background-primary: #{skin(background, grading-0)};
+  --background-secondary: #{skin(background, grading-1)};
+  --background-secondary-alt: #{skin(background, grading-2)};
+  --background-tertiary: #{skin(background, grading-3)};
 
   // Accent (Custom)
-  --accent-primary: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
-  --accent-secondary: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
-  --accent-tertiary: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
+  --accent-primary: #{skin(accent, 0%)};
+  --accent-secondary: #{skin(accent, -10%)};
+  --accent-tertiary: #{skin(accent, -20%)};
 
   // Green (Custom)
-  --green-primary: hsla(var(--SKIN-green-h, var(--green-h)), calc(var(--saturation-factor, 1) * var(--SKIN-green-s, var(--green-s))), calc(var(--SKIN-green-l, var(--green-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-green-a, var(--green-a)));
-  --green-secondary: hsla(var(--SKIN-green-h, var(--green-h)), calc(var(--saturation-factor, 1) * var(--SKIN-green-s, var(--green-s))), calc(var(--SKIN-green-l, var(--green-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-green-a, var(--green-a)));
-  --green-tertiary: hsla(var(--SKIN-green-h, var(--green-h)), calc(var(--saturation-factor, 1) * var(--SKIN-green-s, var(--green-s))), calc(var(--SKIN-green-l, var(--green-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-green-a, var(--green-a)));
+  --green-primary: #{skin(green, 0%)};
+  --green-secondary: #{skin(green, -10%)};
+  --green-tertiary: #{skin(green, -20%)};
 
   // Yellow (Custom)
-  --yellow-primary: hsla(var(--SKIN-yellow-h, var(--yellow-h)), calc(var(--saturation-factor, 1) * var(--SKIN-yellow-s, var(--yellow-s))), calc(var(--SKIN-yellow-l, var(--yellow-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-yellow-a, var(--yellow-a)));
-  --yellow-secondary: hsla(var(--SKIN-yellow-h, var(--yellow-h)), calc(var(--saturation-factor, 1) * var(--SKIN-yellow-s, var(--yellow-s))), calc(var(--SKIN-yellow-l, var(--yellow-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-yellow-a, var(--yellow-a)));
-  --yellow-tertiary: hsla(var(--SKIN-yellow-h, var(--yellow-h)), calc(var(--saturation-factor, 1) * var(--SKIN-yellow-s, var(--yellow-s))), calc(var(--SKIN-yellow-l, var(--yellow-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-yellow-a, var(--yellow-a)));
+  --yellow-primary: #{skin(yellow, 0%)};
+  --yellow-secondary: #{skin(yellow, -10%)};
+  --yellow-tertiary: #{skin(yellow, -20%)};
 
   // Red (Custom)
-  --red-primary: hsla(var(--SKIN-red-h, var(--red-h)), calc(var(--saturation-factor, 1) * var(--SKIN-red-s, var(--red-s))), calc(var(--SKIN-red-l, var(--red-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-red-a, var(--red-a)));
-  --red-secondary: hsla(var(--SKIN-red-h, var(--red-h)), calc(var(--saturation-factor, 1) * var(--SKIN-red-s, var(--red-s))), calc(var(--SKIN-red-l, var(--red-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-red-a, var(--red-a)));
-  --red-tertiary: hsla(var(--SKIN-red-h, var(--red-h)), calc(var(--saturation-factor, 1) * var(--SKIN-red-s, var(--red-s))), calc(var(--SKIN-red-l, var(--red-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-red-a, var(--red-a)));
+  --red-primary: #{skin(red, 0%)};
+  --red-secondary: #{skin(red, -10%)};
+  --red-tertiary: #{skin(red, -20%)};
 
   // Purple (Custom)
-  --purple-primary: hsla(var(--SKIN-purple-h, var(--purple-h)), calc(var(--saturation-factor, 1) * var(--SKIN-purple-s, var(--purple-s))), calc(var(--SKIN-purple-l, var(--purple-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-purple-a, var(--purple-a)));
-  --purple-secondary: hsla(var(--SKIN-purple-h, var(--purple-h)), calc(var(--saturation-factor, 1) * var(--SKIN-purple-s, var(--purple-s))), calc(var(--SKIN-purple-l, var(--purple-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-purple-a, var(--purple-a)));
-  --purple-tertiary: hsla(var(--SKIN-purple-h, var(--purple-h)), calc(var(--saturation-factor, 1) * var(--SKIN-purple-s, var(--purple-s))), calc(var(--SKIN-purple-l, var(--purple-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-purple-a, var(--purple-a)));
+  --purple-primary: #{skin(purple, 0%)};
+  --purple-secondary: #{skin(purple, -10%)};
+  --purple-tertiary: #{skin(purple, -20%)};
 
   // Scrollbar (Default)
   --scrollbar-thin-track: transparent;
-  --scrollbar-thin-thumb: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - 9% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --scrollbar-auto-track: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - 6% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --scrollbar-auto-thumb: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - 9% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --scrollbar-auto-scrollbar-color-thumb: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - 9% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
-  --scrollbar-auto-scrollbar-color-track: hsla(var(--SKIN-background-h, var(--background-h)), calc(var(--saturation-factor, 1) * var(--SKIN-background-s, var(--background-s))), calc(var(--SKIN-background-l, var(--background-l)) - 9% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-background-a, var(--background-a)));
+  --scrollbar-thin-thumb: #{skin(background, -9%)};
+  --scrollbar-auto-track: #{skin(background, -6%)};
+  --scrollbar-auto-thumb: #{skin(background, -9%)};
+  --scrollbar-auto-scrollbar-color-thumb: #{skin(background, -9%)};
+  --scrollbar-auto-scrollbar-color-track: #{skin(background, -9%)};
 
   // Header
-  --header-primary: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 100% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --header-secondary: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
+  --header-primary: #{skin(interactive, 100%)};
+  --header-secondary: #{skin(interactive, -10%)};
 
   // Background Modifier (Default)
-  --background-modifier-hover: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 0% + var(--SKIN-lightness, var(--lightness))), 0.1);
-  --background-modifier-active: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 0% + var(--SKIN-lightness, var(--lightness))), 0.2);
-  --background-modifier-selected: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 0% + var(--SKIN-lightness, var(--lightness))), 0.2);
-  --background-modifier-interactive: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 0% + var(--SKIN-lightness, var(--lightness))), 0.18);
-  
+  --background-modifier-hover: #{skin(interactive, 0%, $alpha: 0.1)};
+  --background-modifier-active: #{skin(interactive, 0%, $alpha: 0.2)};
+  --background-modifier-selected: #{skin(interactive, 0%, $alpha: 0.2)};
+  --background-modifier-interactive: #{skin(interactive, 0%, $alpha: 0.18)};
 
   --brightness: calc(1.5 - var(--saturation-factor, 1) * 0.5);
   --contrast: var(--saturation-factor, 1);
 
   --focus-primary: var(--accent-primary);
-
-  --toast-background: #2f3136;
-  --toast-header: #202225;
-  --toast-contents: #36393f;
-  --toast-box-shadow: rgba(0, 0, 0, 0.2);
-  --toast-border: rgba(28, 36, 43, 0.6);
 
   --search-popout-option-fade: linear-gradient(90deg, rgba(24, 25, 28, 0), #18191c 80%);
   --search-popout-option-fade-hover: linear-gradient(90deg, rgba(54, 57, 63, 0), #36393f 50%);
@@ -196,54 +236,24 @@
   --search-popout-option-non-text-color: #caccce;
   --search-popout-option-filter-color: #caccce;
   --search-popout-option-answer-color: #caccce;
-  --search-popout-date-picker-border: 1px solid hsla(214, calc(var(--saturation-factor, 1) * 9.1%), 15.1%, 0.3);
-  --search-popout-date-picker-hint-text: #caccce;
-  --search-popout-date-picker-hint-value-text: #fff;
-  --search-popout-date-picker-hint-value-background: var(--brand-experiment);
-  --search-popout-date-picker-hint-value-background-hover: var(--brand-experiment-430);
 
-
-// Text
-  --text-normal: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --text-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
+  // Text
+  --text-normal: #{skin(interactive, 20%)};
+  --text-muted: #{skin(interactive, -20%)};
   // Faint on purpose (date dividers, "(edited)"); Discord now uses --text-muted for regular secondary text
-  --text-faint: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
+  --text-faint: #{skin(interactive, -20%, $fade: 0.8)};
 
+  --text-link: #{skin(accent, 0%)};
+  --text-link-low-saturation: #{skin(accent, 4%)};
 
-  --text-link: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
-  --text-link-low-saturation: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) + 4% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
-
-
-  
   --text-positive: hsl(139, calc(var(--saturation-factor, 1) * 51.6%), 52.2%);
   --text-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
   --text-danger: hsl(359, calc(var(--saturation-factor, 1) * 82%), 73.9%);
   --text-brand: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%);
 
-
-
-
   --background-accent: #4f545c;
   --background-floating: #18191c;
-  --background-nested-floating: #2f3136;
-  --background-mobile-primary: #36393f;
-  --background-mobile-secondary: #2f3136;
-  
 
-
-
-  --info-positive-background: hsla(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%, 0.1);
-  --info-positive-foreground: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
-  --info-positive-text: #fff;
-  --info-warning-background: hsla(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%, 0.1);
-  --info-warning-foreground: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
-  --info-warning-text: #fff;
-  --info-danger-background: hsla(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%, 0.1);
-  --info-danger-foreground: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
-  --info-danger-text: #fff;
-  --info-help-background: hsla(197, calc(var(--saturation-factor, 1) * 100%), 47.8%, 0.1);
-  --info-help-foreground: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
-  --info-help-text: #fff;
   --status-positive-background: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
   --status-positive-text: #fff;
   --status-warning-background: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
@@ -253,36 +263,6 @@
   --status-danger: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
   --status-positive: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
   --status-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
-  --button-danger-background: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
-  --button-danger-background-hover: hsl(359, calc(var(--saturation-factor, 1) * 56.3%), 40.4%);
-  --button-danger-background-active: hsl(359, calc(var(--saturation-factor, 1) * 56.4%), 35.1%);
-  --button-danger-background-disabled: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
-  --button-positive-background: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
-  --button-positive-background-hover: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
-  --button-positive-background-active: hsl(138, calc(var(--saturation-factor, 1) * 46.9%), 22.2%);
-  --button-positive-background-disabled: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
-  --button-secondary-background: #4f545c;
-  --button-secondary-background-hover: #686d73;
-  --button-secondary-background-active: #72767d;
-  --button-secondary-background-disabled: #4f545c;
-  --button-outline-danger-text: #fff;
-  --button-outline-danger-border: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
-  --button-outline-danger-background: hsla(0, 0%, 100%, 0);
-  --button-outline-danger-background-hover: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
-  --button-outline-danger-text-hover: #fff;
-  --button-outline-danger-border-hover: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
-  --button-outline-danger-background-active: hsl(359, calc(var(--saturation-factor, 1) * 56.7%), 48%);
-  --button-outline-danger-text-active: #fff;
-  --button-outline-danger-border-active: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
-  --button-outline-positive-text: #fff;
-  --button-outline-positive-border: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
-  --button-outline-positive-background: hsla(0, 0%, 100%, 0);
-  --button-outline-positive-background-hover: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
-  --button-outline-positive-text-hover: #fff;
-  --button-outline-positive-border-hover: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
-  --button-outline-positive-background-active: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
-  --button-outline-positive-text-active: #fff;
-  --button-outline-positive-border-active: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
   --button-outline-brand-text: #fff;
   --button-outline-brand-border: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
   --button-outline-brand-background: hsla(0, 0%, 100%, 0);
@@ -304,8 +284,6 @@
   --modal-background: #36393f;
   --modal-footer-background: #2f3136;
 
-
-
   --input-background: var(--background-primary);
   --input-placeholder-text: hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%);
   --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
@@ -323,29 +301,16 @@
   --channels-default: var(--interactive-normal);
   --channel-icon: var(--interactive-normal);
   --channel-text-area-placeholder: #72767d;
-  --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   --channeltextarea-background: #40444b;
-  --activity-card-background: #202225;
   --textbox-markdown-syntax: var(--interactive-normal);
   --spoiler-revealed-background: #292b2f;
   --spoiler-hidden-background: #202225;
-  --deprecated-card-bg: rgba(32, 34, 37, 0.6);
-  --deprecated-card-editable-bg: rgba(32, 34, 37, 0.3);
-  --deprecated-store-bg: #36393f;
-  --deprecated-quickswitcher-input-background: #72767d;
-  --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
-  --deprecated-text-input-bg: #202225;
-  --deprecated-text-input-border: rgba(0, 0, 0, 0.3);
-  --deprecated-text-input-border-hover: #040405;
-  --deprecated-text-input-border-disabled: #202225;
-  --deprecated-text-input-prefix: #dcddde;
 }
 
 // Brand Color
 [data-popout-root],
 html {
-
-  --brand-experiment: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
+  --brand-experiment: #{skin(accent, 0%)};
   --brand-experiment-100: hsl(240, calc(var(--saturation-factor, 1) * 77.8%), 98.2%);
   --brand-experiment-130: hsl(236, calc(var(--saturation-factor, 1) * 87.5%), 96.9%);
   --brand-experiment-160: hsl(235, calc(var(--saturation-factor, 1) * 84.6%), 94.9%);
@@ -402,11 +367,6 @@ html {
     "Microsoft JhengHei", 宋体, SimSun, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-chinese-traditional: Dash, Emoji, CreArts, Whitney, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI",
     "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-// Powercord
-:root {
-  --spotify-color: #1ed860;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -506,7 +466,3 @@ html {
   --message-automod-background-default: var(--background-message-automod);
   --message-automod-background-hover: var(--background-message-automod-hover);
 }
-
-/*
-//--accent-text: var(--SKIN-accent-text, hsla(216, calc(var(--saturation-factor, 1) * 4%), 74%, 1));
-*/

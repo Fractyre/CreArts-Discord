@@ -1,30 +1,6 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Panel                    ║ Layout                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Panel                    ║ Hover Function                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spotify (Normal)
-.powercord-spotify .container__37e49 {
-  height: calc(50px + var(--inner-primary) + var(--inner-primary)) !important;
-}
-
-.powercord-spotify .container__37e49 .flex__7c0ba {
-  opacity: 0;
-  z-index: -99;
-}
-
-// Spotify (Hover)
-.powercord-spotify:hover .container__37e49 {
-  height: calc(90px + var(--inner-primary) + var(--inner-primary)) !important;
-}
-
-.powercord-spotify:hover .container__37e49 .flex__7c0ba {
-  opacity: 0.4;
-  z-index: 0;
-}
 
 // Activity (Normal)
 .activityPanel__5e434 .body__5dec7 {
@@ -55,9 +31,14 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
-  height: calc(90px + var(--inner-primary) + var(--inner-primary));
+  height: var(--height-panel) !important;
   padding: 0px;
   margin: 0px;
+}
+
+// Last Card (Discord adds a bottom margin)
+.panels__5e434 > .container__37e49:last-child {
+  margin-bottom: unset !important;
 }
 
 // Avatar + Name
@@ -72,6 +53,7 @@
 
 // Name
 .container__37e49 .nameTag__37e49 {
+  min-width: unset !important;
   background: transparent;
   margin: 0px;
   padding: 0px 0px 0px var(--inner-primary);
@@ -96,29 +78,6 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Panel                    ║ Spotify                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// No Spotify Controls
-.spotify-extra-controls,
-.spotify-seek {
-  display: none !important;
-}
-
-// Spacing
-.powercord-spotify .container__37e49 {
-  margin-bottom: -8px !important;
-}
-
-.powercord-spotify .spotify-buttons button {
-  background: var(--background-primary) !important;
-}
-
-.powercord-spotify .spotify-buttons button > div {
-  color: var(--interactive-normal) !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Panel                    ║ Voice                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
@@ -135,7 +94,6 @@
   margin: var(--inner-primary);
   padding: 0px;
   border: none !important;
-  //height: 120px;
 }
 
 // Spacing
@@ -267,11 +225,6 @@
 // Activity
 .activityPanel__5e434 {
   order: 3;
-}
-
-// Spotify
-.powercord-spotify {
-  order: 4;
 }
 
 // Profile

@@ -6,16 +6,9 @@
 .container_c8ffbb {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-}
-
-// Spacing
-.container_c8ffbb {
   margin-left: calc(var(--layout-margin) / 2);
   width: var(--width-members);
-}
-
-// Fit the card (Discord sizes the list wider than --width-members)
-.container_c8ffbb {
+  // Fit the card (Discord sizes the list wider than --width-members)
   overflow: hidden;
   flex-shrink: 0;
 }

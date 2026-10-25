@@ -1,20 +1,20 @@
 /**
- * @name CreArts v3 
+ * @name CreArts
  * @version 3.1.0
- * @author CorellanStoma#1996
+ * @author corellan
  * @authorLink https://github.com/CorellanStoma
- * @maintainer Fractyre
+ * @maintainer fractyre
  * @description CreArts is a customizable Discord theme that changes the appearance of Discord.
  * @source https://github.com/Fractyre/CreArts-Discord
- * @invite 8w8e39z
 */
 
 /* ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
 /* ║ Discord Theme                                                                                                      ║ */
 /* ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣ */
-/* ║ Name:                    ║ CreArts v3                                                                              ║ */
+/* ║ Name:                    ║ CreArts                                                                                 ║ */
 /* ║ Version:                 ║ 3.1.0                                                                                   ║ */
-/* ║ Author:                  ║ CorellanStoma#1996                                                                      ║ */
+/* ║ Author:                  ║ corellan                                                                                ║ */
+/* ║ Maintainer:              ║ fractyre                                                                                ║ */
 /* ║ License:                 ║ MIT                                                                                     ║ */
 /* ╠══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╣ */
 /* ║                                                                                                                    ║ */
@@ -334,9 +334,6 @@
 /* ╠══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╣ */
 /* ║ Enable or Disable these optional Animations, you can combine them as you wish.                                     ║ */
 /* ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ */
-
-/* ⭕ Adds Hover Animation */
-/*@import url("https://fractyre.github.io/CreArts-Discord/modules/animations/hover.css"); /**/
 
 /* ⭕ Adds Chat-Input Animation */
 /*@import url("https://fractyre.github.io/CreArts-Discord/modules/animations/chat-input.css"); /**/
