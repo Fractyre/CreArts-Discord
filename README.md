@@ -98,6 +98,8 @@ pnpm run check-classes  # list selectors that no longer exist in Discord
 
 ## Credits
 
+Originally created by [CorellanStoma](https://github.com/CorellanStoma) and contributors. Revived for the 2025+ Discord client by [Fractyre](https://github.com/Fractyre).
+
 This theme uses extensions from other theme creators:
 
 * [**Discolored**](https://github.com/NYRI4/Discolored) | *Colorize Discord's boring SVGs.*
