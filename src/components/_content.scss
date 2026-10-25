@@ -93,6 +93,52 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Shop)                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// No Background (the page was one square block flush with the sidebar)
+.shop__6db1d {
+  background: transparent;
+}
+
+// Header
+.shop__6db1d .headerBar__80679 {
+  background: var(--background-secondary) !important;
+  border-radius: var(--radius-primary);
+  padding: 0px var(--inner-secondary);
+}
+
+// Background
+.shopViewWrapper__6db1d {
+  margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
+  border-radius: var(--radius-primary);
+  overflow: hidden;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Discover)                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Sidebar
+.container__551b0 {
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+// Background
+.container_a592e1 {
+  margin-left: calc(var(--layout-margin) / 2);
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+// No Background (Discord's own square layers inside the card)
+.homeWrapper__0920e,
+.scroller__02f2d {
+  background: transparent;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (No Page)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 

@@ -61,6 +61,8 @@ body,
   padding: 0px var(--inner-secondary);
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
+  // Above full-page views like Discover, which otherwise paint over it
+  z-index: 1000;
 }
 
 // Header row makes room for the card
