@@ -6,9 +6,6 @@
 @forward "base/caret";
 @forward "base/fix";
 @forward "base/fonts";
-//@forward "base/loading";
-//@forward "base/login";
-@forward "base/reponsive";
 @forward "base/scrollbars";
 @forward "base/titlebar";
 @forward "base/variables";
@@ -34,7 +31,6 @@
 @forward "components/panel";
 @forward "components/search";
 @forward "components/serverlist";
-//@forward "components/settings";
 @forward "components/sidebar";
 @forward "components/threads";
 
@@ -43,15 +39,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "pages/boost";
-@forward "pages/friends";
-@forward "pages/home";
-@forward "pages/library";
-@forward "pages/nitro";
-
 @forward "pages/premium";
 @forward "pages/settings";
-@forward "pages/study";
-@forward "pages/voice";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Modals                                                                                  ║
