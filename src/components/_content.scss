@@ -134,9 +134,55 @@
 // Header (the transparent variant sits in a column, where the header's width: unset collapsed it to a 0px pill)
 .container__9293f.transparent__9293f {
   align-self: stretch;
+  margin-left: 0px;
 }
 
 .container__9293f.transparent__9293f .children__9293f {
+  flex: 1 1 auto;
+}
+
+// Split into a header card and a page card, like Quests. The header is sticky inside the scroller, so CSS can't
+// move it out; a mask cuts the scroller into both shapes with a real gap, so scrolled content never shows in it.
+// ponytail: assumes --height-header >= 2 * --radius-primary
+.applicationStore_f07d62 {
+  --split-h: var(--height-header);
+  --split-g: calc(var(--layout-margin) / 2);
+  --split-w: calc(var(--top-bar-width) + var(--split-g));
+  --split-r: var(--radius-primary);
+  --split-fill: linear-gradient(#000, #000);
+  --split-c: #000 calc(var(--split-r) - 1px), transparent var(--split-r);
+  // Pieces that only touch get pixel-snapped separately and leave hairline seams, so every piece is anchored to the
+  // top and each rectangle reaches --split-o into its neighbouring corner tiles (invisible: ~0.03px past the curve).
+  --split-o: 1px;
+  --split-mask:
+    /* Header: wide and tall rectangles, top-left fill (border-radius rounds it), then bottom-left, top-right and bottom-right corners */
+    var(--split-fill) left 0 top calc(var(--split-r) - var(--split-o)) / calc(100% - var(--split-w)) calc(var(--split-h) - var(--split-r) * 2 + var(--split-o) * 2) no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top 0 / calc(100% - var(--split-w) - var(--split-r) * 2 + var(--split-o) * 2) var(--split-h) no-repeat,
+    var(--split-fill) left 0 top 0 / calc(var(--split-r) + var(--split-o)) calc(var(--split-r) + var(--split-o)) no-repeat,
+    radial-gradient(circle at 100% 0, var(--split-c)) left 0 top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right var(--split-w) top 0 / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 0, var(--split-c)) right var(--split-w) top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
+    /* Page: wide and tall rectangles running past the bottom (border-radius rounds those corners), then top-left and top-right corners */
+    var(--split-fill) left 0 top calc(var(--split-h) + var(--split-g) + var(--split-r) - var(--split-o)) / 100% 100% no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top calc(var(--split-h) + var(--split-g)) / calc(100% - var(--split-r) * 2 + var(--split-o) * 2) 100% no-repeat,
+    radial-gradient(circle at 100% 100%, var(--split-c)) left 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat;
+  -webkit-mask: var(--split-mask);
+  mask: var(--split-mask);
+}
+
+// No Scrollbar Gutter (content ended 15px short of the card, so the header and the mask didn't line up)
+.applicationStore_f07d62 .scroller__02f2d {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+
+// Header card (solid strip; the mask rounds it, a second rounded edge let the hero bleed through at the corners)
+.applicationStore_f07d62 .navBar__131a1 {
+  background: var(--background-secondary) !important;
+}
+
+.applicationStore_f07d62 .navBar__131a1 .children__9293f {
   background: transparent;
 }
 
@@ -159,6 +205,7 @@
 .container_a592e1 .headerBar__8a7fc {
   position: relative;
   flex-shrink: 0;
+  width: auto;
   height: var(--height-header);
   margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
   padding: 0px var(--inner-secondary);
