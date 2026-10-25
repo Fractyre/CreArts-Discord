@@ -159,6 +159,16 @@ body {
   justify-content: center;
 }
 
+// One hover for the whole card (Discord also highlights the inner icon box)
+.attachWrapper__0923f .attachButtonInner__0923f {
+  background: transparent !important;
+  color: var(--interactive-normal);
+}
+
+.attachWrapper__0923f .attachButton__0923f:hover .attachButtonInner__0923f {
+  color: var(--interactive-hover);
+}
+
 // Spacing
 .attachButton__74017 {
   margin: 0px;
