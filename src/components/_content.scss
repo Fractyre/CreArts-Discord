@@ -272,6 +272,25 @@
   margin-left: 0px;
 }
 
+// Header and top bar card are both transparent over the call, so they read as one row: end the toolbar under the card,
+// its last icon one toolbar gap (--inner-primary) from the card's first (toolbar padding + card gap + card padding read
+// as one wide gap)
+.callContainer_cb9592 .container__9293f {
+  margin-right: calc(var(--top-bar-width) - var(--inner-secondary));
+}
+
+// With the chat panel open the call no longer reaches the top bar card, so its header needs no room for it
+.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2))
+  .callContainer_cb9592
+  .container__9293f {
+  margin-right: 0px;
+}
+
+// Header floats over the video like Discord's (its cards touched the call card's rounded edges)
+.callContainer_cb9592 :is(.children__9293f, .toolbar__9293f) {
+  background: transparent;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Home                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝

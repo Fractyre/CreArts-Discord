@@ -57,6 +57,37 @@ body,
   z-index: 1000;
 }
 
+// Over a call (no chat panel beside it, docked or floating): transparent like the call's own header, and fades with
+// the call controls while the call is idle, unless pointed at (same motion as Discord's top controls)
+.base__5e434:has(.callContainer_cb9592):not(:has(.chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2)))
+  > .bar_c38106
+  > .trailing_c38106 {
+  background: transparent;
+}
+
+.full-motion .base__5e434 > .bar_c38106 > .trailing_c38106 {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.base__5e434:has(.root_bfe55a.idle_bfe55a:not(:focus-within)):not(
+    :has(.chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2))
+  )
+  > .bar_c38106
+  > .trailing_c38106:not(:hover, :focus-within) {
+  opacity: 0;
+  transform: translate3d(0px, -8px, 0px);
+}
+
+// Pointing at the card leaves the call, which Discord treats as idle; keep the call's controls up with the card
+.base__5e434:has(> .bar_c38106 > .trailing_c38106:is(:hover, :focus-within)):not(
+    :has(.chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2))
+  )
+  .root_bfe55a.idle_bfe55a
+  :is(.topControls_bfe55a, .bottomControls_bfe55a, .gradientContainer_bfe55a) {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 // Header row makes room for the card
 .base__5e434 .container__9293f {
   margin-right: var(--top-bar-reserve);
