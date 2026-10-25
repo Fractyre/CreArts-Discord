@@ -3,7 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-:is(.chat_f75fb0, .chat_f02135) .scrollableContainer__74017,
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .scrollableContainer__74017,
 .channelTextArea_f75fb0 {
   background: transparent;
 }
@@ -19,7 +19,7 @@
   margin-top: calc(var(--layout-margin) / 2);
 }
 
-:is(.chat_f75fb0, .chat_f02135) .form_f75fb0 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .form_f75fb0 {
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -27,12 +27,12 @@
 }
 
 // Disabled
-:is(.chat_f75fb0, .chat_f02135) .channelTextAreaDisabled__74017 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .channelTextAreaDisabled__74017 {
   display: none;
 }
 
 // Text
-:is(.chat_f75fb0, .chat_f02135) .textArea__74017 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .textArea__74017 {
   padding: 0px;
 }
 
@@ -45,7 +45,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-:is(.chat_f75fb0, .chat_f02135) .replyBar__841c8 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .replyBar__841c8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
@@ -53,25 +53,25 @@
 }
 
 // Spacing
-:is(.chat_f75fb0, .chat_f02135) .clipContainer__841c8 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .clipContainer__841c8 {
   overflow: hidden;
   padding-top: 0px;
   margin-top: 0px;
 }
 
 // No Background
-:is(.chat_f75fb0, .chat_f02135) .stackedBars__74017 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .stackedBars__74017 {
   order: -1;
   background: transparent;
 }
 
 // No Separator, No Thread Suggestion
-:is(.chat_f75fb0, .chat_f02135) .separator__841c8,
-:is(.chat_f75fb0, .chat_f02135) .threadSuggestionBar__841c8 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .separator__841c8,
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .threadSuggestionBar__841c8 {
   display: none;
 }
 
-:is(.chat_f75fb0, .chat_f02135) .colorLink__201d5 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .colorLink__201d5 {
   color: var(--interactive-normal);
 }
 
@@ -106,11 +106,11 @@
 // ║ Input                    ║ Typing                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.chat_f75fb0 .typing_b88801 {
+:is(.chat_f75fb0, .chat_ee72fa) .typing_b88801 {
   order: 1;
 }
 
-:is(.chat_f75fb0, .chat_f02135) .base_b88801 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .base_b88801 {
   position: relative;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -177,7 +177,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-:is(.chat_f75fb0, .chat_f02135) .textArea__74017 {
+:is(.chat_f75fb0, .chat_f02135, .chat_ee72fa) .textArea__74017 {
   order: 2;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -188,8 +188,8 @@
 // ║ Input                    ║ Buttons                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Backgound
-.chat_f75fb0 .buttons__74017 {
+// Background
+:is(.chat_f75fb0, .chat_ee72fa) .buttons__74017 {
   order: 3;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
@@ -199,7 +199,7 @@
 }
 
 // Replace Emoji Icon
-.chat_f75fb0 .sprite__04eed {
+:is(.chat_f75fb0, .chat_ee72fa) .sprite__04eed {
   background: var(--interactive-normal);
   -webkit-mask: var(--emoji);
   mask: var(--emoji);
@@ -283,7 +283,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat_f75fb0 .bar__84522 {
+:is(.chat_f75fb0, .chat_ee72fa) .bar__84522 {
   margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);

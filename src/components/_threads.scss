@@ -11,3 +11,63 @@
   background: var(--background-secondary);
   margin: 0px 0px 0px 0px;
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Threads                  ║ Side Panel                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// No Background (Discord's square block behind the header and chat cards; threads and voice chat)
+.container__01ae2 {
+  background: transparent;
+}
+
+// Header lines up with the chat card below it
+.container__01ae2 .container__9293f {
+  margin-left: 0px;
+}
+
+// Spacing
+.container__01ae2 .chat_ee72fa {
+  margin-top: calc(var(--layout-margin) / 2);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Threads                  ║ Side Panel (Voice)                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Discord floats the voice chat over the call from a layer; put that layer in the row so the panel sits beside the call
+// like the thread panel (its inline width still applies, so the call gives up whatever width the panel has)
+.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) {
+  flex-direction: row;
+}
+
+.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) > .wrapper_cb9592 {
+  flex: 1 1 0px;
+  min-width: 0px;
+}
+
+// Empty below the call; in a row it would take half the width
+.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) > .content_f75fb0 {
+  display: none;
+}
+
+.chat_f75fb0 > .layerContainer__59d0d:has(> .chatLayerWrapper__01ae2 > .floating__01ae2) {
+  position: relative;
+  inset: auto;
+  flex: none;
+  margin-left: calc(var(--layout-margin) / 2);
+  // Below the top bar card (the panel's top right corner covered the window buttons)
+  z-index: auto;
+}
+
+.chatLayerWrapper__01ae2:has(> .floating__01ae2),
+.chatLayerWrapper__01ae2 > .container__01ae2.floating__01ae2:not(.chatTarget__01ae2) {
+  position: relative;
+  inset: auto;
+  height: 100%;
+}
+
+// Discord's empty twin of the floating panel (still absolute, so it would land over the call and catch its clicks)
+.chatTarget__01ae2.floating__01ae2 {
+  visibility: hidden;
+}

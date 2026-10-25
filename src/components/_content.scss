@@ -24,8 +24,8 @@
   min-width: 0px;
 }
 
-// Background (Chat)
-.chat_f75fb0 .messagesWrapper__36d07 {
+// Background (Chat; .chat_ee72fa is the thread and voice chat side panel)
+:is(.chat_f75fb0, .chat_ee72fa) .messagesWrapper__36d07 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
