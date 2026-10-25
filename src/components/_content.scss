@@ -11,6 +11,11 @@
   border-radius: var(--radius-primary);
 }
 
+// Scrollbar spans the card (Discord stops it 36px short for the floating typing bar, which is its own card here)
+.scroller__36d07::-webkit-scrollbar-track {
+  margin-bottom: 0px;
+}
+
 // Background
 .chatContent_f75fb0 {
   margin: 0px 0px 0px 0px;
