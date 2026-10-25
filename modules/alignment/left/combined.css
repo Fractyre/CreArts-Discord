@@ -17,13 +17,37 @@
   /* Discord's edge fade is a mask, which would hide the pinned cards outside the list */
   mask: none !important;
   -webkit-mask: none !important;
+  /* Containing block for the pinned cards, which are position: fixed: unlike absolute, that escapes the scroller's
+     clipping while the scroller stays positioned (Discord measures server offsets against it to scroll them into view;
+     a static scroller made selecting a half-hidden server jump) */
+  transform: translateZ(0);
 }
 
+/* No containment, which would make these the pinned cards' containing block (and clip them) instead */
 .guilds__5e434 .tree_ef3116,
-.guilds__5e434 .scroller_ef3116,
-.guilds__5e434 .tutorialContainer__650eb {
-  position: static !important;
+.guilds__5e434 .scroller_ef3116 {
   contain: none;
+}
+
+.guilds__5e434 .scroller_ef3116 {
+  position: relative;
+}
+
+/* Its buttons are pinned to the top card; as an empty flex item it added a gap above the servers */
+.guilds__5e434 .tutorialContainer__650eb {
+  display: contents;
+}
+
+/* Drop zone after the last server (Discord anchors it to the wrapper above, which put its line above the card); back in
+   the list's flow below the servers, filling the empty space like Discord's */
+.guilds__5e434 .tutorialContainer__650eb > .wrapper_d144f8 {
+  position: relative;
+  flex: 1 0 var(--guild-icon);
+  height: auto !important;
+}
+
+.guilds__5e434 .tutorialContainer__650eb > .wrapper_d144f8 > .target_d144f8 {
+  height: 100% !important;
 }
 
 /* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
@@ -42,7 +66,7 @@
 
 /* Home Button */
 .guilds__5e434 .tutorialContainer__1f388 {
-  position: absolute;
+  position: fixed;
   top: calc(var(--combined-offset) * -1);
   left: 0px;
   width: 100%;
@@ -56,7 +80,7 @@
 /* Explore, Add Server Buttons */
 .guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]),
 .guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0px;
   width: 100%;
@@ -71,8 +95,9 @@
   top: calc(var(--combined-offset) * -1 + var(--inner-secondary) + (var(--guild-icon) + var(--guild-spacing)) * 2);
 }
 
-/* Separator */
-.guildSeparator__252b6 {
+/* Separator (its whole list item, which otherwise still adds a gap above the servers) */
+.guildSeparator__252b6,
+.guilds__5e434 .listItem__650eb:has(> .guildSeparator__252b6) {
   display: none;
 }
 
