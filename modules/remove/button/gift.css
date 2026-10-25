@@ -31,3 +31,8 @@
 [aria-label="선물 보내기"] {
   display: none !important;
 }
+
+/* Hide the whole chat bar slot too: the empty wrapper still took a flex gap and pushed the buttons right */
+.buttons__74017 .container__5287f {
+  display: none;
+}
