@@ -15,11 +15,6 @@
   margin-bottom: calc(var(--custom-app-panels-height, var(--height-panel)) + (var(--layout-margin) / 2)) !important;
 }
 
-// No Resize
-.sidebarResizeHandle__5e434 {
-  display: none;
-}
-
 // No Bottom Shadow
 .sidebar__5e434::after {
   display: none;
