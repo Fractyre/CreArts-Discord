@@ -102,9 +102,11 @@
   margin-left: 0px;
 }
 
-// Flex
+// Flex (Discord sizes the row for one line; the stacked info card and buttons overflowed it onto the action buttons)
 .container_e131a9 .connection_e131a9 {
   flex-direction: column;
+  flex: none;
+  height: auto;
 }
 
 // Info
@@ -134,6 +136,13 @@
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   width: 100%;
+  // Icon only: Discord's text-button padding and minimum width squashed the icons at the narrowest channel list
+  min-width: 0px;
+  padding: 0px;
+}
+
+.container_e131a9 .buttonContents_e131a9 {
+  margin: 0px;
 }
 
 // Disabled Buttons
