@@ -87,6 +87,17 @@
   grid-template-rows: 1fr;
 }
 
+/* Avatar + Name fills the card, inset evenly (the card has no button row any more) */
+.panels__5e434 > .container__37e49 .accountPopoutButtonWrapper__37e49 {
+  align-self: stretch;
+  margin: var(--inner-primary);
+}
+
+/* Nameplate clipped to the Avatar + Name box (Discord sizes it to the whole card) */
+.panels__5e434 > .container__37e49 > .fitInAccount_df39b2 {
+  clip-path: inset(var(--inner-primary) round var(--radius-secondary));
+}
+
 /* Background */
 .panels__5e434 > .container__37e49 .buttons__37e49 {
   position: absolute;
