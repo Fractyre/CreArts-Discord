@@ -3,14 +3,14 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Text Selection
-.versionHash__081d7 {
+.bd-version-info > div {
   user-select: all;
 }
 
 //  content: 'CreArts ' var(--info-version) ' - ' var(--info-skin) ' - by ' var(--info-author);
 
 // Version
-div:has(> .versionHash__081d7)::after {
+.bd-version-info::after {
   display: block;
 
   content: "CreArts " var(--info-version);
