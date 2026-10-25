@@ -11,6 +11,9 @@
 // Height (one 44px slot, so the 11px text padding centres a single line; scoped so popout inputs keep their size)
 .channelTextArea_f75fb0 {
   --custom-channel-textarea-text-area-height: 44px;
+  // Icon button hover square (20px icon + --inner-secondary) and its inset from the card's edge
+  --chat-button-size: calc(20px + var(--inner-secondary));
+  --chat-button-inset: calc((var(--custom-channel-textarea-text-area-height) - var(--chat-button-size)) / 2);
   margin-bottom: 0px;
 }
 
@@ -129,20 +132,31 @@
 // ║ Input                    ║ Upload Button                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Background
+// Background (Discord's button__24af7 hover would light the whole card)
 .attachWrapper__0923f .attachButton__0923f {
-  background: var(--background-secondary);
+  background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
   justify-content: center;
+  align-items: center;
 }
 
-// One hover for the whole card (Discord also highlights the inner icon box)
+// Hover square inset in the card like the buttons on the right, in the colour Discord's button__24af7 hover paints
+// them (Discord's own inner highlight is replaced; its padding grew the square back to 44px and pushed the icon off-centre)
 .attachWrapper__0923f .attachButtonInner__0923f {
   background: transparent !important;
   color: var(--interactive-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: var(--chat-button-size);
+  height: var(--chat-button-size);
+  padding: 0px;
+  border-radius: calc(var(--radius-primary) - var(--chat-button-inset));
 }
 
 .attachWrapper__0923f .attachButton__0923f:hover .attachButtonInner__0923f {
+  background: var(--interactive-background-selected) !important;
   color: var(--interactive-hover);
 }
 
@@ -193,9 +207,30 @@
   order: 3;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  padding-right: var(--inner-primary);
-  padding-left: var(--inner-primary);
+  padding: var(--chat-button-inset);
+  // Discord fixes the height (the padding grew it past the row); its gap (~9px) spread the icons too far
+  box-sizing: border-box;
+  gap: calc(var(--inner-primary) / 2);
   margin-right: auto;
+}
+
+// Square slots inset in the card (Discord's were 44x31); the slot and the button inside it both get corners concentric
+// with the card's, whichever of the two Discord paints the hover on
+:is(.chat_f75fb0, .chat_ee72fa) .buttons__74017 > div:not(.separator_aa63ab) {
+  width: var(--chat-button-size);
+  height: var(--chat-button-size);
+  align-items: stretch;
+  border-radius: calc(var(--radius-primary) - var(--chat-button-inset));
+}
+
+:is(.chat_f75fb0, .chat_ee72fa)
+  .buttons__74017
+  :is(.button__74017, .button_e6e74f, .buttonContainer_aa63ab, .button_aa63ab) {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius-primary) - var(--chat-button-inset));
+  justify-content: center;
+  align-items: center;
 }
 
 // Replace Emoji Icon
@@ -225,6 +260,11 @@
 // Background
 .separator_aa63ab {
   margin-left: 0px;
+}
+
+// Midway between its neighbours; the gap on each side sets the send button a little further apart
+:is(.chat_f75fb0, .chat_ee72fa) .separator_aa63ab {
+  margin: 0px;
 }
 
 // No Border
