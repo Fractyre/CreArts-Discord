@@ -127,6 +127,19 @@
   border-radius: var(--radius-primary);
 }
 
+.containerBackground__02f2d {
+  background: transparent;
+}
+
+// Header (the transparent variant sits in a column, where the header's width: unset collapsed it to a 0px pill)
+.container__9293f.transparent__9293f {
+  align-self: stretch;
+}
+
+.container__9293f.transparent__9293f .children__9293f {
+  background: transparent;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (Discover)                                                                       ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝

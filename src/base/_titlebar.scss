@@ -70,6 +70,29 @@ body,
   margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
 }
 
+// Full-page views with no header row (Nitro, Discover) get a notch cut around the card instead.
+// Union of six mask layers: left block, rounded corner + strip beside the notch, block under it, strip + rounded corner at the right edge.
+.applicationStore_f07d62,
+.container_a592e1 {
+  --notch-w: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+  --notch-h: calc(var(--height-header) + (var(--layout-margin) / 2));
+  --notch-r: var(--radius-primary);
+  --notch-fill: linear-gradient(#000, #000);
+  --notch-corner: radial-gradient(circle at 0 100%, #000 calc(var(--notch-r) - 1px), transparent var(--notch-r));
+  -webkit-mask: var(--notch-fill) left 0 top 0 / calc(100% - var(--notch-w) - var(--notch-r)) 100% no-repeat,
+    var(--notch-corner) right var(--notch-w) top 0 / var(--notch-r) var(--notch-r) no-repeat,
+    var(--notch-fill) right var(--notch-w) top var(--notch-r) / var(--notch-r) calc(100% - var(--notch-r)) no-repeat,
+    var(--notch-fill) right 0 bottom 0 / var(--notch-w) calc(100% - var(--notch-h) - var(--notch-r)) no-repeat,
+    var(--notch-fill) right var(--notch-r) top var(--notch-h) / calc(var(--notch-w) - var(--notch-r)) var(--notch-r) no-repeat,
+    var(--notch-corner) right 0 top var(--notch-h) / var(--notch-r) var(--notch-r) no-repeat;
+  mask: var(--notch-fill) left 0 top 0 / calc(100% - var(--notch-w) - var(--notch-r)) 100% no-repeat,
+    var(--notch-corner) right var(--notch-w) top 0 / var(--notch-r) var(--notch-r) no-repeat,
+    var(--notch-fill) right var(--notch-w) top var(--notch-r) / var(--notch-r) calc(100% - var(--notch-r)) no-repeat,
+    var(--notch-fill) right 0 bottom 0 / var(--notch-w) calc(100% - var(--notch-h) - var(--notch-r)) no-repeat,
+    var(--notch-fill) right var(--notch-r) top var(--notch-h) / calc(var(--notch-w) - var(--notch-r)) var(--notch-r) no-repeat,
+    var(--notch-corner) right 0 top var(--notch-h) / var(--notch-r) var(--notch-r) no-repeat;
+}
+
 // Buttons
 .trailing_c38106 > .winButtons_c38106 {
   display: contents;
