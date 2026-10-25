@@ -2,8 +2,9 @@
 // ║ Members                  ║ Layout                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Background (Members & Channel)
-.container_c8ffbb {
+// Background (Members & Channel; a full-view thread has no outer container, so its list wrapper is the card)
+.container_c8ffbb,
+.membersWrap_c8ffbb:not(.container_c8ffbb .membersWrap_c8ffbb) {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-left: calc(var(--layout-margin) / 2);
@@ -13,14 +14,15 @@
   flex-shrink: 0;
 }
 
-.membersWrap_c8ffbb,
+.container_c8ffbb .membersWrap_c8ffbb,
 .membersWrap_c8ffbb > .members_c8ffbb {
   width: 100% !important;
   min-width: 0px;
 }
 
-// Rows inset evenly from both card edges (Discord fixes them at 247px with a left margin only)
-.member_c8ffbb {
+// Rows inset evenly from both card edges (Discord fixes them at 247px with a left margin only; threads use __5d473)
+.member_c8ffbb,
+.membersWrap_c8ffbb .member__5d473 {
   width: auto;
   max-width: none;
   margin: 0px var(--inner-primary) !important;
