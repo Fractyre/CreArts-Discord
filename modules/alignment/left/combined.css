@@ -119,6 +119,12 @@
   border-radius: var(--radius-primary);
 }
 
+/* Discord tints the hover with the nameplate's colour (!important; an inherited override lost, so it's set on
+   the button); the buttons sit away from it here, so use the plain hover the mute/deafen buttons get without a nameplate */
+.panels__5e434 > .container__37e49 .buttons__37e49 .plated__67645 {
+  --custom-nameplate: var(--interactive-background-selected) !important;
+}
+
 /* Buttons */
 .panels__5e434 > .container__37e49 .buttons__37e49 .button__67645 {
   background: var(--background-primary);
