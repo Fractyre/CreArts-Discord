@@ -6,12 +6,20 @@
   display: none;
 }
 
-.timestamp_c19a55:not(.timestampInline_c19a55,
-.timestampVisibleOnHover_c19a55) time::after {
-  content: "("attr(aria-label)")";
+/* The edit date moved from the time's aria-label (now gone, which left "()") into a screen-reader-only sibling */
+.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2 {
+  all: unset;
   color: var(--text-faint);
   font-size: 0.625rem;
   font-weight: 400;
   line-height: 1;
   user-select: none;
+}
+
+.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2::before {
+  content: "(";
+}
+
+.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2::after {
+  content: ")";
 }
