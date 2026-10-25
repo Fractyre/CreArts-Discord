@@ -39,6 +39,15 @@
   margin: 0px;
 }
 
+// Idle toolbar icons rest at the normal colour (Discord paints them with the faint muted colour)
+.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f) .icon__9293f {
+  color: var(--interactive-normal);
+}
+
+.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f):hover .icon__9293f {
+  color: var(--interactive-hover);
+}
+
 // New Group DM (Friends page; Discord pads it on one side only)
 .inviteToolbar__133bf {
   padding: 0px;
