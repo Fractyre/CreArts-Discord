@@ -4,7 +4,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Text Selection
-.info-3pQQBb .line-18uChy {
+.versionHash__081d7 {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
@@ -14,7 +14,7 @@
 //  content: 'CreArts ' var(--info-version) ' - ' var(--info-skin) ' - by ' var(--info-author);
 
 // Version
-.info-3pQQBb::after {
+div:has(> .versionHash__081d7)::after {
   display: block;
 
   content: "CreArts " var(--info-version);
@@ -32,7 +32,7 @@
 
 /*
 // Skin
-.info-3pQQBb::before {
+div:has(> .versionHash__081d7)::before {
   display: block;
   position: absolute;
   content: var(--info-skin);
@@ -61,7 +61,7 @@
     }
   }
   
-  .socialLinks-3ywLUf::after {
+  .socialLinks__7df54::after {
     content: "Style: " var(--style-name) " | Creator: " var(--style-creator) !important;
     color: var(--text-muted);
     opacity: 1;

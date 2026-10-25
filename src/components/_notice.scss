@@ -2,15 +2,14 @@
 // ║ Notice                   ║ Layout                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.channelNotice-7cg_jN,
-.notice-2HEN-u,
-.notice-1x8lm- {
-  margin-bottom: var(--layout-margin);
+.channelNotice_e88f3f,
+.notice__30f28 {
+  margin-bottom: calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
   background: var(--background-secondary) !important;
   box-shadow: none;
 }
-.chat-2ZfjoI .content-2a4AW9,
-.chat-1-OBC7 .content-2a4AW9 {
+.chat_f75fb0 .content_d125d2,
+.chat_f02135 .content_d125d2 {
   border-radius: var(--radius-primary);
 }

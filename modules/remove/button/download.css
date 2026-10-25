@@ -2,7 +2,7 @@
 /* ║ Download                 ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.platform-web .scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(2),
-.platform-web .scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(3) {
+.platform-web .scroller_ef3116 > .listItem__650eb:nth-last-child(2),
+.platform-web .scroller_ef3116 > .listItem__650eb:nth-last-child(3) {
   display: none;
 }

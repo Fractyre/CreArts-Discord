@@ -3,8 +3,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.container-ZMc96U {
-  margin: 0px 0px calc(var(--layout-margin) / 2) calc(var(--layout-margin) / 2);
+.container__9293f {
+  margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   background: transparent !important;
   padding: 0px;
   width: unset;
@@ -13,36 +13,46 @@
 }
 
 // Title
-.children-3xh0VB {
+.children__9293f {
   background: var(--background-secondary);
-  margin: 0px calc(var(--layout-margin) / 2) 0px 0px;
+  margin: 0px;
+  padding: 0px var(--inner-secondary);
   border-radius: var(--radius-primary);
   height: 100%;
 }
 
 // Toolbar
-.toolbar-3_r2xA {
+.toolbar__9293f {
   background: var(--background-secondary);
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
+  padding: 0px var(--inner-primary) !important;
   border-radius: var(--radius-primary);
   height: 100%;
 }
 
 // Divider
-.divider-q3P9HC {
-  background: var(--background-primary);
-}
 
 // Remove Divider
-.divider-q3P9HC {
-  display: none !important;
-}
 
 // Icons
-.button-1fGHAH {
+.button__9db96 {
   margin: 0px;
 }
 
-.toolbar-3_r2xA button{
+// Idle toolbar icons rest at the normal colour (Discord paints them with the faint muted colour)
+.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f) .icon__9293f {
+  color: var(--interactive-normal);
+}
+
+.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f):hover .icon__9293f {
+  color: var(--interactive-hover);
+}
+
+// New Group DM (Friends page; Discord pads it on one side only)
+.inviteToolbar__133bf {
+  padding: 0px;
+}
+
+.toolbar__9293f button{
   margin: 0 8px;
 }

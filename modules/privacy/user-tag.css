@@ -2,7 +2,7 @@
 /* ║ Privacy                  ║ User Tag                                                                                ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.nameTag-sc-gpq .subtext-2HDqJ7:not(.spotify-artist) {
+.nameTag__37e49 .subtext__339d0:not(.spotify-artist) {
   background: var(--header-secondary);
   border-radius: 4px;
   width: 20%;
@@ -10,7 +10,7 @@
   margin-top: 4px;
 }
 
-.nameTag-sc-gpq:hover .subtext-2HDqJ7:not(.spotify-artist) {
+.nameTag__37e49:hover .subtext__339d0:not(.spotify-artist) {
   background: transparent;
   height: auto;
   margin-top: 0px;

@@ -16,20 +16,20 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Text (Normal) */
-.aboutMeBody-1J8rhz a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"])::after,
-.aboutMeBody-1J8rhz a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"])::after,
-.messageContent-2t3eCI a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"])::after,
-.messageContent-2t3eCI a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"])::after
+.markup__75297 a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"])::after,
+.markup__75297 a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"])::after,
+.messageContent_c19a55 a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"])::after,
+.messageContent_c19a55 a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"])::after
 {
   content: var(--jump-to) " CreArts | Community" !important;
   background: #cd095240 !important;
 }
 
 /* Text (Hover) */
-.aboutMeBody-1J8rhz a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
-.aboutMeBody-1J8rhz a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
-.messageContent-2t3eCI a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
-.messageContent-2t3eCI a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after
+.markup__75297 a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
+.markup__75297 a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
+.messageContent_c19a55 a[href^="https://www.discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after,
+.messageContent_c19a55 a[href^="https://discord.gg/8W8E39Z"]:not([href^="channels"]):hover::after
 {
   background-color: #cd0952 !important;
 }

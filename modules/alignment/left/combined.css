@@ -2,88 +2,77 @@
 /* ║ Left (Combined)          ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-/* Spacing */
-.scroller-3X7KbA {
-  contain: unset;
+:root {
+  /* Home, Explore, Add Server */
+  --combined-top: calc((var(--guild-icon) * 3) + (var(--guild-spacing) * 2) + (var(--inner-secondary) * 2));
+  /* Mute, Deafen, Settings */
+  --combined-bottom: calc((48px * 3) + (var(--inner-secondary) * 4));
+}
+
+/* Anchor the pinned cards to the server list instead of its scroller */
+.guilds__5e434 {
+  overflow: visible !important;
+  /* Discord's edge fade is a mask, which would hide the pinned cards outside the list */
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+.guilds__5e434 .tree_ef3116,
+.guilds__5e434 .scroller_ef3116,
+.guilds__5e434 .tutorialContainer__650eb {
+  position: static !important;
+  contain: none;
 }
 
 /* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
 /* ║ Left (Combined)          ║ Divided                                                                                 ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-/* Spacing */
-.wrapper-1_HaEi {
-  margin-top: calc((var(--guild-icon) * 3) + (var(--guild-spacing) * 4) + var(--layout-margin) + var(--layout-margin-top)) !important;
+/* Spacing (outranks the core margin, which loads later) */
+.sidebar__5e434 > .guilds__5e434 {
+  margin-top: calc(var(--combined-top) + (var(--layout-margin) / 2)) !important;
+  margin-bottom: calc(var(--combined-bottom) + (var(--layout-margin) / 2)) !important;
 }
 
-.scroller-3X7KbA {
-  padding-top: 0px !important;
+.scroller_ef3116 {
+  padding-top: var(--inner-secondary) !important;
 }
 
 /* Home Button */
-.tutorialContainer-1pL9QS {
-  position: fixed;
+.guilds__5e434 .tutorialContainer__1f388 {
+  position: absolute;
+  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1);
+  left: 0px;
+  width: 100%;
+  height: var(--combined-top) !important;
+  box-sizing: border-box;
+  padding: var(--inner-secondary) 0px;
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  padding: var(--inner-secondary) 0px;
-  height: calc((var(--guild-icon) * 3) + (var(--guild-spacing) * 2)) !important;
-  top: var(--layout-margin-top);
-}
-
-.platform-win .tutorialContainer-1pL9QS {
-  top: calc(var(--height-titlebar) - 2px + var(--layout-margin-top));
 }
 
 /* Explore Button */
-.scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(2) {
-  position: fixed;
-  top: calc(var(--layout-margin-top) + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
-}
-
-.platform-win .scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(2) {
-  position: fixed;
-  top: calc(var(--height-titlebar) - 2px + var(--layout-margin-top) + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
-}
-
-.platform-web .scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(4) {
-  position: fixed !important;
-  top: calc(var(--layout-margin-top) + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
+.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]) {
+  position: absolute;
+  z-index: 1;
+  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1 + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
+  left: 0px;
+  width: 100%;
+  margin: 0px;
 }
 
 /* Add Server Button */
-.tutorialContainer-2jwoiB {
-  position: fixed;
-  top: calc(var(--layout-margin-top) + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing) + var(--guild-icon) + var(--guild-spacing));
-}
-
-.platform-win .tutorialContainer-2jwoiB {
-  position: fixed;
-  top: calc(var(--height-titlebar) - 2px + var(--layout-margin-top) + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing) + var(--guild-icon) + var(--guild-spacing));
-}
-
-/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
-/* ║ Left (Combined)          ║ Divided (DM Button)                                                                     ║ */
-/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
-
-/* Spacing */
-[style="opacity: 1; height: 56px; transform: scale(1);"] {
-  order: -2;
-  border-radius: var(--radius-primary);
-  padding-top: 8px;
-  padding-bottom: 8px;
-  height: 50px !important;
+.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
+  position: absolute;
+  z-index: 1;
+  top: calc((var(--combined-top) + (var(--layout-margin) / 2)) * -1 + var(--inner-secondary) + (var(--guild-icon) + var(--guild-spacing)) * 2);
+  left: 0px;
+  width: 100%;
+  margin: 0px;
 }
 
 /* Separator */
-.scroller-3X7KbA > .listItem-3SmSlK:nth-last-child(5) {
-  order: -1;
-}
-
-[style="opacity: 1; height: 56px; transform: scale(1);"] + .listItem-3SmSlK .guildSeparator-a4uisj {
-  display: block;
-}
-
-.guildSeparator-a4uisj {
+.guildSeparator__252b6 {
   display: none;
 }
 
@@ -91,41 +80,50 @@
 /* ║ Left (Combined)          ║ Buttons                                                                                 ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-/* Spacing */
-.wrapper-1_HaEi {
-  margin-bottom: calc(var(--layout-margin-bottom) + var(--inner-secondary) + 48px + var(--inner-secondary) + 48px + var(--inner-secondary) + 48px + var(--inner-secondary) + var(--layout-margin)) !important;
+/* Anchor the buttons to the user panel so they can sit in the server column */
+.panels__5e434 > .container__37e49 {
+  position: static;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* Avatar + Name fills the card, inset evenly (the card has no button row any more) */
+.panels__5e434 > .container__37e49 .accountPopoutButtonWrapper__37e49 {
+  align-self: stretch;
+  margin: var(--inner-primary);
+}
+
+/* Nameplate clipped to the Avatar + Name box (Discord sizes it to the whole card) */
+.panels__5e434 > .container__37e49 > .fitInAccount_df39b2 {
+  clip-path: inset(var(--inner-primary) round var(--radius-secondary));
 }
 
 /* Background */
-.panels-3wFtMD .container-YkUktl:last-child .flex-2S1XBF {
-  position: fixed;
-  background: var(--background-secondary);
-  border-radius: var(--radius-primary);
+.panels__5e434 > .container__37e49 .buttons__37e49 {
+  position: absolute;
+  left: calc((var(--layout-width-guild) + (var(--layout-margin) / 2)) * -1);
+  bottom: 0px;
+  width: var(--layout-width-guild);
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: calc(var(--layout-margin-bottom));
-  left: var(--layout-margin-left);
-  width: 72px;
+  gap: var(--inner-secondary);
   padding: var(--inner-secondary) 0px;
   margin: 0px;
-  grid-gap: var(--inner-secondary);
+  box-sizing: border-box;
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
 }
 
 /* Buttons */
-.panels-3wFtMD>.container-YkUktl:last-child .directionRow-2Iu2A9 .button-12Fmur {
+.panels__5e434 > .container__37e49 .buttons__37e49 .button__67645 {
   background: var(--background-primary);
   border-radius: var(--radius-primary);
   width: 48px;
   height: 48px;
 }
 
-/* Panel */
-.panels-3wFtMD>.container-YkUktl:last-child {
-margin-bottom: -42px;
-}
-
-/* Remove Game Activity */
-.panels-3wFtMD>.container-YkUktl:last-child .button-12Fmur:nth-last-child(4) {
+/* Remove Device Menus */
+.panels__5e434 > .container__37e49 .buttonChevron__5e764 {
   display: none;
 }

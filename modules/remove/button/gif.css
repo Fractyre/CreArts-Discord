@@ -2,7 +2,7 @@
 /* ║ No GIF                   ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.buttonContainer-2lnNiN>.button-f2h6uQ:not(.emojiButton-1fMsf3 ).colorBrand-I6CyqQ>.contents-3ca1mk:not(.stickerButton-1-nFh2){
+.buttonContainer__74017>.button__201d5:not(.emojiButton__74017 ).colorBrand__201d5>.contents__201d5:not(.stickerButton__74017){
     position: fixed;
     visibility: hidden;
 }

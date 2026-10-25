@@ -3,7 +3,104 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.searchResultsWrap-5RVOkx {
+.searchResultsWrap_a98f3b {
   border-radius: var(--radius-primary);
   margin-left: 20px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Search                   ║ Bar                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background (matches the user panel controls)
+.search_c322aa .searchBar_c322aa {
+  background: var(--background-primary);
+  border: none;
+  box-shadow: none;
+  border-radius: var(--radius-secondary);
+}
+
+// Icon
+.search_c322aa .icon__0c4c4 {
+  color: var(--interactive-normal);
+}
+
+// Collapsed to a plain toolbar icon until focused or holding a query (the clear icon shows then)
+.search__49676 {
+  width: 31px;
+  margin-left: 0px;
+  transition: width 0.2s ease;
+}
+
+.search__49676:is(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) {
+  width: 240px;
+}
+
+.search__49676 .search_c322aa,
+.search__49676 .searchBar_c322aa {
+  width: 100%;
+}
+
+// Collapsed: no bar, an icon sized and coloured like its toolbar neighbours; the editor covers the slot
+// invisibly so a click anywhere on it focuses the search
+.search__49676:not(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) .searchBar_c322aa {
+  justify-content: center;
+  background: transparent;
+}
+
+// Magnifier (the bolder pre-2023 Discord glyph from the CreArts screenshots, at the toolbar's 24px icon size)
+.search_c322aa .iconContainer__0c4c4 > svg:not(.clear__0c4c4) {
+  opacity: 0;
+}
+
+// Container sized to the glyph so it doesn't spill into the padding; expanded, it keeps clear of the bar's edge
+.search_c322aa .iconContainer__0c4c4 {
+  width: 24px;
+}
+
+.search__49676:is(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) .icon_c322aa {
+  padding-right: var(--inner-primary);
+}
+
+.search_c322aa .iconContainer__0c4c4:not(:has(.clear__0c4c4.visible__0c4c4))::before {
+  content: "";
+  position: absolute;
+  // Centred with translate: inset + auto margins don't centre a box wider than its 16px container
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: var(--interactive-normal);
+  -webkit-mask: var(--search-icon) center / contain no-repeat;
+  mask: var(--search-icon) center / contain no-repeat;
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.707 20.293L16.314 14.9C17.403 13.504 18 11.799 18 10C18 7.863 17.167 5.854 15.656 4.344C14.146 2.832 12.137 2 10 2C7.863 2 5.854 2.832 4.344 4.344C2.833 5.854 2 7.863 2 10C2 12.137 2.833 14.146 4.344 15.656C5.854 17.168 7.863 18 10 18C11.799 18 13.504 17.404 14.9 16.314L20.293 21.706L21.707 20.293ZM10 16C8.397 16 6.891 15.376 5.758 14.243C4.624 13.11 4 11.603 4 10C4 8.398 4.624 6.891 5.758 5.758C6.891 4.624 8.397 4 10 4C11.603 4 13.109 4.624 14.242 5.758C15.376 6.891 16 8.398 16 10C16 11.603 15.376 13.11 14.242 14.243C13.109 15.376 11.603 16 10 16Z'/%3E%3C/svg%3E");
+}
+
+// Same specificity as the rule above plus :hover, so it wins
+.search__49676:hover .search_c322aa .iconContainer__0c4c4:not(:has(.clear__0c4c4.visible__0c4c4))::before {
+  background: var(--interactive-hover);
+}
+
+// Discord forces position: relative on the editor, which kept it in the row and pushed the icon off-centre
+.search__49676:not(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) .editor__25bec {
+  position: absolute !important;
+  inset: 0px !important;
+  opacity: 0;
+}
+
+// Collapsed it acts as a button, not a text field. The icon sits above the editor, so let the pointer through to it.
+.search__49676:not(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) .icon_c322aa {
+  pointer-events: none;
+}
+
+.search__49676:not(:focus-within, :has(.clear__0c4c4.visible__0c4c4)),
+.search__49676:not(:focus-within, :has(.clear__0c4c4.visible__0c4c4)) * {
+  cursor: pointer !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search__49676 {
+    transition: none;
+  }
 }

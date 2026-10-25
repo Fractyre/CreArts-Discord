@@ -4,7 +4,7 @@
 
 @mixin chat-normal($name, $background, $user-id:"") {
   @if $user-id != "" {
-    .avatar-2e8lTP[src*="#{$user-id}"] + h2 .username-h_Y3Us[style="color: #{$background};"]::after {
+    .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55[style="color: #{$background};"]::after {
       position: relative;
       content: "#{$name}";
       background: #{$background};
@@ -19,7 +19,7 @@
     }
   }
   @else {
-    h2 .username-h_Y3Us[style="color: #{$background};"]::after {
+    h2 .username_c19a55[style="color: #{$background};"]::after {
       position: relative;
       content: "#{$name}";
       background: #{$background};
@@ -33,15 +33,15 @@
       line-height: .9375rem;
       font-weight: 500;
     }
-    [style="color: #{$background};"] + .botTag-1NoD0B,
-    [style="color: #{$background};"] + .botTag-7aX5WZ {
+    [style="color: #{$background};"] + .botTag_c19a55,
+    [style="color: #{$background};"] + .botTag__82f07 {
       display: none;
     }
   }
 }
 
 @mixin chat-extra($name, $background, $user-id) {
-  .avatar-2e8lTP[src*="#{$user-id}"] + h2 .username-h_Y3Us::after {
+  .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55::after {
     position: relative;
     content: "#{$name}";
     background: #{$background};
@@ -55,7 +55,7 @@
     line-height: .9375rem;
     font-weight: 500;
   }
-  .botTagCozy-3NTBvK {
+  .botTagCozy_c19a55 {
       display: none !important;
   }
 }

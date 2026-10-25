@@ -3,92 +3,64 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background (Members & Channel)
-.container-NkLXgf,
-.container-2o3qEW {
+.container_c8ffbb {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
 
 // Spacing
-.container-2o3qEW {
-  margin-left: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+.container_c8ffbb {
+  margin-left: calc(var(--layout-margin) / 2);
   width: var(--width-members);
 }
 
+// Fit the card (Discord sizes the list wider than --width-members)
+.container_c8ffbb {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.membersWrap_c8ffbb,
+.membersWrap_c8ffbb > .members_c8ffbb {
+  width: 100% !important;
+  min-width: 0px;
+}
+
+// Rows inset evenly from both card edges (Discord fixes them at 247px with a left margin only)
+.member_c8ffbb {
+  width: auto;
+  max-width: none;
+  margin: 0px var(--inner-primary) !important;
+  border-radius: var(--radius-tertiary);
+  overflow: hidden;
+}
+
 // No Background
-.container-2Oqvgx,
-.members-3WRCEx,
-.members-3WRCEx > div {
+.members_c8ffbb,
+.members_c8ffbb > div {
   background-color: transparent;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Members                  ║ Header                                                                                  ║
+// ║ Members                  ║ Profile                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.tabs-1RhQha {
-  flex-direction: row-reverse;
+// Card (the DM profile sidebar takes the member list's place)
+.aside_f58343 {
+  margin-left: calc(var(--layout-margin) / 2);
+  padding: 0px;
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+  overflow: hidden;
 }
 
-.tabs-1RhQha .tab-FftSDB {
-  flex: 1;
-  background: var(--background-primary);
-  border-radius: var(--radius-secondary);
-  padding-left: 12px;
+// No Frame (Discord draws a 2px primary-colour frame around the profile; themed profiles keep theirs)
+.aside_f58343 > .outer_c0bea0:not(.custom-user-profile-theme) {
+  padding: 0px;
+  background: transparent;
+  border-radius: var(--radius-primary);
 }
 
-.tabs-1RhQha [aria-controls="details-tab"] {margin: 0px 4px 0px 0px !important;}
-.tabs-1RhQha [aria-controls="members-tab"] {margin: 0px 0px 0px 4px !important;}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Members                  ║ Details                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Header
-.container-NkLXgf .sectionHeader-37ixY1 {
-  background: var(--background-primary);
-  border-radius: var(--radius-secondary) var(--radius-secondary) 0px 0px !important;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-  padding: 12px;
-} 
-
-// Section
-.container-NkLXgf .section-2PUwqg {
-  background: var(--background-primary);
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-  border-radius: 0px;
-  padding: 12px;
+.aside_f58343 > .outer_c0bea0 .inner_c0bea0 {
+  border-radius: var(--radius-primary);
 }
-
-.container-NkLXgf .section-2PUwqg:nth-last-child(2) {
-  border-radius: 0px 0px var(--radius-secondary) var(--radius-secondary);
-}
-
-// Divider
-.container-NkLXgf .divider-2vPjtn {
-  content: "";
-  background: var(--background-primary);
-  border-radius: 0px 0px var(--radius-secondary) var(--radius-secondary);
-  height: 12px;
-  margin-top: 0px;
-}
-
-// Button (Normal)
-.container-NkLXgf .editTopicButton-jKMcn4 {
-  color: #fff;
-  background-color: var(--brand-experiment);
-  height: 32px;
-  min-width: 60px;
-  min-height: 32px;
-}
-
-// Button (Hover)
-.container-NkLXgf .editTopicButton-jKMcn4:hover {background-color: var(--brand-experiment-560);}
-
-// No Gear
-.container-NkLXgf .gearIcon-2r92xC {display: none;}
-
-// Link Overflow
-.container-NkLXgf .channelTopic-1hZBwz {overflow: hidden;}

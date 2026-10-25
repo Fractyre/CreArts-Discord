@@ -1,0 +1,9 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Profile                  ║ Menu                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Menu groups (Edit Profile, Switch Accounts, ...) are controls inside the card; Discord mixes them from neutral greys.
+// Themed (Nitro) profiles keep their own colours.
+.outer_c0bea0:not(.custom-user-profile-theme) .menuOverlay_ce8328 {
+  background: var(--background-primary);
+}

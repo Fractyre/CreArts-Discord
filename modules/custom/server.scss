@@ -18,7 +18,7 @@
   }
 
   // Background
-  .container-1NXEtd[aria-label^="#{$name}"] .header-3OsQeK {
+  .container__2637a[aria-label^="#{$name}"] .header_f37cb1 {
     height: 135px !important;
     padding-bottom: 90px;
     background-image: var(--banner-#{$id}) !important;
@@ -26,10 +26,8 @@
     background-position: center;
     background-size: cover;
   }
-  .container-1NXEtd[aria-label*="#{$name}"] {
-    .guildIconContainer-2FW_iA,
-    .name-3Uvkvr,
-    .button-2BMPJJ {
+  .container__2637a[aria-label*="#{$name}"] {
+    .name_f37cb1 {
       z-index: 2;
       transition: none;
     }

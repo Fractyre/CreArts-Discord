@@ -21,21 +21,61 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.sidebar-1tnWFu {
+.sidebar__5e434 {
   background: transparent;
-  margin: 0px calc(var(--layout-margin) / 2) 0px 0px;
+  margin: 0px;
   border-radius: var(--radius-primary) !important;
-  width: var(--width-channel);
+  width: calc(var(--layout-width-guild) + (var(--layout-margin) / 2) + var(--width-channel)) !important;
+}
+
+// Channel column leaves room for the user panel below it
+.sidebarList__5e434 {
+  margin-bottom: calc(50px + var(--inner-primary) + var(--inner-primary) + (var(--layout-margin) / 2)) !important;
+}
+
+// No Resize
+.sidebarResizeHandle__5e434 {
+  display: none;
+}
+
+// No Bottom Shadow
+.sidebar__5e434::after {
+  display: none;
+}
+
+// DM List (Discord reserves panel room here too; the channel column already does)
+.privateChannels_e6b769 .scroller__99e7c {
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+  margin-bottom: 0px;
+}
+
+// DM List Text (idle rows match the channel list)
+.privateChannels_e6b769 .interactive__972a0 .name__20a53 {
+  color: var(--channels-default);
+}
+
+.privateChannels_e6b769 .interactive__972a0:hover .name__20a53 {
+  color: var(--interactive-hover);
+}
+
+.privateChannels_e6b769 .interactiveSelected__972a0 .name__20a53 {
+  color: var(--interactive-active);
 }
 
 // Background
-.container-1NXEtd,
-.sidebar-1tnWFu .thin-31rlnD {
+.container__2637a,
+.sidebar__5e434 .thin__99f8c {
   background: transparent;
-  margin-bottom: calc(var(--layout-margin) / 2);
+  margin-bottom: 0px;
 }
 
-.privateChannels-oVe7HL {
+// Discord pads the channel list for its full-width panel; the channel column already leaves room
+.container__2637a {
+  padding-bottom: 0px;
+}
+
+.privateChannels_e6b769 {
   background: transparent;
 }
 
@@ -43,15 +83,15 @@
 // ║ Layout                   ║ Sidebar (Home)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.searchBar-3TnChZ {
+.searchBar_e6b769 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   box-shadow: none;
   height: var(--height-header);
-  margin-bottom: calc((var(--layout-margin) / 2) + (var(--layout-margin) / 2));
+  margin-bottom: calc(var(--layout-margin) / 2);
 }
 
-.searchBar-3TnChZ .searchBarComponent-3N7dCG {
+.searchBar_e6b769 .searchBarComponent_ee924e {
   background: transparent;
   border-radius: var(--radius-primary);
   height: 100%;
@@ -67,7 +107,7 @@
 // ║ Layout                   ║ Sidebar (Explore)                                                                       ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.sidebar-1tnWFu .thin-31rlnD.scrollerBase-_bVAAt {
+.sidebar__5e434 .thin__99f8c.scrollerBase_d125d2 {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
 }
@@ -77,12 +117,12 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.container-1-ERn5 {
+.container_f37cb1 {
   z-index: 2 !important;
 }
 
 // Background
-.header-3OsQeK {
+.header_f37cb1 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   height: var(--height-header);
@@ -94,31 +134,31 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Banner
-.bannerImg-2PzH6z, .bannerImage-ubW8K- {
+.bannerImg_f37cb1, .bannerImage_f37cb1 {
   width: 100%;
 }
 
-.animatedContainer-2laTjx {
+.animatedContainer_f37cb1 {
   border-radius: var(--radius-primary);
   box-shadow: none;
 }
 
 // Spacing
-.hasBanner-2IrYih .header-3OsQeK {
+.hasBanner_f37cb1 .header_f37cb1 {
   background: transparent;
   height: 135px !important;
   padding-bottom: 84px;
 }
 
 // No Banner Hide
-.hasBanner-2IrYih .bannerImage-ubW8K-,
-.hasBanner-2IrYih .animatedContainer-2laTjx {
+.hasBanner_f37cb1 .bannerImage_f37cb1,
+.hasBanner_f37cb1 .animatedContainer_f37cb1 {
   opacity: 1 !important;
   transform: translateY(0px) !important;
 }
 
 // Remove Spacing
-.scroller-1ox3I2 [style="height: 84px;"] {
+.scroller__629e4 [style="height: 84px;"] {
   display: none !important;
 }
 
@@ -127,7 +167,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Channel Notice
-.channelNotice-3CfHGl {
+.channelNotice_e88f3f {
   background-color: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px;
@@ -137,7 +177,7 @@
 
 
 // Background
-.channelNotice-K4UfZY {
+.channelNotice_e2d7b8 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px;
@@ -145,17 +185,17 @@
 }
 
 // Normal
-.channelNotice-K4UfZY .textBlock-3rqvcj:first-child,
-.channelNotice-K4UfZY .button-f2h6uQ {
+.channelNotice_e2d7b8 .textBlock_e2d7b8:first-child,
+.channelNotice_e2d7b8 .button__201d5 {
   display: none;
 }
 
 // Hover
-.channelNotice-K4UfZY:hover .textBlock-3rqvcj:first-child {
+.channelNotice_e2d7b8:hover .textBlock_e2d7b8:first-child {
   display: flex;
 }
 
-.channelNotice-K4UfZY:hover .button-f2h6uQ {
+.channelNotice_e2d7b8:hover .button__201d5 {
   display: block;
 }
 
@@ -164,10 +204,10 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.scroller-1ox3I2 {
+.scroller__629e4 {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px 0px !important;
+  margin: 0px !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -175,8 +215,12 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.panels-3wFtMD {
+.panels__5e434 {
   background: var(--background-secondary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px 0px;
+  margin: 0px;
   border-radius: var(--radius-primary);
+  left: calc(var(--layout-width-guild) + (var(--layout-margin) / 2)) !important;
+  right: 0px;
+  bottom: 0px;
+  width: auto !important;
 }

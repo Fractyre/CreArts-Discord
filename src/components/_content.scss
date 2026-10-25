@@ -3,24 +3,48 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.content-1jQy2l {
+.content_f75fb0 {
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.scroller-kQBbkU {
-  border-radius: var(--radius-primary) var(--radius-primary) 0px 0px;
+.scroller__36d07 {
+  border-radius: var(--radius-primary);
+}
+
+// Scrollbar spans the card (Discord stops it 36px short for the floating typing bar, which is its own card here)
+.scroller__36d07::-webkit-scrollbar-track {
+  margin-bottom: 0px;
 }
 
 // Background
-.chatContent-3KubbW {
+.chatContent_f75fb0 {
   margin: 0px 0px 0px 0px;
   border-radius: var(--radius-primary);
+  background: transparent;
+  min-width: 0px;
 }
 
 // Background (Chat)
-.chat-2ZfjoI .messagesWrapper-RpOMA3 {
+.chat_f75fb0 .messagesWrapper__36d07 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
+}
+
+// No Fade (square strips over the card's rounded bottom corners, typing variant included)
+.chatGradientBase__36d07 {
+  display: none;
+}
+
+// Bottom Padding (Discord's spacer reserves room for a floating typing indicator; CreArts shows typing as its own card)
+.scrollerSpacer__36d07 {
+  height: var(--inner-secondary) !important;
+}
+
+// Messages inset and rounded like the member rows (hover/mention highlights were square and flush with the card edge)
+.message__5126c {
+  margin-left: var(--inner-primary);
+  margin-right: var(--inner-primary);
+  border-radius: var(--radius-tertiary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -28,62 +52,194 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.pageWrapper-2PwDoS {
-  background: var(--background-secondary) !important;
-}
 
 // Spacing
-.pageWrapper-2PwDoS {
-  border-radius: var(--radius-primary);
-  margin: 0px 0px 0px calc(var(--layout-margin) / 2);
-}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (Friends)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.tabBody-2dgbAs:before {
+.tabBody__133bf:before {
   display: none;
 }
 
-.container-1oAagU {
+.tabBody__133bf {
+  background: transparent;
+}
+
+.container__7d20c {
   background: transparent;
 }
 
 // Background
-.peopleColumn-1wMU14 {
+.peopleColumn__133bf {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.nowPlayingColumn-1eCBCN {
+.nowPlayingColumn__133bf {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
-  margin: calc(var(--layout-margin) / 2) 0px 0px var(--layout-margin);
+  margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.applicationStore-2nk7Lo,
-.container-2cd8Mz {
+.container__133bf {
   background: transparent !important;
   border: none;
 }
 
-.headerBar-1dSpQr:before {
-  box-shadow: none;
-}
 
-.nowPlayingColumn-1eCBCN .scroller-hE2gWq {
+.nowPlayingColumn__133bf .scroller__7d20c {
   margin-left: 0px;
   border: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Shop)                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// No Background (the page was one square block flush with the sidebar)
+.shop__6db1d {
+  background: transparent;
+}
+
+// Header (Shop, Quests)
+.shop__6db1d .headerBar__80679,
+.container__955a3 .headerBar__1a9ce {
+  background: var(--background-secondary) !important;
+  border-radius: var(--radius-primary);
+  padding: 0px var(--inner-secondary);
+}
+
+// Background (Shop, Quests)
+.shopViewWrapper__6db1d,
+.container__955a3 > .scroller__23746 {
+  margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
+  border-radius: var(--radius-primary);
+  overflow: hidden;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Nitro)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.applicationStore_f07d62 {
+  margin-left: calc(var(--layout-margin) / 2);
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+.containerBackground__02f2d {
+  background: transparent;
+}
+
+// Header (the transparent variant sits in a column, where the header's width: unset collapsed it to a 0px pill)
+.container__9293f.transparent__9293f {
+  align-self: stretch;
+  margin-left: 0px;
+}
+
+.container__9293f.transparent__9293f .children__9293f {
+  flex: 1 1 auto;
+}
+
+// Split into a header card and a page card, like Quests. The header is sticky inside the scroller, so CSS can't
+// move it out; a mask cuts the scroller into both shapes with a real gap, so scrolled content never shows in it.
+// ponytail: assumes --height-header >= 2 * --radius-primary
+.applicationStore_f07d62 {
+  --split-h: var(--height-header);
+  --split-g: calc(var(--layout-margin) / 2);
+  --split-w: calc(var(--top-bar-width) + var(--split-g));
+  --split-r: var(--radius-primary);
+  --split-fill: linear-gradient(#000, #000);
+  --split-c: #000 calc(var(--split-r) - 1px), transparent var(--split-r);
+  // Pieces that only touch get pixel-snapped separately and leave hairline seams, so every piece is anchored to the
+  // top and each rectangle reaches --split-o into its neighbouring corner tiles (invisible: ~0.03px past the curve).
+  --split-o: 1px;
+  --split-mask:
+    /* Header: wide and tall rectangles, top-left fill (border-radius rounds it), then bottom-left, top-right and bottom-right corners */
+    var(--split-fill) left 0 top calc(var(--split-r) - var(--split-o)) / calc(100% - var(--split-w)) calc(var(--split-h) - var(--split-r) * 2 + var(--split-o) * 2) no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top 0 / calc(100% - var(--split-w) - var(--split-r) * 2 + var(--split-o) * 2) var(--split-h) no-repeat,
+    var(--split-fill) left 0 top 0 / calc(var(--split-r) + var(--split-o)) calc(var(--split-r) + var(--split-o)) no-repeat,
+    radial-gradient(circle at 100% 0, var(--split-c)) left 0 top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right var(--split-w) top 0 / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 0, var(--split-c)) right var(--split-w) top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
+    /* Page: wide and tall rectangles running past the bottom (border-radius rounds those corners), then top-left and top-right corners */
+    var(--split-fill) left 0 top calc(var(--split-h) + var(--split-g) + var(--split-r) - var(--split-o)) / 100% 100% no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top calc(var(--split-h) + var(--split-g)) / calc(100% - var(--split-r) * 2 + var(--split-o) * 2) 100% no-repeat,
+    radial-gradient(circle at 100% 100%, var(--split-c)) left 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat;
+  -webkit-mask: var(--split-mask);
+  mask: var(--split-mask);
+}
+
+// No Scrollbar Gutter (content ended 15px short of the card, so the header and the mask didn't line up)
+.applicationStore_f07d62 .scroller__02f2d {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+
+// Header card (solid strip; the mask rounds it, a second rounded edge let the hero bleed through at the corners)
+.applicationStore_f07d62 .navBar__131a1 {
+  background: var(--background-secondary) !important;
+}
+
+.applicationStore_f07d62 .navBar__131a1 .children__9293f {
+  background: transparent;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Content                  ║ Layout (Discover)                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Sidebar
+.container__551b0 {
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+// Background (a header card and a page card, like Quests)
+.container_a592e1 {
+  margin-left: calc(var(--layout-margin) / 2);
+  background: transparent;
+}
+
+.container_a592e1 .headerBar__8a7fc {
+  position: relative;
+  flex-shrink: 0;
+  width: auto;
+  height: var(--height-header);
+  margin-right: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
+  padding: 0px var(--inner-secondary);
+  background: var(--background-secondary);
+  border-radius: var(--radius-primary);
+}
+
+.container_a592e1 .backdrop__8a7fc {
+  display: none;
+}
+
+.container_a592e1 .innerContainer_e1147e > .scroller__23746 {
+  flex: 1 1 auto;
+  min-height: 0px;
+  height: auto;
+  margin-top: calc(var(--layout-margin) / 2);
+  border-radius: var(--radius-primary);
+}
+
+// No Background (Discord's own square layers inside the Discover and Nitro cards)
+.homeWrapper__0920e,
+.scroller__02f2d {
+  background: transparent;
+}
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (No Page)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.noChannel-1GDIAZ {
+.noChannel__01d5c {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-left: calc(var(--layout-margin) / 2);
@@ -93,12 +249,12 @@
 // ║ Content                  ║ Layout (Voice)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.callContainer-HtHELf {
+.callContainer_cb9592 {
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
 }
 
-.callContainer-HtHELf .container-ZMc96U {
+.callContainer_cb9592 .container__9293f {
   margin-left: 0px;
 }
 
@@ -107,27 +263,19 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.theme-dark .background-fkKrXt,
-.theme-light .background-fkKrXt {
-  background: transparent;
-}
 
-.homeContainer-r4Hvv1 {
+.homeContainer__7449f {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
 
-.container-4HqGB3.background-3X6Uak {
-  background: var(--background-primary);
-  border: 1px solid var(--background-modifier-active);
-}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Chat (Header)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.container-1yy5xN {
+.container__00de6 {
   background: var(--background-secondary-alt);
   border-radius: var(--radius-secondary);
   margin: 16px 0px 0px 16px;
@@ -135,7 +283,7 @@
 }
 
 // Buttons (Normal)
-.container-1yy5xN .channelSettingButtons-sCQ_2T .button-1kija8 {
+.container__00de6 .channelSettingButtons__1ee8c .button_aec7ab {
   color: #fff;
   background: var(--brand-experiment);
   border-radius: var(--radius-tertiary);
@@ -147,17 +295,17 @@
 }
 
 // Buttons (Hover)
-.container-1yy5xN .channelSettingButtons-sCQ_2T .button-1kija8:hover {
+.container__00de6 .channelSettingButtons__1ee8c .button_aec7ab:hover {
   background-color: var(--brand-experiment-560);
 }
 
 // No Icon
-.emptyChannelIcon-1YdEz2 {
+.emptyChannelIcon__00de6 {
   display: none;
 }
 
 // No Avatar
-.container-1yy5xN .avatars-37eU13 {
+.container__00de6 .avatars__1ee8c {
   display: none;
 }
 
@@ -165,7 +313,7 @@
 // ║ Content                  ║ Chat (Embeds)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.embedFull-1HGV2S {
+.embedFull__623de {
   background: var(--background-secondary-alt);
   border-radius: 4px var(--radius-secondary) var(--radius-secondary) 4px;
 }
@@ -175,17 +323,17 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.container-30bdan {
+.container_aae012 {
   flex-direction: row;
 }
 
 // Title
-.titleName-2vkJTW {
+.titleName_aae012 {
   text-align: left;
 }
 
 // Sub Title
-.subtitle-3tY4DQ {
+.subtitle_aae012 {
   text-align: left;
 }
 
@@ -195,7 +343,7 @@
 // ║ Content                  ║ Build Override                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.wrapper-3-JZ_Z {
+.wrapper__124c8 {
   background: var(--background-secondary-alt) !important;
 }
 
@@ -205,8 +353,13 @@
 // ║ Content                  ║ Timestamp                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.cozy-VmLDNB .timestamp-p1Df1m {
+.cozy_c19a55 .timestamp_c19a55 {
   color: var(--header-secondary);
+}
+
+// Date Divider (faint on purpose; the unread divider keeps its colour)
+.divider__908e2:not(.isUnread__908e2) .content__908e2 {
+  color: var(--text-faint);
 }
 
 
@@ -233,26 +386,26 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.callContainer-HtHELf {
+.callContainer_cb9592 {
   overflow: visible !important;
   border-radius: var(--radius-primary) !important;
 }
 
 // Radius
-.gradientTop-1UBZHm,
-.gradientBottom-uB_-4E {
+.gradientTop_bfe55a,
+.gradientBottom_bfe55a {
   border-radius: var(--radius-primary);
 }
 
 // Header
-.wrapper-1gVUIN:not(.minimum-fXpVNc) {
+.wrapper_cb9592:not(.minimum_cb9592) {
   margin-top: calc(var(--layout-margin-top) + var(--height-header));
   border-radius: var(--radius-primary);
   height: calc(100% - var(--layout-margin-top) - var(--height-header)) !important;
   background: transparent;
 }
 
-.topControls-23RE3h {
+.topControls_bfe55a {
   margin-top: calc((var(--layout-margin-top) + var(--height-header)) * -1);
   height: var(--height-header);
   opacity: 1.0 !important;
@@ -264,25 +417,25 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.wrapper-1gVUIN.minimum-fXpVNc {
+.wrapper_cb9592.minimum_cb9592 {
   margin-top: calc(var(--layout-margin-top) + var(--height-header));
   background-color: transparent;
-  margin-bottom: var(--layout-margin);
+  margin-bottom: calc(var(--layout-margin) / 2);
 }
 
-.wrapper-1gVUIN.minimum-fXpVNc .root-22AK9z {
+.wrapper_cb9592.minimum_cb9592 .root_bfe55a {
   background: black;
   border-radius: var(--radius-primary);
 }
 
 // Controls
-.videoControls-353CsJ .quickSelect-384d3G {
+.videoControls_bfe55a .quickSelect__540d0 {
   margin-top: 20px;
 }
 
 // Resize Handle
-.wrapper-1gVUIN.minimum-fXpVNc .resizeHandle-1zU8BL,
-.wrapper-1gVUIN .resizeHandle-1zU8BL {
+.wrapper_cb9592.minimum_cb9592 .resizeHandle__7be9d,
+.wrapper_cb9592 .resizeHandle__7be9d {
   background: var(--background-secondary-alt);
   border-radius: var(--radius-primary);
   height: 8px;
@@ -292,18 +445,18 @@
 
 }
 
-.voiceCallWrapper-3UtDiC {
+.voiceCallWrapper_a21736 {
   padding-bottom: 0px;
 }
 
 // Opacity
-.callContainer-HtHELf .videoControls-353CsJ .quickSelect-384d3G,
-.callContainer-HtHELf .controlButton-2PMNom {
+.callContainer_cb9592 .videoControls_bfe55a .quickSelect__540d0,
+.callContainer_cb9592 .controlButton__1405b {
   opacity: 0;
   transition: all 0.4s ease;
 }
-.callContainer-HtHELf:hover .videoControls-353CsJ .quickSelect-384d3G,
-.callContainer-HtHELf:hover .controlButton-2PMNom {
+.callContainer_cb9592:hover .videoControls_bfe55a .quickSelect__540d0,
+.callContainer_cb9592:hover .controlButton__1405b {
   opacity: 1;
 }
 
@@ -312,28 +465,28 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.container-3XgAHv:not(.floating-3M3WeH) {
+.container__01ae2:not(.floating__01ae2) {
   margin-top: calc((var(--layout-margin-top) + var(--height-header)) * -1);
 }
 
-.container-3XgAHv .chat-1-OBC7 {
+.container__01ae2 .chat_f02135 {
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.chatIcon-R5MUNn {
+.chatIcon__233f8 {
   margin-top: calc((var(--layout-margin-top) + var(--height-header)) * -1);
   min-width: 0px;
   margin-right: 0px;
   padding: 0px;
 }
 
-.root-22AK9z.idle-39sGPO .chatButton-10jXXp:not(.chatButtonShowing-1aD1ch) {
+.root_bfe55a.idle_bfe55a .chatButton_dd069c:not(.chatButtonShowing_dd069c) {
   transform: none !important;
   opacity: 1.0 !important;
 }
 
 // Floating
-.floating-3M3WeH {
+.floating__01ae2 {
   margin-top: calc(var(--layout-margin-top) + var(--height-header));
   border: none;
   filter: none;
@@ -341,7 +494,7 @@
 }
 
 // Resize Handle
-.resizeHandle-PBRzPC {
+.resizeHandle__01ae2 {
   background: var(--background-secondary-alt);
   border-radius: var(--radius-primary);
   margin-left: calc(var(--layout-margin) / 2);

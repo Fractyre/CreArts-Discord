@@ -1,3 +1,31 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ BetterDiscord            ║ Base                                                                                    ║
+// ║ BetterDiscord            ║ Addon Cards                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Card
+.bd-addon-card {
+  background-color: var(--background-secondary-alt);
+  border: none;
+  border-radius: var(--radius-secondary);
+}
+
+// Header
+.bd-addon-card .bd-addon-header {
+  color: var(--header-primary);
+  border-bottom: none;
+}
+
+// Description
+.bd-addon-card .bd-description {
+  color: var(--header-secondary);
+}
+
+// Footer
+.bd-addon-card .bd-addon-footer {
+  border-top: none;
+}
+
+// Search
+.bd-addon-list-header .bd-search {
+  border-radius: var(--radius-primary);
+}

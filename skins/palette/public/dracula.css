@@ -23,7 +23,7 @@
 /* ║ Dark                     ║ Here you can make general adjustments.                                                  ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.theme-dark {
+.theme-dark, .theme-darker, .theme-midnight {
 /* Lightness */
 --SKIN-lightness: 0%;
 

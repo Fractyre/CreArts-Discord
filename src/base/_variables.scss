@@ -4,7 +4,7 @@
 
 :root {
   // Info (Custom)
-  --info-version: "v3.0.3";
+  --info-version: "v3.1.0";
   --info-skin: var(--SKIN-skin, "Default");
   --info-author: var(--SKIN-author, "CorellanStoma");
 
@@ -63,7 +63,7 @@
 // ║ Variables                ║ Palette                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.theme-dark {
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
   // Lightness (Custom)
   --lightness: 0%;
 
@@ -120,7 +120,7 @@
 // ║ Variables                ║ System                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.theme-dark {
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
   // Interactive (Default)
   --interactive-active: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 100% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
   --interactive-hover: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 10% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
@@ -180,7 +180,7 @@
   --brightness: calc(1.5 - var(--saturation-factor, 1) * 0.5);
   --contrast: var(--saturation-factor, 1);
 
-  --focus-primary: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
+  --focus-primary: var(--accent-primary);
 
   --toast-background: #2f3136;
   --toast-header: #202225;
@@ -205,7 +205,9 @@
 
 // Text
   --text-normal: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) + 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
-  --text-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
+  --text-muted: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-interactive-a, var(--interactive-a)));
+  // Faint on purpose (date dividers, "(edited)"); Discord now uses --text-muted for regular secondary text
+  --text-faint: hsla(var(--SKIN-interactive-h, var(--interactive-h)), calc(var(--saturation-factor, 1) * var(--SKIN-interactive-s, var(--interactive-s))), calc(var(--SKIN-interactive-l, var(--interactive-l)) - 20% + var(--SKIN-lightness, var(--lightness))), calc(var(--SKIN-interactive-a, var(--interactive-a)) - 0.8));
 
 
   --text-link: hsla(var(--SKIN-accent-h, var(--accent-h)), calc(var(--saturation-factor, 1) * var(--SKIN-accent-s, var(--accent-s))), calc(var(--SKIN-accent-l, var(--accent-l)) - 0% + var(--SKIN-lightness, var(--lightness))), var(--SKIN-accent-a, var(--accent-a)));
@@ -304,7 +306,7 @@
 
 
 
-  --input-background: #202225;
+  --input-background: var(--background-primary);
   --input-placeholder-text: hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%);
   --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
   --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
@@ -428,6 +430,81 @@ html {
   --guild-number: calc(var(--guild-icon) / 4.2);
 
   --height-channel-buttons: 32px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Modern Discord Tokens                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Discord's 2025 refresh reads these instead of the legacy names above; point them at the CreArts palette.
+:is(.theme-dark, .theme-darker, .theme-midnight):not(.custom-user-profile-theme) {
+  // Background
+  --background-base-lowest: var(--background-tertiary);
+  --background-base-lower: var(--background-secondary);
+  --background-base-low: var(--background-primary);
+  --background-surface-high: var(--background-secondary);
+  --background-surface-higher: var(--background-secondary-alt);
+  --background-surface-highest: var(--background-tertiary);
+  --bg-surface-raised: var(--background-secondary);
+  --bg-surface-overlay: var(--background-secondary-alt);
+  --chat-background: var(--background-primary);
+  --chat-background-default: var(--background-primary);
+  --app-frame-background: var(--background-tertiary);
+  --app-frame-border: transparent;
+  --home-background: var(--background-tertiary);
+  --card-background-default: var(--background-secondary-alt);
+  --background-brand: var(--accent-primary);
+
+  // Modifier
+  --background-mod-subtle: var(--background-modifier-hover);
+  --background-mod-muted: var(--background-modifier-hover);
+  --background-mod-normal: var(--background-modifier-active);
+  --background-mod-strong: var(--background-modifier-selected);
+  --interactive-background-hover: var(--background-modifier-hover);
+  --interactive-background-active: var(--background-modifier-active);
+  --interactive-background-selected: var(--background-modifier-selected);
+
+  // Interactive
+  --interactive-text-default: var(--interactive-normal);
+  --interactive-text-hover: var(--interactive-hover);
+  --interactive-text-active: var(--interactive-active);
+  --interactive-icon-default: var(--interactive-normal);
+  --interactive-icon-hover: var(--interactive-hover);
+  --interactive-icon-active: var(--interactive-active);
+
+  // Text
+  --text-default: var(--text-normal);
+  --text-strong: var(--header-primary);
+  --text-subtle: var(--header-secondary);
+  --text-feedback-positive: var(--green-primary);
+  --text-feedback-warning: var(--yellow-primary);
+  --text-feedback-critical: var(--red-primary);
+
+  // Icon
+  --icon-default: var(--interactive-normal);
+  --icon-strong: var(--interactive-hover);
+  --icon-subtle: var(--interactive-normal);
+  --icon-muted: var(--interactive-muted);
+
+  // Border (CreArts panels are borderless)
+  --border-subtle: transparent;
+  --border-muted: transparent;
+  --border-normal: var(--background-modifier-active);
+  --border-strong: var(--background-modifier-selected);
+
+  // Controls
+  --control-primary-background-default: var(--accent-primary);
+  --control-primary-background-hover: var(--accent-secondary);
+  --control-primary-background-active: var(--accent-tertiary);
+  --input-background-default: var(--input-background);
+  --input-placeholder-text-default: var(--input-placeholder-text);
+
+  // Messages
+  --message-background-hover: var(--background-message-hover);
+  --message-mentioned-background-default: var(--background-mentioned);
+  --message-mentioned-background-hover: var(--background-mentioned-hover);
+  --message-automod-background-default: var(--background-message-automod);
+  --message-automod-background-hover: var(--background-message-automod-hover);
 }
 
 /*
