@@ -4,9 +4,6 @@
 
 // Text Selection
 .versionHash__081d7 {
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
   user-select: all;
 }
 
@@ -22,9 +19,6 @@ div:has(> .versionHash__081d7)::after {
   text-transform: none;
   color: var(--text-muted);
   margin-top: 20px;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
   user-select: text;
   cursor: text;
 }
