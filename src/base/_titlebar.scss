@@ -21,7 +21,10 @@ body,
 .base__5e434 {
   --top-bar-slots: 4; // Inbox, Minimize, Maximize, Close
   --top-bar-slot: 32px;
-  --top-bar-width: calc(var(--top-bar-slots) * var(--top-bar-slot) + (var(--top-bar-slots) - 1) * var(--inner-primary) + var(--inner-secondary) * 2);
+  --top-bar-width: calc(
+    var(--top-bar-slots) * var(--top-bar-slot) + (var(--top-bar-slots) - 1) * var(--inner-primary) +
+      var(--inner-secondary) * 2
+  );
   // Room a header row leaves for the card
   --top-bar-reserve: calc(var(--top-bar-width) + (var(--layout-margin) / 2));
 }

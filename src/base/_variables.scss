@@ -46,14 +46,29 @@
   // Fonts (Custom)
   --font-titlebar: var(--SKIN-titlebar-font, "Segoe UI", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif);
   --font-primary: var(--SKIN-primary-font, "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif);
-  --font-display: var(--SKIN-display-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";);
-  --font-headline: var(--SKIN-headline-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";);
-  --font-code: var(--SKIN-code-font, "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", Courier, monospace;);
-  
+  --font-display: var(--SKIN-display-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif" ;);
+  --font-headline: var(--SKIN-headline-font, "Ginto", "Helvetica Neue", "Helvetica", "Arial", "sans-serif" ;);
+  --font-code: var(
+    --SKIN-code-font,
+    "Consolas",
+    "Andale Mono WT",
+    "Andale Mono",
+    "Lucida Console",
+    "Lucida Sans Typewriter",
+    "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono",
+    "Liberation Mono",
+    "Nimbus Mono L",
+    "Monaco",
+    "Courier New",
+    Courier,
+    monospace;
+  );
+
   // Opacity (Custom)
-  --opacity-titlebar-wordmark: var(--SKIN-opacity-titlebar-wordmark, 1.0);
-  --opacity-titlebar-title: var(--SKIN-opacity-titlebar-title, 1.0);
-  --opacity-titlebar-buttons: var(--SKIN-opacity-titlebar-buttons, 1.0);
+  --opacity-titlebar-wordmark: var(--SKIN-opacity-titlebar-wordmark, 1);
+  --opacity-titlebar-title: var(--SKIN-opacity-titlebar-title, 1);
+  --opacity-titlebar-buttons: var(--SKIN-opacity-titlebar-buttons, 1);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -109,43 +124,43 @@
   --interactive-h: 216;
   --interactive-s: 4%;
   --interactive-l: 74%;
-  --interactive-a: 1.0;
+  --interactive-a: 1;
 
   // Background (Custom)
   --background-h: 220;
   --background-s: 8%;
   --background-l: 23%;
-  --background-a: 1.0;
+  --background-a: 1;
 
   // Accent (Custom)
   --accent-h: 235;
   --accent-s: 100%;
   --accent-l: 71%;
-  --accent-a: 1.0;
+  --accent-a: 1;
 
   // Green (Custom)
   --green-h: 153;
   --green-s: 46%;
   --green-l: 49%;
-  --green-a: 1.0;
+  --green-a: 1;
 
   // Yellow (Custom)
   --yellow-h: 38;
   --yellow-s: 96%;
   --yellow-l: 54%;
-  --yellow-a: 1.0;
+  --yellow-a: 1;
 
   // Red (Custom)
   --red-h: 0;
   --red-s: 85%;
   --red-l: 61%;
-  --red-a: 1.0;
+  --red-a: 1;
 
   // Purple (Custom)
   --purple-h: 262;
   --purple-s: 47%;
   --purple-l: 40%;
-  --purple-a: 1.0;
+  --purple-a: 1;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -207,7 +222,6 @@
   --background-modifier-active: #{skin(interactive, 0%, $alpha: 0.2)};
   --background-modifier-selected: #{skin(interactive, 0%, $alpha: 0.2)};
   --background-modifier-interactive: #{skin(interactive, 0%, $alpha: 0.18)};
-  
 
   --brightness: calc(1.5 - var(--saturation-factor, 1) * 0.5);
   --contrast: var(--saturation-factor, 1);
@@ -234,35 +248,25 @@
   --search-popout-date-picker-hint-value-background: var(--brand-experiment);
   --search-popout-date-picker-hint-value-background-hover: var(--brand-experiment-430);
 
-
-// Text
+  // Text
   --text-normal: #{skin(interactive, 20%)};
   --text-muted: #{skin(interactive, -20%)};
   // Faint on purpose (date dividers, "(edited)"); Discord now uses --text-muted for regular secondary text
   --text-faint: #{skin(interactive, -20%, $fade: 0.8)};
 
-
   --text-link: #{skin(accent, 0%)};
   --text-link-low-saturation: #{skin(accent, 4%)};
 
-
-  
   --text-positive: hsl(139, calc(var(--saturation-factor, 1) * 51.6%), 52.2%);
   --text-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
   --text-danger: hsl(359, calc(var(--saturation-factor, 1) * 82%), 73.9%);
   --text-brand: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%);
-
-
-
 
   --background-accent: #4f545c;
   --background-floating: #18191c;
   --background-nested-floating: #2f3136;
   --background-mobile-primary: #36393f;
   --background-mobile-secondary: #2f3136;
-  
-
-
 
   --info-positive-background: hsla(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%, 0.1);
   --info-positive-foreground: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
@@ -336,8 +340,6 @@
   --modal-background: #36393f;
   --modal-footer-background: #2f3136;
 
-
-
   --input-background: var(--background-primary);
   --input-placeholder-text: hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%);
   --elevation-stroke: 0 0 0 1px rgba(4, 4, 5, 0.15);
@@ -376,7 +378,6 @@
 // Brand Color
 [data-popout-root],
 html {
-
   --brand-experiment: #{skin(accent, 0%)};
   --brand-experiment-100: hsl(240, calc(var(--saturation-factor, 1) * 77.8%), 98.2%);
   --brand-experiment-130: hsl(236, calc(var(--saturation-factor, 1) * 87.5%), 96.9%);

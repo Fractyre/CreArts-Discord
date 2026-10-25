@@ -66,7 +66,9 @@
   background: var(--background-primary);
 }
 
-.guilds__5e434 .wrapper__6e9f8[data-list-item-id="guildsnav___home"]:not(:hover, .selected__6e9f8) .childWrapper__6e9f8 {
+.guilds__5e434
+  .wrapper__6e9f8[data-list-item-id="guildsnav___home"]:not(:hover, .selected__6e9f8)
+  .childWrapper__6e9f8 {
   color: var(--interactive-normal);
 }
 
@@ -78,12 +80,10 @@
   background: var(--brand-experiment);
 }
 
-
 // Guild Separator
 .guildSeparator__252b6 {
   background: var(--background-primary);
 }
-
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Serverlist               ║ Folder                                                                                  ║

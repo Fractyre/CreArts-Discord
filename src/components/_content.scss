@@ -82,7 +82,6 @@
   border: none;
 }
 
-
 .nowPlayingColumn__133bf .scroller__7d20c {
   margin-left: 0px;
   border: none;
@@ -148,18 +147,30 @@
   // top and each rectangle reaches --split-o into its neighbouring corner tiles (invisible: ~0.03px past the curve).
   --split-o: 1px;
   --split-mask:
-    /* Header: wide and tall rectangles, top-left fill (border-radius rounds it), then bottom-left, top-right and bottom-right corners */
-    var(--split-fill) left 0 top calc(var(--split-r) - var(--split-o)) / calc(100% - var(--split-w)) calc(var(--split-h) - var(--split-r) * 2 + var(--split-o) * 2) no-repeat,
-    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top 0 / calc(100% - var(--split-w) - var(--split-r) * 2 + var(--split-o) * 2) var(--split-h) no-repeat,
-    var(--split-fill) left 0 top 0 / calc(var(--split-r) + var(--split-o)) calc(var(--split-r) + var(--split-o)) no-repeat,
-    radial-gradient(circle at 100% 0, var(--split-c)) left 0 top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
-    radial-gradient(circle at 0 100%, var(--split-c)) right var(--split-w) top 0 / var(--split-r) var(--split-r) no-repeat,
-    radial-gradient(circle at 0 0, var(--split-c)) right var(--split-w) top calc(var(--split-h) - var(--split-r)) / var(--split-r) var(--split-r) no-repeat,
+    /* Header: wide and tall rectangles, top-left fill (border-radius rounds it), then bottom-left, top-right and bottom-right corners */ var(
+        --split-fill
+      )
+      left 0 top calc(var(--split-r) - var(--split-o)) / calc(100% - var(--split-w))
+      calc(var(--split-h) - var(--split-r) * 2 + var(--split-o) * 2) no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top 0 /
+      calc(100% - var(--split-w) - var(--split-r) * 2 + var(--split-o) * 2) var(--split-h) no-repeat,
+    var(--split-fill) left 0 top 0 / calc(var(--split-r) + var(--split-o)) calc(var(--split-r) + var(--split-o))
+      no-repeat,
+    radial-gradient(circle at 100% 0, var(--split-c)) left 0 top calc(var(--split-h) - var(--split-r)) / var(--split-r)
+      var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right var(--split-w) top 0 / var(--split-r) var(--split-r)
+      no-repeat,
+    radial-gradient(circle at 0 0, var(--split-c)) right var(--split-w) top calc(var(--split-h) - var(--split-r)) /
+      var(--split-r) var(--split-r) no-repeat,
     /* Page: wide and tall rectangles running past the bottom (border-radius rounds those corners), then top-left and top-right corners */
-    var(--split-fill) left 0 top calc(var(--split-h) + var(--split-g) + var(--split-r) - var(--split-o)) / 100% 100% no-repeat,
-    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top calc(var(--split-h) + var(--split-g)) / calc(100% - var(--split-r) * 2 + var(--split-o) * 2) 100% no-repeat,
-    radial-gradient(circle at 100% 100%, var(--split-c)) left 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat,
-    radial-gradient(circle at 0 100%, var(--split-c)) right 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r) var(--split-r) no-repeat;
+      var(--split-fill) left 0 top calc(var(--split-h) + var(--split-g) + var(--split-r) - var(--split-o)) / 100% 100%
+      no-repeat,
+    var(--split-fill) left calc(var(--split-r) - var(--split-o)) top calc(var(--split-h) + var(--split-g)) /
+      calc(100% - var(--split-r) * 2 + var(--split-o) * 2) 100% no-repeat,
+    radial-gradient(circle at 100% 100%, var(--split-c)) left 0 top calc(var(--split-h) + var(--split-g)) /
+      var(--split-r) var(--split-r) no-repeat,
+    radial-gradient(circle at 0 100%, var(--split-c)) right 0 top calc(var(--split-h) + var(--split-g)) / var(--split-r)
+      var(--split-r) no-repeat;
   -webkit-mask: var(--split-mask);
   mask: var(--split-mask);
 }
@@ -256,7 +267,6 @@
   border-radius: var(--radius-primary);
 }
 
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Chat (Header)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -324,8 +334,6 @@
   text-align: left;
 }
 
-
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Build Override                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -333,8 +341,6 @@
 .wrapper__124c8 {
   background: var(--background-secondary-alt) !important;
 }
-
-
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Timestamp                                                                               ║

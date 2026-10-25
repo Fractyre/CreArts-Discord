@@ -25,23 +25,6 @@
   box-shadow: var(--elevation-low);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Remove Spacing for Public Servers
 .communityInfoVisible_f37cb1:not(.hasBanner_f37cb1)
   ~ .scroller__629e4
@@ -49,8 +32,6 @@
   > .containerDefault__29444:first-of-type {
   padding-top: 0px;
 }
-
-
 
 .headerContent_f37cb1 {
   width: 100% !important;
@@ -60,12 +41,6 @@
 .primaryInfo_f37cb1 {
   height: unset !important;
 }
-
-
-
-
-
-
 
 // Header
 .header_f37cb1 {
