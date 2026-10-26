@@ -1,12 +1,10 @@
-> **Revived for the 2025+ Discord client, BetterDiscord only.** The default left (combined) alignment is fully ported; the other alignment modules still use the old layout.
+> **The original CreArts by corellan is no longer maintained and doesn't work on the current Discord client. This fork revives it for BetterDiscord with the same look.**
 
 # CreArts v3.2.0
 
 [![Version](https://img.shields.io/github/package-json/v/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](.github/docs/changelog.md)
 [![License](https://img.shields.io/github/license/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/Fractyre/CreArts-Discord/total?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://github.com/Fractyre/CreArts-Discord/releases)
-[![Paypal](https://img.shields.io/badge/Donate-PayPal-blue?&labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://www.paypal.com/donate/?hosted_button_id=5MQYGQ2FGQDWJ)
-[![Discord](https://img.shields.io/discord/534376415202639903?label=Discord&labelColor=2e343e&color=%23CD0952&style=for-the-badge)](https://discord.gg/8W8E39Z)
 
 **CreArts-Discord** is a theme for [Discord](https://discord.com) that gives you a new modern interface and adds at the same time many possibilities to be customized, one of the core features are [Skins](.github/docs/skins.md), which allow you to customize the appearance with [Variables](.github/docs/variables.md). The goal of this Discord theme is to wrap the standard Discord charm in a new visual idea.
 
