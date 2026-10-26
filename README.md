@@ -1,6 +1,6 @@
 > **Revived for the 2025+ Discord client, BetterDiscord only.** The default left (combined) alignment is fully ported; the other alignment modules still use the old layout.
 
-# CreArts v3.1.0
+# CreArts v3.2.0
 
 [![Version](https://img.shields.io/github/package-json/v/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](.github/docs/changelog.md)
 [![License](https://img.shields.io/github/license/Fractyre/CreArts-Discord?labelColor=2e343e&color=%23CD0952&style=for-the-badge)](LICENSE)
