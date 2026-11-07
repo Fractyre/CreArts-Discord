@@ -3,31 +3,31 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.chat_f75fb0 {
+.chat_z_gUBg {
   background: transparent;
 }
-.layer__960e4 {
+.layer_Fd0FEH {
   background: transparent !important;
 }
 
 // Spacing (no top margin: the top bar fills it, see Titlebar)
-.base__5e434 {
+.base_pog62O {
   margin: 0px var(--layout-margin-right) var(--layout-margin-bottom) var(--layout-margin);
 }
 
 // No Lines
-.form_f75fb0:before,
-.children__9293f:after,
-.content_f75fb0:before {
+.form_z_gUBg:before,
+.children_ybUK7Z:after,
+.content_z_gUBg:before {
   display: none;
 }
 
 // No Shaddow
-.header_f37cb1 {
+.header_XH4OpX {
   box-shadow: none;
 }
 
 // No Focus Outline
-ul.tree_ef3116:focus:not(:focus-visible) {
+ul.tree_5dqHTG:focus:not(:focus-visible) {
   outline: none;
 }

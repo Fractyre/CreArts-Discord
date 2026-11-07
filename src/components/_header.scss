@@ -3,7 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.container__9293f {
+.container_ybUK7Z {
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   background: transparent !important;
   padding: 0px;
@@ -12,7 +12,7 @@
 }
 
 // Title
-.children__9293f {
+.children_ybUK7Z {
   background: var(--background-secondary);
   margin: 0px;
   padding: 0px var(--inner-secondary);
@@ -21,7 +21,7 @@
 }
 
 // Toolbar
-.toolbar__9293f {
+.toolbar_ybUK7Z {
   background: var(--background-secondary);
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   padding: 0px var(--inner-primary) !important;
@@ -31,35 +31,35 @@
 
 // The title truncates instead (a full toolbar, e.g. a call's clip and stream quality badges, squeezed its items and
 // clipped the quality badge)
-.toolbar__9293f,
-.toolbar__9293f > * {
+.toolbar_ybUK7Z,
+.toolbar_ybUK7Z > * {
   flex-shrink: 0;
 }
 
 // Clip badge: the toolbar's gap alone after it, like the other items (its own right margin doubled it)
-.toolbar__9293f > .clipsEnabledIndicator__8c88a {
+.toolbar_ybUK7Z > .clipsEnabledIndicator_U6LhXD {
   margin-right: 0px;
 }
 
 // Icons
-.button__9db96 {
+.button_wIG9Rr {
   margin: 0px;
 }
 
 // Idle toolbar icons rest at the normal colour (Discord paints them with the faint muted colour)
-.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f) .icon__9293f {
+.toolbar_ybUK7Z .iconWrapper_ybUK7Z:not(.selected_ybUK7Z) .icon_ybUK7Z {
   color: var(--interactive-normal);
 }
 
-.toolbar__9293f .iconWrapper__9293f:not(.selected__9293f):hover .icon__9293f {
+.toolbar_ybUK7Z .iconWrapper_ybUK7Z:not(.selected_ybUK7Z):hover .icon_ybUK7Z {
   color: var(--interactive-hover);
 }
 
 // New Group DM (Friends page; Discord pads it on one side only)
-.inviteToolbar__133bf {
+.inviteToolbar_zrUwGA {
   padding: 0px;
 }
 
-.toolbar__9293f button {
+.toolbar_ybUK7Z button {
   margin: 0 8px;
 }

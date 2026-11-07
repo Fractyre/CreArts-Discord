@@ -3,7 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.sidebar__5e434 {
+.sidebar_pog62O {
   background: transparent;
   margin: 0px;
   border-radius: var(--radius-primary) !important;
@@ -11,48 +11,48 @@
 }
 
 // Channel column leaves room for the panels below it (Discord measures them, voice and activity panels included)
-.sidebarList__5e434 {
+.sidebarList_pog62O {
   margin-bottom: calc(var(--custom-app-panels-height, var(--height-panel)) + (var(--layout-margin) / 2)) !important;
 }
 
 // No Bottom Shadow
-.sidebar__5e434::after {
+.sidebar_pog62O::after {
   display: none;
 }
 
 // DM List (Discord reserves panel room here too; the channel column already does)
-.privateChannels_e6b769 .scroller__99e7c {
+.privateChannels_u88IQl .scroller_Bce46W {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-bottom: 0px;
 }
 
 // DM List Text (idle rows match the channel list)
-.privateChannels_e6b769 .interactive__972a0 .name__20a53 {
+.privateChannels_u88IQl .interactive_zln_tS .name_TBNqol {
   color: var(--channels-default);
 }
 
-.privateChannels_e6b769 .interactive__972a0:hover .name__20a53 {
+.privateChannels_u88IQl .interactive_zln_tS:hover .name_TBNqol {
   color: var(--interactive-hover);
 }
 
-.privateChannels_e6b769 .interactiveSelected__972a0 .name__20a53 {
+.privateChannels_u88IQl .interactiveSelected_zln_tS .name_TBNqol {
   color: var(--interactive-active);
 }
 
 // Background
-.container__2637a,
-.sidebar__5e434 .thin__99f8c {
+.container_H5ozaj,
+.sidebar_pog62O .thin_tqapBM {
   background: transparent;
   margin-bottom: 0px;
 }
 
 // Discord pads the channel list for its full-width panel; the channel column already leaves room
-.container__2637a {
+.container_H5ozaj {
   padding-bottom: 0px;
 }
 
-.privateChannels_e6b769 {
+.privateChannels_u88IQl {
   background: transparent;
 }
 
@@ -60,7 +60,7 @@
 // ║ Layout                   ║ Sidebar (Home)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.searchBar_e6b769 {
+.searchBar_u88IQl {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   box-shadow: none;
@@ -68,7 +68,7 @@
   margin-bottom: calc(var(--layout-margin) / 2);
 }
 
-.searchBar_e6b769 .searchBarComponent_ee924e {
+.searchBar_u88IQl .searchBarComponent_ee924e {
   background: transparent;
   border-radius: var(--radius-primary);
   height: 100%;
@@ -84,7 +84,7 @@
 // ║ Layout                   ║ Sidebar (Explore)                                                                       ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.sidebar__5e434 .thin__99f8c.scrollerBase_d125d2 {
+.sidebar_pog62O .thin_tqapBM.scrollerBase_tqapBM {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
 }
@@ -94,12 +94,12 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.container_f37cb1 {
+.container_XH4OpX {
   z-index: 2 !important;
 }
 
 // Background
-.header_f37cb1 {
+.header_XH4OpX {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   height: var(--height-header);
@@ -114,38 +114,38 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Banner
-.bannerImg_f37cb1,
-.bannerImage_f37cb1 {
+.bannerImg_XH4OpX,
+.bannerImage_XH4OpX {
   width: 100%;
 }
 
-.animatedContainer_f37cb1 {
+.animatedContainer_XH4OpX {
   border-radius: var(--radius-primary);
   box-shadow: none;
 }
 
 // Clip the header's shading to the card (Discord's dark ellipse behind the name reaches past the banner's top-left
 // corner); clip-path only cuts the painting, overflow: hidden broke the banner's layout
-.container_f37cb1.hasBanner_f37cb1 {
+.container_XH4OpX.hasBanner_XH4OpX {
   clip-path: inset(0px round var(--radius-primary));
 }
 
 // Spacing
-.hasBanner_f37cb1 .header_f37cb1 {
+.hasBanner_XH4OpX .header_XH4OpX {
   background: transparent;
   height: 135px !important;
   padding-bottom: 84px;
 }
 
 // No Banner Hide
-.hasBanner_f37cb1 .bannerImage_f37cb1,
-.hasBanner_f37cb1 .animatedContainer_f37cb1 {
+.hasBanner_XH4OpX .bannerImage_XH4OpX,
+.hasBanner_XH4OpX .animatedContainer_XH4OpX {
   opacity: 1 !important;
   transform: translateY(0px) !important;
 }
 
 // Remove Spacing
-.scroller__629e4 [style="height: 84px;"] {
+.scroller_ysO7Gy [style="height: 84px;"] {
   display: none !important;
 }
 
@@ -154,7 +154,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Channel Notice
-.channelNotice_e88f3f {
+.channelNotice_jOZ0iO {
   background-color: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px;
@@ -162,7 +162,7 @@
 }
 
 // Background (the header's bottom margin already spaces it from above)
-.channelNotice_e2d7b8 {
+.channelNotice_hVh8FI {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: 0px 0px calc(var(--layout-margin) / 2) 0px;
@@ -174,7 +174,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.scroller__629e4 {
+.scroller_ysO7Gy {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
   margin: 0px !important;
@@ -185,7 +185,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.panels__5e434 {
+.panels_pog62O {
   background: var(--background-secondary);
   margin: 0px;
   border-radius: var(--radius-primary);

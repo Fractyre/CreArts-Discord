@@ -3,11 +3,11 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // No Border
-.chat_f02135:before {
+.chat_fjXxyy:before {
   display: none;
 }
 
-.messagesWrapper__36d07 {
+.messagesWrapper_8AE1Qq {
   background: var(--background-secondary);
   margin: 0px 0px 0px 0px;
 }
@@ -17,17 +17,17 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // No Background (Discord's square block behind the header and chat cards; threads and voice chat)
-.container__01ae2 {
+.container_FrbQJp {
   background: transparent;
 }
 
 // Header lines up with the chat card below it
-.container__01ae2 .container__9293f {
+.container_FrbQJp .container_ybUK7Z {
   margin-left: 0px;
 }
 
 // Spacing
-.container__01ae2 .chat_ee72fa {
+.container_FrbQJp .chat_fjXxyy {
   margin-top: calc(var(--layout-margin) / 2);
 }
 
@@ -37,21 +37,21 @@
 
 // Discord floats the voice chat over the call from a layer; put that layer in the row so the panel sits beside the call
 // like the thread panel (its inline width still applies, so the call gives up whatever width the panel has)
-.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) {
+.chat_z_gUBg:has(> .layerContainer_VVADeK > .chatLayerWrapper_FrbQJp > .floating_FrbQJp) {
   flex-direction: row;
 }
 
-.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) > .wrapper_cb9592 {
+.chat_z_gUBg:has(> .layerContainer_VVADeK > .chatLayerWrapper_FrbQJp > .floating_FrbQJp) > .wrapper_hbKzX7 {
   flex: 1 1 0px;
   min-width: 0px;
 }
 
 // Empty below the call; in a row it would take half the width
-.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .floating__01ae2) > .content_f75fb0 {
+.chat_z_gUBg:has(> .layerContainer_VVADeK > .chatLayerWrapper_FrbQJp > .floating_FrbQJp) > .content_z_gUBg {
   display: none;
 }
 
-.chat_f75fb0 > .layerContainer__59d0d:has(> .chatLayerWrapper__01ae2 > .floating__01ae2) {
+.chat_z_gUBg > .layerContainer_VVADeK:has(> .chatLayerWrapper_FrbQJp > .floating_FrbQJp) {
   position: relative;
   inset: auto;
   flex: none;
@@ -60,14 +60,14 @@
   z-index: auto;
 }
 
-.chatLayerWrapper__01ae2:has(> .floating__01ae2),
-.chatLayerWrapper__01ae2 > .container__01ae2.floating__01ae2:not(.chatTarget__01ae2) {
+.chatLayerWrapper_FrbQJp:has(> .floating_FrbQJp),
+.chatLayerWrapper_FrbQJp > .container_FrbQJp.floating_FrbQJp:not(.chatTarget_FrbQJp) {
   position: relative;
   inset: auto;
   height: 100%;
 }
 
 // Discord's empty twin of the floating panel (still absolute, so it would land over the call and catch its clicks)
-.chatTarget__01ae2.floating__01ae2 {
+.chatTarget_FrbQJp.floating_FrbQJp {
   visibility: hidden;
 }

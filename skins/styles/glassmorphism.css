@@ -11,7 +11,7 @@
 /* ║ Blur                     ║ Titlebar                                                                                ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.titleBar__421ed::before {
+.titleBar_gnMEnp::before {
   backdrop-filter: blur(var(--blur));
 }
 
@@ -20,12 +20,12 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.messagesWrapper__36d07 {
+.messagesWrapper_8AE1Qq {
   background: transparent !important;
 }
 
 /* Blur */
-.messagesWrapper__36d07::before {
+.messagesWrapper_8AE1Qq::before {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   position: absolute;
@@ -42,12 +42,12 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.container_c8ffbb {
+.container_86es0b {
 background: transparent;
 }
 
 /* Blur */
-.membersWrap_c8ffbb::before {
+.membersWrap_86es0b::before {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   position: absolute;
