@@ -3,45 +3,45 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.content_f75fb0 {
+.content_z_gUBg {
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.scroller__36d07 {
+.scroller_8AE1Qq {
   border-radius: var(--radius-primary);
 }
 
 // Scrollbar spans the card (Discord stops it 36px short for the floating typing bar, which is its own card here)
-.scroller__36d07::-webkit-scrollbar-track {
+.scroller_8AE1Qq::-webkit-scrollbar-track {
   margin-bottom: 0px;
 }
 
 // Background
-.chatContent_f75fb0 {
+.chatContent_z_gUBg {
   margin: 0px 0px 0px 0px;
   border-radius: var(--radius-primary);
   background: transparent;
   min-width: 0px;
 }
 
-// Background (Chat; .chat_ee72fa is the thread and voice chat side panel)
-:is(.chat_f75fb0, .chat_ee72fa) .messagesWrapper__36d07 {
+// Background (Chat; .chat_fjXxyy is the thread and voice chat side panel)
+:is(.chat_z_gUBg, .chat_fjXxyy) .messagesWrapper_8AE1Qq {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
 
 // No Fade (square strips over the card's rounded bottom corners, typing variant included)
-.chatGradientBase__36d07 {
+.chatGradientBase_8AE1Qq {
   display: none;
 }
 
 // Bottom Padding (Discord's spacer reserves room for a floating typing indicator; CreArts shows typing as its own card)
-.scrollerSpacer__36d07 {
+.scrollerSpacer_8AE1Qq {
   height: var(--inner-secondary) !important;
 }
 
 // Messages inset and rounded like the member rows (hover/mention highlights were square and flush with the card edge)
-.message__5126c {
+.message_SY_P2T {
   margin-left: var(--inner-primary);
   margin-right: var(--inner-primary);
   border-radius: var(--radius-tertiary);
@@ -52,37 +52,37 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.tabBody__133bf:before {
+.tabBody_zrUwGA:before {
   display: none;
 }
 
-.tabBody__133bf {
+.tabBody_zrUwGA {
   background: transparent;
 }
 
-.container__7d20c {
+.container_GNEh_C {
   background: transparent;
 }
 
 // Background
-.peopleColumn__133bf {
+.peopleColumn_zrUwGA {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.nowPlayingColumn__133bf {
+.nowPlayingColumn_zrUwGA {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
 }
 
-.container__133bf {
+.container_zrUwGA {
   background: transparent !important;
   border: none;
 }
 
-.nowPlayingColumn__133bf .scroller__7d20c {
+.nowPlayingColumn_zrUwGA .scroller_GNEh_C {
   margin-left: 0px;
   border: none;
 }
@@ -92,21 +92,21 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // No Background (the page was one square block flush with the sidebar)
-.shop__6db1d {
+.shop_Mqg79R {
   background: transparent;
 }
 
 // Header (Shop, Quests)
-.shop__6db1d .headerBar__80679,
-.container__955a3 .headerBar__1a9ce {
+.shop_Mqg79R .headerBar_ViLURN,
+.container_ZTJWQo .headerBar_tSk_LE {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
   padding: 0px var(--inner-secondary);
 }
 
 // Background (Shop, Quests)
-.shopViewWrapper__6db1d,
-.container__955a3 > .scroller__23746 {
+.shopViewWrapper_Mqg79R,
+.container_ZTJWQo > .scroller_jkJlMe {
   margin: calc(var(--layout-margin) / 2) 0px 0px calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary);
   overflow: hidden;
@@ -117,26 +117,26 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.applicationStore_f07d62 {
+.applicationStore_6U3jXZ {
   margin-left: calc(var(--layout-margin) / 2);
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
 
 // Header (the transparent variant sits in a column, where the header's width: unset collapsed it to a 0px pill)
-.container__9293f.transparent__9293f {
+.container_ybUK7Z.transparent_ybUK7Z {
   align-self: stretch;
   margin-left: 0px;
 }
 
-.container__9293f.transparent__9293f .children__9293f {
+.container_ybUK7Z.transparent_ybUK7Z .children_ybUK7Z {
   flex: 1 1 auto;
 }
 
 // Split into a header card and a page card, like Quests. The header is sticky inside the scroller, so CSS can't
 // move it out; a mask cuts the scroller into both shapes with a real gap, so scrolled content never shows in it.
 // ponytail: assumes --height-header >= 2 * --radius-primary
-.applicationStore_f07d62 {
+.applicationStore_6U3jXZ {
   --split-h: var(--height-header);
   --split-g: calc(var(--layout-margin) / 2);
   --split-w: var(--top-bar-reserve);
@@ -176,22 +176,22 @@
 }
 
 // No Scrollbar Gutter (content ended 15px short of the card, so the header and the mask didn't line up)
-.applicationStore_f07d62 .scroller__02f2d {
+.applicationStore_6U3jXZ .scroller_0fgkqL {
   scrollbar-width: none;
   scrollbar-gutter: auto;
 }
 
 // Header card (solid strip; the mask rounds it, a second rounded edge let the hero bleed through at the corners)
-.applicationStore_f07d62 .navBar__131a1 {
+.applicationStore_6U3jXZ .navBar_jHfUxk {
   background: var(--background-secondary) !important;
 }
 
 // Static like every other header (Discord slides the whole page in from the top, header included)
-.applicationStore_f07d62 .fadeInFromTop__02f2d {
+.applicationStore_6U3jXZ .fadeInFromTop_0fgkqL {
   animation: none;
 }
 
-.applicationStore_f07d62 .navBar__131a1 .children__9293f {
+.applicationStore_6U3jXZ .navBar_jHfUxk .children_ybUK7Z {
   background: transparent;
 }
 
@@ -200,18 +200,18 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Sidebar
-.container__551b0 {
+.container_GQJi50 {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
 }
 
 // Background (a header card and a page card, like Quests)
-.container_a592e1 {
+.container_I4BhVZ {
   margin-left: calc(var(--layout-margin) / 2);
   background: transparent;
 }
 
-.container_a592e1 .headerBar__8a7fc {
+.container_I4BhVZ .headerBar_Y0eJLL {
   position: relative;
   flex-shrink: 0;
   width: auto;
@@ -222,12 +222,12 @@
   border-radius: var(--radius-primary);
 }
 
-.container_a592e1 .backdrop__8a7fc {
+.container_I4BhVZ .backdrop_Y0eJLL {
   display: none;
 }
 
-// (Discover > Servers wraps it in .container_d08938 instead)
-.container_a592e1 :is(.innerContainer_e1147e, .container_d08938) > .scroller__23746 {
+// (Discover > Servers wraps it in .container_67Xl1N instead)
+.container_I4BhVZ :is(.innerContainer_H11xQD, .container_67Xl1N) > .scroller_jkJlMe {
   flex: 1 1 auto;
   min-height: 0px;
   height: auto;
@@ -236,16 +236,16 @@
 }
 
 // No Background (Discord's own square layers inside the Discover and Nitro cards)
-.homeWrapper__0920e,
-.containerBackground__02f2d,
-.scroller__02f2d {
+.homeWrapper_8iSxT3,
+.containerBackground_0fgkqL,
+.scroller_0fgkqL {
   background: transparent;
 }
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Content                  ║ Layout (No Page)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.noChannel__01d5c {
+.noChannel_RvzdCg {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-left: calc(var(--layout-margin) / 2);
@@ -256,38 +256,38 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // No Background (Discord's square block showed in the gap beside the call card and behind its rounded corners; the DM
-// call's .minimum_cb9592 variant sets it with a stronger rule)
-.wrapper_cb9592,
-.channelChatWrapper_cb9592 {
+// call's .minimum_hbKzX7 variant sets it with a stronger rule)
+.wrapper_hbKzX7,
+.channelChatWrapper_hbKzX7 {
   background: transparent !important;
 }
 
 // Discord squares the call off while its chat panel is open
-.callContainer_cb9592 {
+.callContainer_hbKzX7 {
   margin: 0px 0px 0px calc(var(--layout-margin) / 2);
   border-radius: var(--radius-primary) !important;
 }
 
-.callContainer_cb9592 .container__9293f {
+.callContainer_hbKzX7 .container_ybUK7Z {
   margin-left: 0px;
 }
 
 // Header and top bar card are both transparent over the call, so they read as one row: end the toolbar under the card,
 // its last icon one toolbar gap (--inner-primary) from the card's first (toolbar padding + card gap + card padding read
 // as one wide gap)
-.callContainer_cb9592 .container__9293f {
+.callContainer_hbKzX7 .container_ybUK7Z {
   margin-right: calc(var(--top-bar-width) - var(--inner-secondary));
 }
 
 // With the chat panel open the call no longer reaches the top bar card, so its header needs no room for it
-.chat_f75fb0:has(> .layerContainer__59d0d > .chatLayerWrapper__01ae2 > .container__01ae2:not(.chatTarget__01ae2))
-  .callContainer_cb9592
-  .container__9293f {
+.chat_z_gUBg:has(> .layerContainer_VVADeK > .chatLayerWrapper_FrbQJp > .container_FrbQJp:not(.chatTarget_FrbQJp))
+  .callContainer_hbKzX7
+  .container_ybUK7Z {
   margin-right: 0px;
 }
 
 // Header floats over the video like Discord's (its cards touched the call card's rounded edges)
-.callContainer_cb9592 :is(.children__9293f, .toolbar__9293f) {
+.callContainer_hbKzX7 :is(.children_ybUK7Z, .toolbar_ybUK7Z) {
   background: transparent;
 }
 
@@ -305,7 +305,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.container__00de6 {
+.container_w6h4R2 {
   background: var(--background-secondary-alt);
   border-radius: var(--radius-secondary);
   margin: 16px 0px 0px 16px;
@@ -313,7 +313,7 @@
 }
 
 // Buttons (Normal)
-.container__00de6 .channelSettingButtons__1ee8c .button_aec7ab {
+.container_w6h4R2 .channelSettingButtons_88IrSD .button_INrZ8n {
   color: #fff;
   background: var(--brand-experiment);
   border-radius: var(--radius-tertiary);
@@ -325,17 +325,17 @@
 }
 
 // Buttons (Hover)
-.container__00de6 .channelSettingButtons__1ee8c .button_aec7ab:hover {
+.container_w6h4R2 .channelSettingButtons_88IrSD .button_INrZ8n:hover {
   background-color: var(--brand-experiment-560);
 }
 
 // No Icon
-.emptyChannelIcon__00de6 {
+.emptyChannelIcon_w6h4R2 {
   display: none;
 }
 
 // No Avatar
-.container__00de6 .avatars__1ee8c {
+.container_w6h4R2 .avatars_88IrSD {
   display: none;
 }
 
@@ -343,7 +343,7 @@
 // ║ Content                  ║ Chat (Embeds)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.embedFull__623de {
+.embedFull_XyW1ZT {
   background: var(--background-secondary-alt);
   border-radius: 4px var(--radius-secondary) var(--radius-secondary) 4px;
 }
@@ -353,17 +353,17 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.container_aae012 {
+.container_rh88Fa {
   flex-direction: row;
 }
 
 // Title
-.titleName_aae012 {
+.titleName_rh88Fa {
   text-align: left;
 }
 
 // Sub Title
-.subtitle_aae012 {
+.subtitle_rh88Fa {
   text-align: left;
 }
 
@@ -371,7 +371,7 @@
 // ║ Content                  ║ Build Override                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.wrapper__124c8 {
+.wrapper_TF1qYB {
   background: var(--background-secondary-alt) !important;
 }
 
@@ -379,11 +379,11 @@
 // ║ Content                  ║ Timestamp                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.cozy_c19a55 .timestamp_c19a55 {
+.cozy_2i8Bfm .timestamp_2i8Bfm {
   color: var(--header-secondary);
 }
 
 // Date Divider (faint on purpose; the unread divider keeps its colour)
-.divider__908e2:not(.isUnread__908e2) .content__908e2 {
+.divider_4TfzT5:not(.isUnread_4TfzT5) .content_4TfzT5 {
   color: var(--text-faint);
 }

@@ -3,15 +3,15 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Spacing */
-.base__5e434 {
+.base_pog62O {
   margin-left: var(--layout-margin-left) !important;
 }
 
-.layers__960e4 {
+.layers_Fd0FEH {
   margin-top: calc(72px + var(--layout-margin-top));
 }
 
-.wrapper_ef3116 {
+.wrapper_5dqHTG {
   position: fixed;
   transform: rotate(-90deg);
   transform-origin: left top;
@@ -20,24 +20,24 @@
   height: 100vw;
 }
 
-.platform-win .wrapper_ef3116 {
+.platform-win .wrapper_5dqHTG {
   top: calc(var(--height-titlebar) + 72px - 2px + var(--layout-margin-top));
 }
 
-.guilds__5e434 {
+.guilds_pog62O {
   margin: unset !important;
   background: transparent !important;
 }
 
 /* Background */
-.scroller_ef3116 {
+.scroller_5dqHTG {
   background: var(--background-secondary) !important;
   border-radius: var(--radius-primary);
   margin-bottom: calc(var(--layout-margin-right) + var(--layout-margin));
 }
 
 /* Pill */
-.pill_ebc727 {
+.pill_4_iwh6 {
   transform: rotate(90deg);
   transform-origin: center;
   top: -32px;
@@ -45,16 +45,16 @@
 }
 
 /* Separator */
-.guildSeparator__252b6 {
+.guildSeparator_3WHVfy {
   transform: rotate(90deg);
 }
 
 /* Item */
-.listItem__650eb {
+.listItem_rwEpIL {
   transform: rotate(90deg);
 }
 
 /* Unread */
-.unreadMentionsIndicatorBottom_ef3116 {
+.unreadMentionsIndicatorBottom_5dqHTG {
   margin-bottom: calc(var(--layout-margin-right) + var(--layout-margin-bottom));
 }

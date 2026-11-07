@@ -6,7 +6,7 @@
   --count: 10;
 }
 
-.container_b7e1cb {
+.container_YUQhib {
   display: grid;
   grid-template-columns: repeat(var(--count), max-content);
   grid-gap: 24px;
@@ -23,14 +23,14 @@
 }
 
 
-[aria-label*="rules"] .embedWrapper_b5ecb2 {
+[aria-label*="rules"] .embedWrapper_3yYzAt {
   grid-column: 1 / -1;
   position: sticky;
   left: 0;
 }
 
 /* Image Radius */
-.imageWrapper_af017a {
+.imageWrapper_W6wEGA {
   border-radius: var(--radius-tertiary);
 }
 
@@ -39,30 +39,30 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Scrollbar */
-.container_b7e1cb::-webkit-scrollbar {
+.container_YUQhib::-webkit-scrollbar {
   width: 16px;
   height: 16px;
 }
 
-.container_b7e1cb::-webkit-scrollbar-thumb {
+.container_YUQhib::-webkit-scrollbar-thumb {
   background-color: var(--background-tertiary);
   min-height: 40px;
 }
 
-.container_b7e1cb::-webkit-scrollbar-thumb,
-.container_b7e1cb::-webkit-scrollbar-track {
+.container_YUQhib::-webkit-scrollbar-thumb,
+.container_YUQhib::-webkit-scrollbar-track {
   border: 4px solid transparent;
   background-clip: padding-box;
   border-radius: 8px;
 }
 
-.container_b7e1cb::-webkit-scrollbar-thumb,
-.container_b7e1cb::-webkit-scrollbar-track {
+.container_YUQhib::-webkit-scrollbar-thumb,
+.container_YUQhib::-webkit-scrollbar-track {
   border: 2px solid transparent;
   background-clip: padding-box;
   border-radius: 8px;
 }
 
-.container_b7e1cb::-webkit-scrollbar-track {
+.container_YUQhib::-webkit-scrollbar-track {
   background-color: var(--background-primary);
 }

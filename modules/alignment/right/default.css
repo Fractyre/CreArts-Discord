@@ -3,22 +3,22 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Order */
-.wrapper_ef3116 {
+.wrapper_5dqHTG {
   order: 2;
 }
 
-.base__5e434 {
+.base_pog62O {
   order: 1;
 }
 
 /* Spacing */
-.guilds__5e434 {
+.guilds_pog62O {
   margin-right: var(--layout-margin-left) !important;
   margin-left: 0px !important;
 }
 
 /* Reverse */
-.pill_ebc727 {
+.pill_4_iwh6 {
   transform: rotate(180deg);
   transform-origin: center;
   left: 62px;

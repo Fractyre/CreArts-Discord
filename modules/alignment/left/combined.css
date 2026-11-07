@@ -10,7 +10,7 @@
 }
 
 /* Anchor the pinned cards to the server list instead of its scroller */
-.guilds__5e434 {
+.guilds_pog62O {
   /* From the list's top edge up to the top of the pinned card */
   --combined-offset: calc(var(--combined-top) + (var(--layout-margin) / 2));
   overflow: visible !important;
@@ -24,29 +24,29 @@
 }
 
 /* No containment, which would make these the pinned cards' containing block (and clip them) instead */
-.guilds__5e434 .tree_ef3116,
-.guilds__5e434 .scroller_ef3116 {
+.guilds_pog62O .tree_5dqHTG,
+.guilds_pog62O .scroller_5dqHTG {
   contain: none;
 }
 
-.guilds__5e434 .scroller_ef3116 {
+.guilds_pog62O .scroller_5dqHTG {
   position: relative;
 }
 
 /* Its buttons are pinned to the top card; as an empty flex item it added a gap above the servers */
-.guilds__5e434 .tutorialContainer__650eb {
+.guilds_pog62O .tutorialContainer_rwEpIL {
   display: contents;
 }
 
 /* Drop zone after the last server (Discord anchors it to the wrapper above, which put its line above the card); back in
    the list's flow below the servers, filling the empty space like Discord's */
-.guilds__5e434 .tutorialContainer__650eb > .wrapper_d144f8 {
+.guilds_pog62O .tutorialContainer_rwEpIL > .wrapper_nL08_v {
   position: relative;
   flex: 1 0 var(--guild-icon);
   height: auto !important;
 }
 
-.guilds__5e434 .tutorialContainer__650eb > .wrapper_d144f8 > .target_d144f8 {
+.guilds_pog62O .tutorialContainer_rwEpIL > .wrapper_nL08_v > .target_nL08_v {
   height: 100% !important;
 }
 
@@ -55,17 +55,17 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Spacing (outranks the core margin, which loads later) */
-.sidebar__5e434 > .guilds__5e434 {
+.sidebar_pog62O > .guilds_pog62O {
   margin-top: var(--combined-offset) !important;
   margin-bottom: calc(var(--combined-bottom) + (var(--layout-margin) / 2)) !important;
 }
 
-.scroller_ef3116 {
+.scroller_5dqHTG {
   padding-top: var(--inner-secondary) !important;
 }
 
 /* Home Button */
-.guilds__5e434 .tutorialContainer__1f388 {
+.guilds_pog62O .tutorialContainer_1IyMuq {
   position: fixed;
   top: calc(var(--combined-offset) * -1);
   left: 0px;
@@ -78,8 +78,8 @@
 }
 
 /* Explore, Add Server Buttons */
-.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]),
-.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
+.guilds_pog62O .listItem_rwEpIL:has([data-list-item-id="guildsnav___guild-discover-button"]),
+.guilds_pog62O .listItem_rwEpIL:has([data-list-item-id="guildsnav___create-join-button"]) {
   position: fixed;
   z-index: 1;
   left: 0px;
@@ -87,17 +87,17 @@
   margin: 0px;
 }
 
-.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___guild-discover-button"]) {
+.guilds_pog62O .listItem_rwEpIL:has([data-list-item-id="guildsnav___guild-discover-button"]) {
   top: calc(var(--combined-offset) * -1 + var(--inner-secondary) + var(--guild-icon) + var(--guild-spacing));
 }
 
-.guilds__5e434 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]) {
+.guilds_pog62O .listItem_rwEpIL:has([data-list-item-id="guildsnav___create-join-button"]) {
   top: calc(var(--combined-offset) * -1 + var(--inner-secondary) + (var(--guild-icon) + var(--guild-spacing)) * 2);
 }
 
 /* Separator (its whole list item, which otherwise still adds a gap above the servers) */
-.guildSeparator__252b6,
-.guilds__5e434 .listItem__650eb:has(> .guildSeparator__252b6) {
+.guildSeparator_3WHVfy,
+.guilds_pog62O .listItem_rwEpIL:has(> .guildSeparator_3WHVfy) {
   display: none;
 }
 
@@ -106,21 +106,21 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Anchor the buttons to the user panel so they can sit in the server column */
-.panels__5e434 > .container__37e49 {
+.panels_pog62O > .container_g6VwXp {
   position: static;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 
 /* Avatar + Name fills the card, inset evenly (the card has no button row any more) */
-.panels__5e434 > .container__37e49 .accountPopoutButtonWrapper__37e49 {
+.panels_pog62O > .container_g6VwXp .accountPopoutButtonWrapper_g6VwXp {
   align-self: stretch;
   margin: var(--inner-primary);
 }
 
 /* Nameplate clipped to the Avatar + Name box (the card is static, so Discord's absolute nameplate sizes to the whole
    panel stack, voice panel included; pin it to the bottom card) */
-.panels__5e434 > .container__37e49 > .fitInAccount_df39b2 {
+.panels_pog62O > .container_g6VwXp > .fitInAccount_AFi54G {
   top: auto;
   bottom: 0px;
   height: var(--height-panel);
@@ -128,7 +128,7 @@
 }
 
 /* Background */
-.panels__5e434 > .container__37e49 .buttons__37e49 {
+.panels_pog62O > .container_g6VwXp .buttons_g6VwXp {
   position: absolute;
   left: calc((var(--layout-width-guild) + (var(--layout-margin) / 2)) * -1);
   bottom: 0px;
@@ -146,12 +146,12 @@
 
 /* Discord tints the hover with the nameplate's colour (!important; an inherited override lost, so it's set on
    the button); the buttons sit away from it here, so use the plain hover the mute/deafen buttons get without a nameplate */
-.panels__5e434 > .container__37e49 .buttons__37e49 .plated__67645 {
+.panels_pog62O > .container_g6VwXp .buttons_g6VwXp .plated_Y-8oZW {
   --custom-nameplate: var(--interactive-background-selected) !important;
 }
 
 /* Buttons */
-.panels__5e434 > .container__37e49 .buttons__37e49 .button__67645 {
+.panels_pog62O > .container_g6VwXp .buttons_g6VwXp .button_Y-8oZW {
   background: var(--background-primary);
   border-radius: var(--radius-primary);
   width: 48px;
@@ -159,6 +159,6 @@
 }
 
 /* Remove Device Menus */
-.panels__5e434 > .container__37e49 .buttonChevron__5e764 {
+.panels_pog62O > .container_g6VwXp .buttonChevron_gKpIZP {
   display: none;
 }

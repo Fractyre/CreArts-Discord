@@ -2,12 +2,12 @@
 /* ║ Edited                   ║ Import                                                                                  ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.edited_c19a55:not(.message-translate-indicator) {
+.edited_2i8Bfm:not(.message-translate-indicator) {
   display: none;
 }
 
 /* The edit date moved from the time's aria-label (now gone, which left "()") into a screen-reader-only sibling */
-.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2 {
+.timestamp_2i8Bfm:has(.edited_2i8Bfm) > .hiddenVisually_FX8kaC {
   all: unset;
   color: var(--text-faint);
   font-size: 0.625rem;
@@ -16,10 +16,10 @@
   user-select: none;
 }
 
-.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2::before {
+.timestamp_2i8Bfm:has(.edited_2i8Bfm) > .hiddenVisually_FX8kaC::before {
   content: "(";
 }
 
-.timestamp_c19a55:has(.edited_c19a55) > .hiddenVisually_b18fe2::after {
+.timestamp_2i8Bfm:has(.edited_2i8Bfm) > .hiddenVisually_FX8kaC::after {
   content: ")";
 }

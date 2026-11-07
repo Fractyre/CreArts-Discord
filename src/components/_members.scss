@@ -3,8 +3,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background (Members & Channel; a full-view thread has no outer container, so its list wrapper is the card)
-.container_c8ffbb,
-.membersWrap_c8ffbb:not(.container_c8ffbb .membersWrap_c8ffbb) {
+.container_86es0b,
+.membersWrap_86es0b:not(.container_86es0b .membersWrap_86es0b) {
   background: var(--background-secondary);
   border-radius: var(--radius-primary);
   margin-left: calc(var(--layout-margin) / 2);
@@ -14,15 +14,15 @@
   flex-shrink: 0;
 }
 
-.container_c8ffbb .membersWrap_c8ffbb,
-.membersWrap_c8ffbb > .members_c8ffbb {
+.container_86es0b .membersWrap_86es0b,
+.membersWrap_86es0b > .members_86es0b {
   width: 100% !important;
   min-width: 0px;
 }
 
 // Rows inset evenly from both card edges (Discord fixes them at 247px with a left margin only; threads use __5d473)
-.member_c8ffbb,
-.membersWrap_c8ffbb .member__5d473 {
+.member_86es0b,
+.membersWrap_86es0b .member_Iy0c7A {
   width: auto;
   max-width: none;
   margin: 0px var(--inner-primary) !important;
@@ -31,8 +31,8 @@
 }
 
 // No Background
-.members_c8ffbb,
-.members_c8ffbb > div {
+.members_86es0b,
+.members_86es0b > div {
   background-color: transparent;
 }
 
@@ -41,7 +41,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Card (the DM profile sidebar takes the member list's place)
-.aside_f58343 {
+.aside_HbUF2J {
   margin-left: calc(var(--layout-margin) / 2);
   padding: 0px;
   background: var(--background-secondary);
@@ -52,12 +52,12 @@
 }
 
 // No Frame (Discord draws a 2px primary-colour frame around the profile; themed profiles keep theirs)
-.aside_f58343 > .outer_c0bea0:not(.custom-user-profile-theme) {
+.aside_HbUF2J > .outer_P1YEjQ:not(.custom-user-profile-theme) {
   padding: 0px;
   background: transparent;
   border-radius: var(--radius-primary);
 }
 
-.aside_f58343 > .outer_c0bea0 .inner_c0bea0 {
+.aside_HbUF2J > .outer_P1YEjQ .inner_P1YEjQ {
   border-radius: var(--radius-primary);
 }

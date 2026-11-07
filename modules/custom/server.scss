@@ -18,7 +18,7 @@
   }
 
   // Background
-  .container__2637a[aria-label^="#{$name}"] .header_f37cb1 {
+  .container_H5ozaj[aria-label^="#{$name}"] .header_XH4OpX {
     height: 135px !important;
     padding-bottom: 90px;
     background-image: var(--banner-#{$id}) !important;
@@ -26,8 +26,8 @@
     background-position: center;
     background-size: cover;
   }
-  .container__2637a[aria-label*="#{$name}"] {
-    .name_f37cb1 {
+  .container_H5ozaj[aria-label*="#{$name}"] {
+    .name_XH4OpX {
       z-index: 2;
       transition: none;
     }

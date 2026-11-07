@@ -3,21 +3,21 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Activity (Normal)
-.activityPanel__5e434 .body__5dec7 {
+.activityPanel_pog62O .body_8eCwJY {
   height: calc(32px + var(--inner-primary) + var(--inner-primary)) !important;
 }
 
-.activityPanel__5e434 .actions__4cd01 {
+.activityPanel_pog62O .actions_IZv9tE {
   opacity: 0;
   z-index: -99;
 }
 
 // Activity (Hover)
-.activityPanel__5e434:hover .body__5dec7 {
+.activityPanel_pog62O:hover .body_8eCwJY {
   height: calc(72px + var(--inner-primary) + var(--inner-primary)) !important;
 }
 
-.activityPanel__5e434:hover .actions__4cd01 {
+.activityPanel_pog62O:hover .actions_IZv9tE {
   opacity: 1;
   z-index: 0;
 }
@@ -27,7 +27,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Grid
-.container__37e49 {
+.container_g6VwXp {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr 1fr;
@@ -37,12 +37,12 @@
 }
 
 // Last Card (Discord adds a bottom margin)
-.panels__5e434 > .container__37e49:last-child {
+.panels_pog62O > .container_g6VwXp:last-child {
   margin-bottom: unset !important;
 }
 
 // Avatar + Name
-.container__37e49 .accountPopoutButtonWrapper__37e49 {
+.container_g6VwXp .accountPopoutButtonWrapper_g6VwXp {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   margin: 0px var(--inner-primary);
@@ -52,7 +52,7 @@
 }
 
 // Name
-.container__37e49 .nameTag__37e49 {
+.container_g6VwXp .nameTag_g6VwXp {
   min-width: unset !important;
   background: transparent;
   margin: 0px;
@@ -60,7 +60,7 @@
 }
 
 // Button Area
-.container__37e49 .buttons__37e49 {
+.container_g6VwXp .buttons_g6VwXp {
   display: grid;
   margin-left: var(--inner-primary);
   margin-right: var(--inner-primary);
@@ -70,7 +70,7 @@
 }
 
 // Buttons
-.container__37e49 .buttons__37e49 .button__67645 {
+.container_g6VwXp .buttons_g6VwXp .button_Y-8oZW {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   width: 100%;
@@ -82,7 +82,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Grid
-.container_e131a9 .horizontal__7c0ba > .flex__7c0ba {
+.container_9U6LUN .horizontal_hkRWAH > .flex_hkRWAH {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   grid-gap: var(--inner-primary);
@@ -90,27 +90,27 @@
 }
 
 // Background
-.container_e131a9 {
+.container_9U6LUN {
   margin: var(--inner-primary);
   padding: 0px;
   border: none !important;
 }
 
 // Spacing
-.container_e131a9 .horizontal__7c0ba > .flex__7c0ba,
-.horizontal__7c0ba > .flexChild__7c0ba {
+.container_9U6LUN .horizontal_hkRWAH > .flex_hkRWAH,
+.horizontal_hkRWAH > .flexChild_hkRWAH {
   margin-left: 0px;
 }
 
 // Flex (Discord sizes the row for one line; the stacked info card and buttons overflowed it onto the action buttons)
-.container_e131a9 .connection_e131a9 {
+.container_9U6LUN .connection_9U6LUN {
   flex-direction: column;
   flex: none;
   height: auto;
 }
 
 // Info
-.container_e131a9 .inner_e131a9 {
+.container_9U6LUN .inner_9U6LUN {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   width: 100%;
@@ -120,19 +120,19 @@
 }
 
 // RTC Connection Status
-.container_e131a9 .rtcConnectionStatus__06d62 {
+.container_9U6LUN .rtcConnectionStatus_4LJE6I {
   padding-bottom: 4px;
   margin-left: 8px;
 }
 
 // Subtext
-.container_e131a9 .subtext__339d0 {
+.container_9U6LUN .subtext_yc3axZ {
   margin-left: 8px;
 }
 
 // Buttons
-.container_e131a9 .button__201d5,
-.container_e131a9 .button__67645 {
+.container_9U6LUN .button_9OQtot,
+.container_9U6LUN .button_Y-8oZW {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   width: 100%;
@@ -141,15 +141,15 @@
   padding: 0px;
 }
 
-.container_e131a9 .buttonContents_e131a9 {
+.container_9U6LUN .buttonContents_9U6LUN {
   margin: 0px;
 }
 
 // Disabled Buttons
-.button_e131a9.buttonColor_e131a9.fauxDisabled_e131a9,
-.button_e131a9 .buttonColor_e131a9.fauxDisabled_e131a9,
-.button_e131a9.buttonColor_e131a9:disabled,
-.button_e131a9 .buttonColor_e131a9:disabled {
+.button_9U6LUN.buttonColor_9U6LUN.fauxDisabled_9U6LUN,
+.button_9U6LUN .buttonColor_9U6LUN.fauxDisabled_9U6LUN,
+.button_9U6LUN.buttonColor_9U6LUN:disabled,
+.button_9U6LUN .buttonColor_9U6LUN:disabled {
   background: var(--background-tertiary);
 }
 
@@ -158,7 +158,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Grid
-.actions__4cd01 {
+.actions_IZv9tE {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   grid-gap: var(--inner-primary);
@@ -167,23 +167,23 @@
 }
 
 // Background
-.actions__4cd01 .button__67645 {
+.actions_IZv9tE .button_Y-8oZW {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
 }
 
-.body__5dec7 {
+.body_8eCwJY {
   flex-direction: column;
   margin: var(--inner-primary) var(--inner-primary) 0px var(--inner-primary);
 }
 
-.activityPanel__5e434 {
+.activityPanel_pog62O {
   padding: 0px;
   border: none;
 }
 
 // Activity
-.activityPanel__5e434 .gameWrapper__5dec7 {
+.activityPanel_pog62O .gameWrapper_8eCwJY {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   margin: 0px 0px var(--inner-primary) 0px;
@@ -192,27 +192,27 @@
 }
 
 // Icon
-.gameIconWrapper__8c6c2 {
+.gameIconWrapper_PY60v2 {
   padding: 0px var(--inner-primary) 0px 8px;
 }
 
-.gameIcon_b52e4f {
+.gameIcon_-BipLp {
   border-radius: 90%;
 }
 
 // Buttons
-.activityPanel__5e434 .actions__4cd01 {
+.activityPanel_pog62O .actions_IZv9tE {
   background: var(--background-primary);
   border-radius: var(--radius-secondary);
   margin: 0px 0px 0px 0px;
   width: 100%;
 }
 
-.activityPanel__5e434 .disabledButtonWrapper__201d5 {
+.activityPanel_pog62O .disabledButtonWrapper_9OQtot {
   width: 100%;
 }
 
-.activityPanel__5e434 .button__67645 {
+.activityPanel_pog62O .button_Y-8oZW {
   width: 100%;
 }
 
@@ -221,22 +221,22 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Order
-.panels__5e434 {
+.panels_pog62O {
   display: flex;
   flex-direction: column;
 }
 
 // Voice
-.wrapper_e131a9 {
+.wrapper_9U6LUN {
   order: 2;
 }
 
 // Activity
-.activityPanel__5e434 {
+.activityPanel_pog62O {
   order: 3;
 }
 
 // Profile
-.container__37e49 {
+.container_g6VwXp {
   order: 5;
 }

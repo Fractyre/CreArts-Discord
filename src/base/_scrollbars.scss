@@ -3,36 +3,36 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // No Scrollbar
-.scrollableContainer__74017::-webkit-scrollbar {
+.scrollableContainer_2x8-Qn::-webkit-scrollbar {
   display: none;
 }
 
-.textAreaSlate__74017 {
+.textAreaSlate_2x8-Qn {
   overflow-y: auto;
   max-height: 200px;
 }
 
 // Scrollbar
-.textAreaSlate__74017::-webkit-scrollbar {
+.textAreaSlate_2x8-Qn::-webkit-scrollbar {
   width: 16px;
   height: 16px;
 }
-.textAreaSlate__74017::-webkit-scrollbar-corner {
+.textAreaSlate_2x8-Qn::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-.textAreaSlate__74017::-webkit-scrollbar-thumb {
+.textAreaSlate_2x8-Qn::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-auto-thumb);
   min-height: 40px;
 }
 
-.textAreaSlate__74017::-webkit-scrollbar-thumb,
-.textAreaSlate__74017::-webkit-scrollbar-track {
+.textAreaSlate_2x8-Qn::-webkit-scrollbar-thumb,
+.textAreaSlate_2x8-Qn::-webkit-scrollbar-track {
   border: 4px solid transparent;
   background-clip: padding-box;
   border-radius: var(--radius-primary);
 }
 
-.textAreaSlate__74017::-webkit-scrollbar-track {
+.textAreaSlate_2x8-Qn::-webkit-scrollbar-track {
   background-color: var(--scrollbar-auto-track);
   margin-top: 10px;
   margin-bottom: 10px;

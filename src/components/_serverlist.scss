@@ -2,32 +2,32 @@
 // ║ Serverlist               ║ Layout                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.guilds__5e434 {
+.guilds_pog62O {
   margin: 0px calc(var(--layout-margin) / 2) 0px 0px !important;
   width: var(--layout-width-guild);
   border-radius: var(--radius-primary);
 }
 
-.wrapper_ef3116 {
+.wrapper_5dqHTG {
   background: var(--background-secondary);
 }
 
-.scroller_ef3116 {
+.scroller_5dqHTG {
   background: transparent;
 }
 
 // Icons centre in the column (Discord sizes items wider than --layout-width-guild and reserves a scrollbar gutter)
-.guilds__5e434 .scroller_ef3116 {
+.guilds_pog62O .scroller_5dqHTG {
   scrollbar-width: none;
   scrollbar-gutter: auto;
 }
 
-.guilds__5e434 .listItem__650eb,
-.guilds__5e434 .folderGroup__48112 {
+.guilds_pog62O .listItem_rwEpIL,
+.guilds_pog62O .folderGroup_RTMSuZ {
   width: 100%;
 }
 
-.platform-win .scroller_ef3116 {
+.platform-win .scroller_5dqHTG {
   padding-top: 12px;
 }
 
@@ -35,20 +35,20 @@
 // ║ Serverlist               ║ Order                                                                                   ║ */
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.scroller_ef3116 {
+.scroller_5dqHTG {
   display: flex;
   flex-direction: column;
 }
 
-.tutorialContainer__1f388:first-child {
+.tutorialContainer_1IyMuq:first-child {
   order: -3;
 }
 
-.scroller_ef3116 > .listItem__650eb:nth-last-child(2) {
+.scroller_5dqHTG > .listItem_rwEpIL:nth-last-child(2) {
   order: -2;
 }
 
-.tutorialContainer__650eb {
+.tutorialContainer_rwEpIL {
   order: -1;
 }
 
@@ -56,32 +56,32 @@
 // ║ Serverlist               ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.guilds__5e434 .circleIcon__5bc7e {
+.guilds_pog62O .circleIcon_g8YUxD {
   color: var(--interactive-normal) !important;
 }
 
 // Idle icons match the user panel buttons
-.guilds__5e434 .wrapper__6e9f8:not(:hover, .selected__6e9f8) .childWrapper__6e9f8,
-.guilds__5e434 .circleIconButton__5bc7e:not(:hover, .selected__5bc7e) {
+.guilds_pog62O .wrapper_JJ-hgR:not(:hover, .selected_JJ-hgR) .childWrapper_JJ-hgR,
+.guilds_pog62O .circleIconButton_g8YUxD:not(:hover, .selected_g8YUxD) {
   background: var(--background-primary);
 }
 
-.guilds__5e434
-  .wrapper__6e9f8[data-list-item-id="guildsnav___home"]:not(:hover, .selected__6e9f8)
-  .childWrapper__6e9f8 {
+.guilds_pog62O
+  .wrapper_JJ-hgR[data-list-item-id="guildsnav___home"]:not(:hover, .selected_JJ-hgR)
+  .childWrapper_JJ-hgR {
   color: var(--interactive-normal);
 }
 
-.circleIconButton__5bc7e.selected__5bc7e .circleIcon__5bc7e {
+.circleIconButton_g8YUxD.selected_g8YUxD .circleIcon_g8YUxD {
   color: var(--interactive-active) !important;
 }
 
-.circleIconButton__5bc7e.selected__5bc7e {
+.circleIconButton_g8YUxD.selected_g8YUxD {
   background: var(--brand-experiment);
 }
 
 // Guild Separator
-.guildSeparator__252b6 {
+.guildSeparator_3WHVfy {
   background: var(--background-primary);
 }
 
@@ -91,12 +91,12 @@
 
 // Open folder tile matches the Home/Explore/Add tiles: same fill, the tile's own corners.
 // Keep Discord's padding: it makes this layer exactly one tile tall, and the folder animates between it and the preview below.
-.isExpanded__48112 .folderIconWrapper__48112 {
+.isExpanded_RTMSuZ .folderIconWrapper_RTMSuZ {
   background: var(--background-primary);
   border-radius: inherit;
 }
 
-.folderGroupBackground__48112 {
+.folderGroupBackground_RTMSuZ {
   background: var(--background-primary);
 }
 
@@ -104,10 +104,10 @@
 // ║ Serverlist               ║ Inbox                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.tutorialContainer__1f388:nth-child(2) {
+.tutorialContainer_1IyMuq:nth-child(2) {
   order: -1;
 }
 
-.listItemWrapper__91816:active {
+.listItemWrapper_tQErD4:active {
   transform: none !important;
 }

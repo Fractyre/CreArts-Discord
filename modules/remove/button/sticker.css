@@ -3,6 +3,6 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Hide the whole slot so the remaining buttons close ranks */
-.buttons__74017 .buttonContainer__74017:has(.stickerButton__74017) {
+.buttons_2x8-Qn .buttonContainer_2x8-Qn:has(.stickerButton_2x8-Qn) {
   display: none;
 }

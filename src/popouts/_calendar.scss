@@ -14,7 +14,7 @@
 }
 
 // Border
-.calendarPicker_d27f17 .react-datepicker__day {
+.calendarPicker_7yAVe6 .react-datepicker__day {
   border-color: var(--background-tertiary) !important;
 }
 
@@ -69,7 +69,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.calendarPicker_d27f17 .react-datepicker__header {
+.calendarPicker_7yAVe6 .react-datepicker__header {
   background: var(--background-tertiary) !important;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -84,14 +84,14 @@
 }
 
 // Navigation (Left)
-.calendarPicker_d27f17 .react-datepicker__navigation.react-datepicker__navigation--previous {
+.calendarPicker_7yAVe6 .react-datepicker__navigation.react-datepicker__navigation--previous {
   border: none;
   top: 30px;
   margin-left: 10px;
 }
 
 // Navigation (Right)
-.calendarPicker_d27f17 .react-datepicker__navigation.react-datepicker__navigation--next {
+.calendarPicker_7yAVe6 .react-datepicker__navigation.react-datepicker__navigation--next {
   border: none;
   top: 30px;
   margin-right: 10px;
@@ -102,22 +102,22 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Radius (Top Left)
-.calendarPicker_d27f17 .react-datepicker__week:first-of-type > .react-datepicker__day:first-of-type {
+.calendarPicker_7yAVe6 .react-datepicker__week:first-of-type > .react-datepicker__day:first-of-type {
   border-radius: var(--context-menu-radius) 0 0 !important;
 }
 
 // Radius (Top Right)
-.calendarPicker_d27f17 .react-datepicker__week:first-of-type > .react-datepicker__day:last-of-type {
+.calendarPicker_7yAVe6 .react-datepicker__week:first-of-type > .react-datepicker__day:last-of-type {
   border-radius: 0 var(--context-menu-radius) 0 0 !important;
 }
 
 // Radius (Bottom Left)
-.calendarPicker_d27f17 .react-datepicker__week:last-of-type > .react-datepicker__day:first-of-type {
+.calendarPicker_7yAVe6 .react-datepicker__week:last-of-type > .react-datepicker__day:first-of-type {
   border-radius: 0 0 0 var(--context-menu-radius) !important;
 }
 
 // Radius (Bottom Right)
-.calendarPicker_d27f17 .react-datepicker__week:last-of-type > .react-datepicker__day:last-of-type {
+.calendarPicker_7yAVe6 .react-datepicker__week:last-of-type > .react-datepicker__day:last-of-type {
   border-radius: 0 0 var(--context-menu-radius) !important;
 }
 
@@ -126,14 +126,14 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Header
-.theme-dark .calendarPicker_d27f17 .react-datepicker__current-month,
-.theme-light .calendarPicker_d27f17 .react-datepicker__current-month {
+.theme-dark .calendarPicker_7yAVe6 .react-datepicker__current-month,
+.theme-light .calendarPicker_7yAVe6 .react-datepicker__current-month {
   color: var(--context-text-normal);
 }
 
 // Date
-.theme-dark .calendarPicker_d27f17 .react-datepicker__day-name,
-.theme-light .calendarPicker_d27f17 .react-datepicker__day-name {
+.theme-dark .calendarPicker_7yAVe6 .react-datepicker__day-name,
+.theme-light .calendarPicker_7yAVe6 .react-datepicker__day-name {
   color: var(--context-text-normal);
   font-weight: 600;
 }

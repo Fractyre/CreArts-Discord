@@ -3,7 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Re-Add Header Styling
-.communityInfoVisible_f37cb1:not(.hasBanner_f37cb1) .header_f37cb1 {
+.communityInfoVisible_XH4OpX:not(.hasBanner_XH4OpX) .header_XH4OpX {
   position: relative;
   font-family: var(--font-display);
   font-weight: 500;
@@ -16,30 +16,30 @@
 }
 
 // Re-Add Header Hover
-.communityInfoVisible_f37cb1:not(.hasBanner_f37cb1):hover .header_f37cb1 {
+.communityInfoVisible_XH4OpX:not(.hasBanner_XH4OpX):hover .header_XH4OpX {
   background-color: var(--background-modifier-hover) !important;
   box-shadow: var(--elevation-low);
 }
 
 // Remove Spacing for Public Servers
-.communityInfoVisible_f37cb1:not(.hasBanner_f37cb1)
-  ~ .scroller__629e4
-  > .content_d125d2
-  > .containerDefault__29444:first-of-type {
+.communityInfoVisible_XH4OpX:not(.hasBanner_XH4OpX)
+  ~ .scroller_ysO7Gy
+  > .content_tqapBM
+  > .containerDefault_yOdhm_:first-of-type {
   padding-top: 0px;
 }
 
-.headerContent_f37cb1 {
+.headerContent_XH4OpX {
   width: 100% !important;
   //vertical-align: center !important; /* here */
 }
 
-.primaryInfo_f37cb1 {
+.primaryInfo_XH4OpX {
   height: unset !important;
 }
 
 // Header
-.header_f37cb1 {
+.header_XH4OpX {
   display: flex !important;
   align-items: flex-start;
 }

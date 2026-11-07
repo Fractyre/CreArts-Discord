@@ -2,7 +2,7 @@
 /* ║ Chat-Input               ║ Normal                                                                                  ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.chat_f75fb0 .form_f75fb0 {
+.chat_z_gUBg .form_z_gUBg {
   max-height: 0%;
   transition: all 0.2s ease-in-out;
   opacity: 0;
@@ -12,7 +12,7 @@
 /* ║ Chat-Input               ║ Hover                                                                                   ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.chat_f75fb0 .chatContent_f75fb0:hover .form_f75fb0 {
+.chat_z_gUBg .chatContent_z_gUBg:hover .form_z_gUBg {
   max-height: 100%;
   margin-bottom: 0px;
   transition: all 0.2s ease-in-out;

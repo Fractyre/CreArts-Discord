@@ -18,28 +18,28 @@
 
 @mixin chat-normal($name, $background, $user-id:"") {
   @if $user-id != "" {
-    .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55[style="color: #{$background};"]::after {
+    .avatar_2i8Bfm[src*="#{$user-id}"] + h2 .username_2i8Bfm[style="color: #{$background};"]::after {
       @include pill($name, $background);
     }
   }
   @else {
-    h2 .username_c19a55[style="color: #{$background};"]::after {
+    h2 .username_2i8Bfm[style="color: #{$background};"]::after {
       @include pill($name, $background);
       font-weight: 500;
     }
-    [style="color: #{$background};"] + .botTag_c19a55,
-    [style="color: #{$background};"] + .botTag__82f07 {
+    [style="color: #{$background};"] + .botTag_2i8Bfm,
+    [style="color: #{$background};"] + .botTag_feVUtO {
       display: none;
     }
   }
 }
 
 @mixin chat-extra($name, $background, $user-id) {
-  .avatar_c19a55[src*="#{$user-id}"] + h2 .username_c19a55::after {
+  .avatar_2i8Bfm[src*="#{$user-id}"] + h2 .username_2i8Bfm::after {
     @include pill($name, $background);
     font-weight: 500;
   }
-  .botTagCozy_c19a55 {
+  .botTagCozy_2i8Bfm {
       display: none !important;
   }
 }

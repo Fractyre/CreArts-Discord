@@ -10,16 +10,16 @@
 /* ║ Neumorphism              ║ Base                                                                                    ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.base__5e434,
-.sidebar__5e434,
-.content_f75fb0,
-.sidebar__5e434,
-.content__5e434,
-.chat_f75fb0 {
+.base_pog62O,
+.sidebar_pog62O,
+.content_z_gUBg,
+.sidebar_pog62O,
+.content_pog62O,
+.chat_z_gUBg {
   overflow: visible !important;
 }
 
-.base__5e434 {
+.base_pog62O {
   width: 0;
 }
 
@@ -27,7 +27,7 @@
 /* ║ Neumorphism              ║ Titlebar                                                                                ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.titleBar__421ed::before {
+.titleBar_gnMEnp::before {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
@@ -37,27 +37,27 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.wrapper_ef3116 {
+.wrapper_5dqHTG {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
 
-.childWrapper__6e9f8 {
+.childWrapper_JJ-hgR {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.childWrapper__6e9f8 {
+.childWrapper_JJ-hgR {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.circleIconButton__5bc7e {
+.circleIconButton_g8YUxD {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.folderGroupBackground__48112 {
+.folderGroupBackground_RTMSuZ {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -67,7 +67,7 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.header_f37cb1 {
+.header_XH4OpX {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -77,7 +77,7 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.sidebar__5e434 .thin__99f8c.scrollerBase_d125d2 {
+.sidebar_pog62O .thin_tqapBM.scrollerBase_tqapBM {
   background: var(--background-flat) !important;
   box-shadow: var(--shape-flat);
 }
@@ -89,25 +89,25 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.panels__5e434 {
+.panels_pog62O {
   background: var(--background-flat);
   box-shadow: var(--shape-flat);
 }
 
 /* Avatar */
-.container__37e49 .accountPopoutButtonWrapper__37e49  {
+.container_g6VwXp .accountPopoutButtonWrapper_g6VwXp  {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
 
 /* Name */
-.container__37e49 .nameTag__37e49  {
+.container_g6VwXp .nameTag_g6VwXp  {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
 
 /* Buttons */
-.container__37e49 .buttons__37e49 .button__67645 {
+.container_g6VwXp .buttons_g6VwXp .button_Y-8oZW {
   background: var(--background-secondary);
   box-shadow: var(--shape-pressed);
 }
@@ -117,12 +117,12 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.children__9293f {
+.children_ybUK7Z {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
-.toolbar__9293f {
+.toolbar_ybUK7Z {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -132,7 +132,7 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Background */
-.messagesWrapper__36d07 {
+.messagesWrapper_8AE1Qq {
   background: var(--background-pressed) !important;
   box-shadow: var(--shape-pressed);
 }
@@ -141,7 +141,7 @@
 /* ║ Neumorphism              ║ Members                                                                                 ║ */
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
-.container_c8ffbb {
+.container_86es0b {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
@@ -151,26 +151,26 @@
 /* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
 
 /* Attach Button */
-.attachWrapper__0923f .lookBlank__201d5 {
+.attachWrapper_7TM4SO .lookBlank_9OQtot {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Text Area */
-.chat_f02135 .textArea__74017,
-.chat_f75fb0 .textArea__74017 {
+.chat_fjXxyy .textArea_2x8-Qn,
+.chat_z_gUBg .textArea_2x8-Qn {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Buttons */
-.buttons__74017 {
+.buttons_2x8-Qn {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
 
 /* Typing */
-.typing_b88801 {
+.typing_U9Tvvz {
   background: var(--background-pressed);
   box-shadow: var(--shape-pressed);
 }
