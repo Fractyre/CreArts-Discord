@@ -20,6 +20,7 @@
 // ✅ Enabled by Default
 // ⭕ Disabled by Default
 // 🧪 Experimental
+// 🚧 Not ported to the current client yet
 // ⚠️ Must be loaded
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -183,46 +184,46 @@
 // ✅ Combined
 @use "modules/alignment/left/combined";
 
-// ⭕ Divided
+// 🚧 Divided
 //@use "modules/alignment/left/divided";
 
-// ⭕ Buttons
+// 🚧 Buttons
 //@use "modules/alignment/left/buttons";
 
 // ╔══════════════════════════╦═════════════════════════════════╗
 // ║ 1.3 Alignment            ║ Right                           ║
 // ╚══════════════════════════╩═════════════════════════════════╝
 
-// ⭕ Default
+// 🚧 Default
 //@use "modules/alignment/right/default";
 
-// ⭕ Combined
+// 🚧 Combined
 //@use "modules/alignment/right/combined";
 
-// ⭕ Divided
+// 🚧 Divided
 //@use "modules/alignment/right/divided";
 
-// ⭕ Buttons
+// 🚧 Buttons
 //@use "modules/alignment/right/buttons";
 
 // ╔══════════════════════════╦═════════════════════════════════╗
 // ║ 1.3 Alignment            ║ Top                             ║
 // ╚══════════════════════════╩═════════════════════════════════╝
 
-// ⭕ Default
+// 🚧 Default
 //@use "modules/alignment/top/default";
 
-// ⭕ Buttons
+// 🚧 Buttons
 //@use "modules/alignment/top/buttons";
 
 // ╔══════════════════════════╦═════════════════════════════════╗
 // ║ 1.3 Alignment            ║ Bottom                          ║
 // ╚══════════════════════════╩═════════════════════════════════╝
 
-// ⭕ Default
+// 🚧 Default
 //@use "modules/alignment/bottom/default";
 
-// ⭕ Buttons
+// 🚧 Buttons
 //@use "modules/alignment/bottom/buttons";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -231,20 +232,20 @@
 // ║ Enable or disable these addons, you can combine them as you wish.                                                  ║
 // ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-// ✅ Friends-Grid
-@use "modules/addons/friends-grid";
+// 🚧 Friends-Grid
+//@use "modules/addons/friends-grid";
 
-// ✅ Context-Icons
-@use "modules/addons/context-icons";
+// 🚧 Context-Icons
+//@use "modules/addons/context-icons";
 
-// ✅ Settings-Icons
-@use "modules/addons/settings-icons";
+// 🚧 Settings-Icons
+//@use "modules/addons/settings-icons";
 
-// ✅ Mention-Links
-@use "modules/addons/mention-links";
+// 🚧 Mention-Links
+//@use "modules/addons/mention-links";
 
-// ✅ Discolored (by Nyria#3863)
-@use "modules/addons/discolored";
+// 🚧 Discolored (by Nyria#3863)
+//@use "modules/addons/discolored";
 
 // 🧪 Cooler Activity Status (by mr_miner#9699)
 //@use "modules/addons/cooler-activity-status";
@@ -279,10 +280,10 @@
 // ║ Move some elements, you can combine them as you wish.                                                              ║
 // ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-// ⭕ Move Explore Button down. (Working with: Default & Buttons; Not Working with: Combined & Divided)
+// 🚧 Move Explore Button down. (Working with: Default & Buttons; Not Working with: Combined & Divided)
 //@use "modules/move/button/explore";
 
-// ⭕ Move Add Server Button down. (Working with: Default & Buttons; Not Working with: Combined & Divided)
+// 🚧 Move Add Server Button down. (Working with: Default & Buttons; Not Working with: Combined & Divided)
 //@use "modules/move/button/add";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -345,7 +346,7 @@
 // ⭕ Adds Chat-Input Animation
 //@use "modules/animations/chat-input";
 
-// ⭕ Adds Sidebar Animation
+// 🚧 Adds Sidebar Animation
 //@use "modules/animations/channels-sidebar";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

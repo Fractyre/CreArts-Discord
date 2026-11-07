@@ -1,6 +1,6 @@
 {
   "name": "crearts-discord",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "CreArts is a customizable Discord theme that changes the appearance of Discord.",
   "engines": {
     "node": ">=18.0.0"
